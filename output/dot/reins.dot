@@ -1,0 +1,12 @@
+graph {
+	reins -- resin [ label="2" ];
+	reins -- rinse [ label="3" ];
+	reins -- risen [ label="3" ];
+	reins -- siren [ label="6" ];
+	resin -- rinse [ label="5" ];
+	resin -- risen [ label="3" ];
+	resin -- siren [ label="4" ];
+	rinse -- risen [ label="2" ];
+	rinse -- siren [ label="5" ];
+	risen -- siren [ label="3" ];
+}

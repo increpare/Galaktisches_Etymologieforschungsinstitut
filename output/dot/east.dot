@@ -1,0 +1,12 @@
+graph {
+	east -- eats [ label="1" ];
+	east -- sate [ label="4" ];
+	east -- seat [ label="2" ];
+	east -- teas [ label="3" ];
+	eats -- sate [ label="5" ];
+	eats -- seat [ label="3" ];
+	eats -- teas [ label="2" ];
+	sate -- seat [ label="2" ];
+	sate -- teas [ label="5" ];
+	seat -- teas [ label="5" ];
+}

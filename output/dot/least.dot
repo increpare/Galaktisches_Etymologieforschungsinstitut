@@ -1,0 +1,17 @@
+graph {
+	least -- slate [ label="5" ];
+	least -- stale [ label="8" ];
+	least -- steal [ label="8" ];
+	least -- tales [ label="6" ];
+	least -- teals [ label="6" ];
+	slate -- stale [ label="3" ];
+	slate -- steal [ label="5" ];
+	slate -- tales [ label="7" ];
+	slate -- teals [ label="9" ];
+	stale -- steal [ label="2" ];
+	stale -- tales [ label="4" ];
+	stale -- teals [ label="6" ];
+	steal -- tales [ label="6" ];
+	steal -- teals [ label="4" ];
+	tales -- teals [ label="2" ];
+}

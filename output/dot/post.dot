@@ -1,0 +1,12 @@
+graph {
+	post -- pots [ label="1" ];
+	post -- spot [ label="2" ];
+	post -- stop [ label="5" ];
+	post -- tops [ label="4" ];
+	pots -- spot [ label="3" ];
+	pots -- stop [ label="6" ];
+	pots -- tops [ label="3" ];
+	spot -- stop [ label="3" ];
+	spot -- tops [ label="6" ];
+	stop -- tops [ label="3" ];
+}

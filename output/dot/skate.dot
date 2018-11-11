@@ -1,0 +1,12 @@
+graph {
+	skate -- stake [ label="3" ];
+	skate -- steak [ label="5" ];
+	skate -- takes [ label="7" ];
+	skate -- teaks [ label="9" ];
+	stake -- steak [ label="2" ];
+	stake -- takes [ label="4" ];
+	stake -- teaks [ label="6" ];
+	steak -- takes [ label="6" ];
+	steak -- teaks [ label="4" ];
+	takes -- teaks [ label="2" ];
+}

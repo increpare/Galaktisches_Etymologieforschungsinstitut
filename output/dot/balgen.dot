@@ -1,0 +1,5 @@
+graph {
+	balgen -- belang [ label="5" ];
+	balgen -- gabeln [ label="5" ];
+	belang -- gabeln [ label="8" ];
+}
