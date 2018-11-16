@@ -1,0 +1,538 @@
+title Parallanagramm [Deutsch]
+author Stephen Lavelle
+homepage www.increpare.com
+
+background_color darkgreen
+text_color gray
+
+verbose_logging
+
+run_rules_on_level_start
+
+norepeat_action
+
+again_interval 1.0
+
+========
+OBJECTS
+========
+
+Background
+black
+
+
+player 
+yellow
+0...0
+.....
+.....
+.....
+0...0
+
+backred 
+darkred
+
+backblue 
+blue
+
+A
+black
+0...0
+.000.
+.....
+.000.
+.000.
+
+B
+black
+....0
+.000.
+....0
+.000.
+....0
+
+C
+black
+.....
+.0000
+.0000
+.0000
+.....
+
+D
+black
+....0
+.000.
+.000.
+.000.
+....0
+
+E
+black
+.....
+.0000
+...00
+.0000
+.....
+
+F
+black
+.....
+.0000
+...00
+.0000
+.0000
+
+G
+black
+....0
+.0000
+.0...
+.00.0
+....0
+
+H
+black
+.000.
+.000.
+.....
+.000.
+.000.
+
+I
+black
+0...0
+00.00
+00.00
+00.00
+0...0
+
+J
+black
+00...
+000.0
+000.0
+.00.0
+0..00
+
+K
+black
+.00..
+.0.00
+..000
+.0.00
+.00..
+
+L
+black
+.0000
+.0000
+.0000
+.0000
+.....
+
+M
+black
+.....
+.0.0.
+.0.0.
+.0.0.
+.0.0.
+
+N
+black
+...0.
+.0.0.
+.0.0.
+.0.0.
+.0...
+
+O
+black
+0...0
+.000.
+.000.
+.000.
+0...0
+
+P
+black
+.....
+.000.
+.....
+.0000
+.0000
+
+Q
+black
+.....
+.000.
+.....
+0000.
+0000.
+
+R
+black
+.....
+.000.
+....0
+.000.
+.000.
+
+S
+black
+.....
+.0000
+.....
+0000.
+.....
+
+T
+black
+.....
+00.00
+00.00
+00.00
+00.00
+
+U
+black
+.000.
+.000.
+.000.
+.000.
+0...0
+
+V
+black
+.000.
+.000.
+0.0.0
+0.0.0
+00.00
+
+W
+black
+.0.0.
+.0.0.
+.0.0.
+.0.0.
+0.0.0
+
+X
+black
+.000.
+0.0.0
+00.00
+0.0.0
+.000.
+
+Y
+black
+.000.
+.000.
+.....
+0000.
+.....
+
+Z
+black
+.....
+000.0
+00.00
+0.000
+.....
+
+
+1
+black
+.00.0
+0..00
+.00.0
+....0
+.00.0
+
+9
+black
+.00.0
+00000
+0..00
+.00.0
+0..00
+
+7
+black
+.00.0
+00000
+.00.0
+.00.0
+0..00
+
+2
+black
+...00
+.00.0
+.0.00
+.00.0
+.0.00
+
+
+cover 
+darkgreen
+
+lmargin
+darkblue 
+0....
+0....
+0....
+0....
+0....
+
+
+rmargin
+darkblue 
+....0
+....0
+....0
+....0
+....0
+
+bmargin
+darkblue
+.....
+.....
+.....
+.....
+00000
+
+tmargin
+darkblue
+00000
+.....
+.....
+.....
+.....
+
+blank -
+black
+
+tl /
+transparent
+
+endbg
+lightbrown
+
+oendbg 
+orange
+
+=======
+LEGEND
+=======
+
+letter = a or b or c or d or e or f or g or h or i or j or k or l or m or n or o or p or q or r or s or t or u or v or w or x or y or z or 1 or 2 or 7 or 9
+. = Background
+0 = player and blank
+
+
+=======
+SOUNDS
+=======
+
+endlevel 54461103
+endgame 54461103
+
+startgame 54461103
+
+================
+COLLISIONLAYERS
+================
+
+Background
+tl
+backred, backblue
+endbg,
+oendbg
+letter, blank
+cover
+Player
+tmargin
+bmargin
+lmargin
+rmargin
+
+======
+RULES
+======
+
+[tl] -> [ backred ]
+[backred | no backblue] -> [ backred | backblue ]
++[backblue | no backred] -> [backblue | backred ]
+
+[ > player | cover ] [letter no endbg ] -> cancel
+
+[action player no letter  ] [letter no endbg ]-> cancel
+down [ action player letter | cover ] -> [ action player up letter | cover ]
+up [ action player letter | cover ] -> [ action player down letter | cover ]
+
+right [action player ] [ moving letter  no cover | ... | cover ] -> [action player ] [ | ... | moving letter cover ]
+[action player ] [ > letter | ] -> [action player ]  [ | letter ]
+
+right [action player ] [ no cover no letter | letter ] -> [action player ] [ letter | ]
+
+[action player ] [ no letter no cover ] ->[action player ]  [ blank ]
+[action player ] [ no cover no letter ] ->[action player ]  [ blank ]
+
+[endbg] [action player] ->[ endbg ] [] win
+[endbg] [moving player] ->[ endbg ] [] win
+
+late [ cover ] -> [ ]
+late [ no letter no blank ] -> [ cover ]
+
+right late [ cover | l|u|d|e| cover ] -> [ endbg cover | l endbg |u endbg |d endbg |e endbg | cover endbg ] again
+right late [ cover | d|i|c|h|t| cover ] -> [ endbg cover | d endbg |i endbg |c endbg |h endbg |t endbg | cover endbg ] again
+right late [ cover | o|r|g|e|l|n| cover ] -> [ endbg cover | o endbg |r endbg |g endbg |e endbg |l endbg |n endbg | cover endbg ] again
+right late [ cover | k|l|e|i|d|e|n| cover ] -> [ endbg cover | k endbg |l endbg |e endbg |i endbg |d endbg |e endbg |n endbg | cover endbg ] again
+right late [ cover | z|a|u|b|e|r|i|n| cover ] -> [ endbg cover | z endbg |a endbg |u endbg |b endbg |e endbg |r endbg |i endbg |n endbg | cover endbg ] again
+right late [ cover | s|t|e|u|e|r|r|a|d| cover ] -> [ endbg cover | s endbg |t endbg |e endbg |u endbg |e endbg |r endbg |r endbg |a endbg |d endbg | cover endbg ] again
+right late [ cover | h|a|n|d|t|e|l|l|e|r| cover ] -> [ endbg cover | h endbg |a endbg |n endbg |d endbg |t endbg |e endbg |l endbg |l endbg |e endbg |r endbg | cover endbg ] again
+right late [ cover | s|i|n|f|o|n|i|e|t|t|a| cover ] -> [ endbg cover | s endbg |i endbg |n endbg |f endbg |o endbg |n endbg |i endbg |e endbg |t endbg |t endbg |a endbg | cover endbg ] again
+
+late [endbg] [letter]->[endbg] [ letter endbg]
+
+late right [endbg  no oendbg | endbg  ]->[endbg | endbg oendbg ]
+
+late up [ cover | no cover ] -> [ cover tmargin | ]
+late down [ cover | no cover ] -> [ cover bmargin | ]
+late left [ cover | no cover ] -> [ cover lmargin | ]
+late right [ cover | no cover ] -> [ cover rmargin | ]
+==============
+WINCONDITIONS
+==============
+
+
+=======
+LEVELS
+=======
+
+message 4 of 11
+message Wir haben eine neue Weise gefunden, damit wir schneller Anagramme ausrechnen koennen!
+
+/..........
+.ledu.hsla.
+.0---.0---.
+...........
+.hbla.kbla.
+.0---.0---.
+...........
+
+
+message 5 of 11
+
+/............
+.cidht.nedke.
+.0----.0----.
+.............
+.madit.ordge.
+.0----.0----.
+.............
+.nosst.......
+.0----.......
+.............
+
+
+message 6 of 11
+
+/..............
+.nglroe.trgree.
+.0-----.0-----.
+...............
+.dwnega.gsialt.
+.0-----.0-----.
+...............
+.tlbego.sglove.
+.0-----.0-----.
+...............
+
+
+message 7 of 11
+
+/................
+.ekdnile.gntvaei.
+.0------.0------.
+.................
+.rssmgoa.efdguri.
+.0------.0------.
+.................
+.rhcesih.essnipe.
+.0------.0------.
+.................
+.naugdhn.........
+.0------.........
+.................
+
+
+message 8 of 11
+
+/..................
+.neubraiz.stchleor.
+.0-------.0-------.
+...................
+.ehitoesr.gleduins.
+.0-------.0-------.
+...................
+.kwulearm.rtusiaeh.
+.0-------.0-------.
+...................
+.taefhers.niafkreg.
+.0-------.0-------.
+...................
+
+
+message 9 of 11
+
+/..............................
+.edrsertua.snumerasi.gsganluea.
+.0--------.0--------.0--------.
+...............................
+.bhittsiec.tncoshpie.rnrvogose.
+.0--------.0--------.0--------.
+...............................
+.telmleean.enhscepir.inawsgese.
+.0--------.0--------.0--------.
+...............................
+
+
+message 10 of 11
+
+/.................................
+.adenhltler.rahokctsie.aeebrgnovl.
+.0---------.0---------.0---------.
+..................................
+.sritamoonn.dpeaantoin.ogersrefni.
+.0---------.0---------.0---------.
+..................................
+.eeublanrsm.oahmrcnsie............
+.0---------.0---------............
+..................................
+.iielfngarn.nhitagoole............
+.0---------.0---------............
+..................................
+
+
+message 11 of 11
+
+/....................................
+.intitnaoefs.einraedthsg.gneetinrroi.
+.0----------.0----------.0----------.
+.....................................
+.ideezsnrtew.ictiumetnhl.heeaiknilmc.
+.0----------.0----------.0----------.
+.....................................
+.hresmonmooc.taeeltntids.treedlnhnas.
+.0----------.0----------.0----------.
+.....................................
+.rahrcnteeuf.ieiselnetsk.............
+.0----------.0----------.............
+.....................................
+
+message THE END. Congratulations.

@@ -1,0 +1,12 @@
+graph {
+	parleys -- parsley [ label="3" ];
+	parleys -- players [ label="5" ];
+	parleys -- replays [ label="6" ];
+	parleys -- sparely [ label="7" ];
+	parsley -- players [ label="8" ];
+	parsley -- replays [ label="9" ];
+	parsley -- sparely [ label="4" ];
+	players -- replays [ label="9" ];
+	players -- sparely [ label="12" ];
+	replays -- sparely [ label="11" ];
+}

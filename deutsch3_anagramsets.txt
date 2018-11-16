@@ -1,0 +1,421 @@
+92509 words
+calculating divisions
+on stufe 2
+on stufe 3
+on stufe 4
+on stufe 5
+on stufe 6
+on stufe 7
+on stufe 8
+on stufe 9
+on stufe 10
+on stufe 11
+on stufe 12
+on stufe 13
+on stufe 14
+on stufe 15
+on stufe 16
+on stufe 17
+on stufe 18
+on stufe 19
+on stufe 20
+on stufe 21
+on stufe 22
+on stufe 23
+on stufe 24
+on stufe 25
+on stufe 26
+on stufe 27
+on stufe 28
+on stufe 29
+on stufe 30
+on stufe 31
+processing division 0
+
+
+
+processing division 1
+it, ti
+tm, mt
+ev, ve
+em, me
+ac, ca
+el, le
+ek, ke
+ad, da
+ro, or
+rk, kr
+ey, ye
+fa, af
+ag, ga
+kb, bk
+ah, ha
+ri, ir
+rg, gr
+kz, zk
+ai, ia
+aj, ja
+
+
+
+processing division 2
+lei, eli, lie, ile, eil
+rai, ira, ari, ria, air
+spa, psa, aps, pas, sap
+dia, adi, dai, aid, ida
+bus, sub, usb, ubs
+ani, ina, ain, ian
+eat, eta, tae, tea
+spd, psd, pds, sdp
+est, ste, set, tse
+dna, adn, dan, and
+pre, erp, rep, per
+die, dei, eid, edi
+ram, arm, mar, amr
+abd, dab, bad, bda
+sbg, bsg, sgb, bgs
+cma, mac, cam, mca
+dis, sdi, sid
+raf, fra, far
+won, own, now
+sni, ins, sin
+
+
+
+processing division 3
+leif, lief, life, feil, fiel, elfi
+atem, atme, amte, mate, meta, team
+liam, lima, mail, mali, mila
+irma, amir, mair, mari, mira
+baer, bare, bear, aber, rabe
+lena, lane, elan, neal, lean
+dire, reid, ried, ride, drei
+lese, seel, esel, else, lees
+isle, lies, lise, seil, ilse
+rias, isar, airs, aris, sari
+sami, siam, amis, sima, mais
+deal, dale, lade, adel, lead
+leib, lieb, blei, beil, biel
+reim, imre, emir, meir, riem
+rehe, ehre, eher, here, heer
+amor, amro, roma, omar, mora
+army, mary, mayr, myra
+iren, erin, rein, rien
+levi, live, viel, evil
+resi, reis, rise, ries
+
+
+
+processing division 4
+trieb, berti, berit, tiber, birte, breit, brite, reibt
+green, neger, gerne, genre, egner, regen, enger
+tores, orest, ortes, oster, store, sorte, rotes
+teils, stile, stiel, liste, steil, liest
+nader, arend, rande, andre, ander, adern
+nagel, galen, angel, lange, lagen, algen
+nager, garen, argen, ragen, anger, range
+nahes, hanse, hasen, shane, sahen, sahne
+teile, leite, eilte, eitel, eitle, elite
+niere, irene, eiern, einer, reine, ernie
+toren, tenor, notre, orten, roten
+turan, natur, unart, unrat, raunt
+harte, heart, herat, herta, earth
+toter, torte, ortet, otter, rotte
+tanks, stank, kants, knast, sankt
+large, lager, regal, elgar, erlag
+inder, diner, dirne, drein, rinde
+arnie, arien, irena, einar, reina
+liefe, fiele, eifel, feile, elfie
+miene, meine, einem, emine
+
+
+
+processing division 5
+sirene, serien, reines, seiner, reisen, einser, riesen, eisern, eisner
+breite, bereit, beriet, bertie, triebe, treibe, bieter
+sterne, tresen, resten, nester, ersten, ernste, ernest
+brauen, braune, urbane, bauern, bernau, rauben
+freien, ferien, reifen, feiner, feiern, riefen
+sicher, reichs, reisch, schrie, schrei, schier
+lieder, derlei, riedel, riedle, leider
+meiner, eimern, reimen, reinem, riemen
+ostern, sorten, tenors, nestor, rosten
+garten, tragen, anregt, ragten, tanger
+geisel, geiles, siegel, gleise, selige
+lesart, laster, slater, alster, alters
+deiner, diener, dreien, neider, nieder
+dinger, dringe, reding, irgend, erding
+lesben, belsen, lebens, selben, nebels
+herein, heiner, reihen, einher, rheine
+meiers, meiser, mieser, misere, remise
+eilten, teilen, eitlen, eliten, leiten
+melina, milena, einmal, mailen
+untere, treuen, teuren, erneut
+
+
+
+processing division 6
+seibert, siebert, siebter, breites, biester, bereits, bereist
+scheint, schneit, sichten, stichen, nitsche, tischen
+estrich, schreit, sichert, streich, striche
+skatern, starken, tankers, karsten, kastner
+rieselt, steiler, sterile, leiters
+scherte, rechtes, stecher, chester
+schiere, schreie, reiches, sichere
+schlafe, falsche, flaches, flasche
+erlagen, regalen, general, anleger
+saniert, satiren, inserat, anreist
+renault, neutral, uralten, laurent
+reisten, reinste, steiner, stieren
+schalen, laschen, lachens, achseln
+erblast, bastler, bartels, alberts
+siegert, steiger, geister, gereist
+siegten, steigen, stiegen, gestein
+seligen, siegeln, geiseln, gleisen
+statuen, staunte, stauten, tetanus
+breiten, bietern, treiben, trieben
+erlahmt, thermal, lehramt
+
+
+
+processing division 7
+galerien, rangelei, generali, genialer, anlieger, algerien
+negieren, energien, ereignen, genieren
+einstige, einstieg, steinige, seitigen
+schienen, chinesen, schneien, scheinen
+schieren, sicheren, erschien, schreien
+reichste, sicherte, streiche, schreite
+geangelt, gelangte, genagelt, angelegt
+ursachen, rauschen, rauchens, schauern
+reaktion, kantorei, kroatien, kreation
+erlegten, regelten, gelernte
+falschen, schlafen, flaschen
+erlangen, garnelen, anlegern
+resident, dereinst, dreisten
+schieber, bereichs, schreibe
+tiefster, fristete, streifte
+schieden, schneide, scheiden
+tischler, erlischt, christel
+betreute, beteuert, erbeutet
+betreuen, beteuern, erbeuten
+betragen, gebraten, bretagne
+
+
+
+processing division 8
+sicherten, streichen, schreiten, scheitern, erscheint, reichsten
+tischchen, schichten, technisch, tschechin
+herrliche, lehrreich, ehrlicher
+besiegten, besteigen, bestiegen
+eingelebt, begleiten, geliebten
+angeregte, getragene, regentage
+angereist, gastieren, stagniere
+einstiger, steiniger, signierte
+gerichtes, gesichert, gesichter
+arbeitens, basierten, anbieters
+arbeitern, beraterin, antreiber
+pretiosen, postieren, posierten
+abhielten, teilhaben, beinhalte
+schneidet, entscheid, entschied
+abgereist, absteiger, beitrages
+sichtbare, absichert, abstriche
+schliefen, schleifen, feilschen
+teuersten, steuerten, treuesten
+delegiert, erledigte, gliederte
+sanierten, inseraten, anreisten
+
+
+
+processing division 9
+direktbank, kreditbank, bankkredit
+stagnierte, strategien, gastierten
+steiermark, maskierter, reisemarkt
+eingesandt, eingestand, ansteigend
+scheinwelt, westlichen, wesentlich
+entleerung, ungelernte, unterlegen
+herrhausen, herrenhaus, hausherren
+vertrieben, vertreiben, verbreiten
+gestiegene, geeignetes, gegenseite
+angewendet, gewandeten
+sportarten, transporte
+konstanter, kontrasten
+spanischem, schimpanse
+verdienste, verdientes
+konterfeis, kostenfrei
+spruchreif, freispruch
+abgeerntet, abgetreten
+konzentrat, konzertant
+dreisprung, grundpreis
+sonnentage, sogenannte
+
+
+
+processing division 10
+genetischer, gesicherten, gestenreich, gestrichene, energetisch
+versprochen, vorpreschen, vorsprechen
+niedrigeren, erniedrigen, irgendeiner
+ersichtlich, christliche, sichtlicher
+mitregieren, emigrierten
+geldspenden, spendengeld
+verbreitung, vertreibung
+gastronomen, rosenmontag
+gartenteich, angerichtet
+verlosungen, vorlesungen
+übertreiben, übertrieben
+ortseingang, eingangstor
+ausschieden, ausscheiden
+ortsausgang, ausgangsort
+vaterlandes, landesvater
+planstellen, stellenplan
+furchtbares, fruchtbares
+furchtbarer, fruchtbarer
+furchtbaren, fruchtbaren
+pokalsieger, siegerpokal
+
+
+
+processing division 11
+gliederungen, erledigungen, niederlegung
+ansteigenden, eingestanden, eingesandten
+leistenbruch, unsterbliche
+gegliederten, niedergelegt
+auszubreiten, auszutreiben
+gottesmutter, muttergottes
+gefühlsleben, lebensgefühl
+absteigenden, beigestanden
+nachgelassen, angelsachsen
+gecharterten, artgerechten
+kulturlebens, lebenskultur
+romantischen, monarchisten
+jahresanfang, anfangsjahre
+abgeordneten, dargebotenen
+feldspielern, spielfeldern
+gazastreifen, strafanzeige
+gleichsetzen, gesetzlichen
+thermoskanne, kostenrahmen
+zeitweiligen, zweiteiligen
+visitenkarte, interaktives
+
+
+
+processing division 12
+innerdeutsche, unterscheiden, unterschieden
+bühnenbildner, bühnenbildern
+innenminister, ministerinnen
+sportlichkeit, rechtspolitik
+literarisches, realistischer
+überschrieben, überschreiben
+anzeigentafel, anzeigetafeln
+einsatzbereit, arbeitszeiten
+landgerichtes, landesgericht
+konzentrierte, konzertierten
+konzernmutter, mutterkonzern
+entscheidenen, entschiedenen
+tierversuchen, verunsicherte
+abscheulichen, beschaulichen
+reorganisiert, organisierter
+geburtsfehler, geburtshelfer
+
+
+
+processing division 13
+tiertransporte, transportierte
+lebenslustigen, lebensleistung
+auftragsarbeit, arbeitsauftrag
+streitparteien, parteienstreit
+undemokratisch, dokumentarisch
+kunsthandwerks, handwerkskunst
+innenpolitiker, politikerinnen
+unterschreiben, unterschrieben
+unterschreiten, unterstreichen
+busunternehmer, subunternehmer
+busunternehmen, subunternehmen
+
+
+
+processing division 14
+dokumentarische, undemokratische
+gesetzentwurfes, gesetzesentwurf
+stabilisierende, destabilisieren
+
+
+
+processing division 15
+bezirksregierung, regierungsbezirk
+erscheinungsform, meinungsforscher
+erstinstanzliche, zentralistischen
+weihnachtsfeiern, weihnachtsferien
+undemokratischen, dokumentarischen
+schüleraustausch, austauschschüler
+eigentumswohnung, wohnungseigentum
+
+
+
+processing division 16
+ausgleichszahlung, zahlungsausgleich
+themenschwerpunkt, schwerpunktthemen
+
+
+
+processing division 17
+betriebswirtschaft, wirtschaftsbetrieb
+altersdurchschnitt, durchschnittsalter
+
+
+
+processing division 18
+gemeinschaftsaktion, aktionsgemeinschaft
+gemeinschaftsarbeit, arbeitsgemeinschaft
+koalitionsregierung, regierungskoalition
+
+
+
+processing division 19
+beratungsunternehmen, unternehmensberatung
+
+
+
+processing division 20
+
+
+
+processing division 21
+
+
+
+processing division 22
+
+
+
+processing division 23
+
+
+
+processing division 24
+
+
+
+processing division 25
+
+
+
+processing division 26
+
+
+
+processing division 27
+
+
+
+processing division 28
+
+
+
+processing division 29
+
+
+
+processing division 30
+
+
+

@@ -1,0 +1,17 @@
+graph {
+	eifern -- feiern [ label="2" ];
+	eifern -- ferien [ label="4" ];
+	eifern -- freien [ label="5" ];
+	eifern -- reifen [ label="4" ];
+	eifern -- riefen [ label="5" ];
+	feiern -- ferien [ label="2" ];
+	feiern -- freien [ label="3" ];
+	feiern -- reifen [ label="6" ];
+	feiern -- riefen [ label="7" ];
+	ferien -- freien [ label="1" ];
+	ferien -- reifen [ label="4" ];
+	ferien -- riefen [ label="5" ];
+	freien -- reifen [ label="3" ];
+	freien -- riefen [ label="4" ];
+	reifen -- riefen [ label="1" ];
+}

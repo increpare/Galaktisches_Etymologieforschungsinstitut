@@ -1,0 +1,274 @@
+9164 words
+calculating divisions
+on stufe 2
+on stufe 3
+on stufe 4
+on stufe 5
+on stufe 6
+on stufe 7
+on stufe 8
+on stufe 9
+on stufe 10
+on stufe 11
+on stufe 12
+on stufe 13
+on stufe 14
+on stufe 15
+on stufe 16
+on stufe 17
+on stufe 18
+on stufe 19
+on stufe 20
+on stufe 21
+on stufe 22
+on stufe 24
+on stufe 25
+on stufe 26
+on stufe 27
+processing division 0
+
+
+
+processing division 1
+ne, en
+na, an
+mi, im
+da, ad
+ba, ab
+
+
+
+processing division 2
+tor, rot, ort
+sie, sei, eis
+rad, dar, ard
+sed, des
+udo, duo
+gar, arg
+ton, not
+tal, alt
+spd, pds
+wen, new
+wer, rwe
+red, der
+rat, art
+usa, aus
+ots, ost
+nie, ein
+las, als
+ihn, hin
+gen, eng
+
+
+
+processing division 3
+tore, rote, orte
+heer, ehre, eher
+lief, fiel
+viel, live
+ford, dorf
+team, atem
+sein, eins
+sagt, gast
+rief, frei
+rest, erst
+rede, erde
+rand, dran
+luft, flut
+zuge, zeug
+lied, leid
+lebe, elbe
+lage, egal
+knie, kein
+klar, karl
+jena, jean
+
+
+
+processing division 4
+toren, tenor, roten, orten
+seine, seien, eisen, eines
+bande, baden, abend
+treue, teure, teuer
+tisch, stich, sicht
+teils, liste, liest
+reine, irene, einer
+regen, gerne, enger
+nagel, lange, lagen
+zieht, hitze
+tonne, noten
+todes, desto
+titel, teilt
+wiese, weise
+these, stehe
+tests, stets
+werde, weder
+teile, elite
+teams, amtes
+taten, tante
+
+
+
+processing division 5
+riefen, reifen, freien, ferien, feiern
+lieder, leider, derlei
+konten, konnte, knoten
+reinen, innere
+zielen, zeilen
+wurden, wunder
+wiesen, weisen
+wetter, wertet
+wenige, ewigen
+warten, warnte
+vorher, hervor
+träume, räumte
+treten, retten
+treibt, bitter
+traten, ratten
+tragen, garten
+tiefer, feiert
+thesen, stehen
+teurer, reuter
+teuren, erneut
+
+
+
+processing division 6
+leichte, etliche
+fischer, frische
+welches, wechsel
+vierten, vereint
+treiben, breiten
+trainer, terrain
+teilung, leitung
+strenge, gestern
+stiegen, steigen
+rechten, rechnet
+nachdem, demnach
+wenigen, gewinne
+kredite, direkte
+höheren, erhöhen
+anleger, general
+bargeld, belgrad
+bleiben, blieben
+bremens, bremsen
+daimler, dreimal
+dörfern, fördern
+
+
+
+processing division 7
+scheinen, schienen, chinesen
+schlafen, falschen, flaschen
+gespielt, spiegelt
+getragen, angeregt
+kroatien, reaktion
+leichten, teilchen
+logische, sogleich
+riesigen, ereignis
+scheiben, schieben
+gerichte, gereicht
+geflohen, geholfen
+schlagen, schlange
+sicheren, erschien
+anbieter, arbeiten
+beweisen, bewiesen
+einstieg, einstige
+erfunden, freunden
+erweisen, erwiesen
+
+
+
+processing division 8
+streichen, scheitern, erscheint
+mittleren, ermitteln
+vermieden, vermeiden
+verliehen, verleihen
+technisch, schichten
+betrieben, betreiben
+verwiesen, verweisen
+gesichter, gesichert
+geliebten, begleiten
+gegenteil, eingelegt
+christina, christian
+
+
+
+processing division 9
+vertrieben, vertreiben, verbreiten
+westlichen, wesentlich
+tschechien, technische
+schwestern, schwersten
+erschienen, erscheinen
+
+
+
+processing division 10
+vertreibung, verbreitung
+vereinbarte, verarbeiten
+entschieden, entscheiden
+engagierten, eingetragen
+beschrieben, beschreiben
+
+
+
+processing division 11
+
+
+
+processing division 12
+
+
+
+processing division 13
+
+
+
+processing division 14
+
+
+
+processing division 15
+
+
+
+processing division 16
+
+
+
+processing division 17
+
+
+
+processing division 18
+
+
+
+processing division 19
+
+
+
+processing division 20
+
+
+
+processing division 21
+
+
+
+processing division 22
+
+
+
+processing division 23
+
+
+
+processing division 24
+
+
+
+processing division 25
+
+
+

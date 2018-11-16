@@ -1,0 +1,5 @@
+graph {
+	ort -- rot [ label="1" ];
+	ort -- tor [ label="2" ];
+	rot -- tor [ label="3" ];
+}

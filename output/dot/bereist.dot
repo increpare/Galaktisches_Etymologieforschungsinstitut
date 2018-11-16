@@ -1,0 +1,23 @@
+graph {
+	bereist -- bereits [ label="1" ];
+	bereist -- biester [ label="8" ];
+	bereist -- breites [ label="4" ];
+	bereist -- seibert [ label="10" ];
+	bereist -- siebert [ label="11" ];
+	bereist -- siebter [ label="13" ];
+	bereits -- biester [ label="9" ];
+	bereits -- breites [ label="3" ];
+	bereits -- seibert [ label="11" ];
+	bereits -- siebert [ label="12" ];
+	bereits -- siebter [ label="14" ];
+	biester -- breites [ label="8" ];
+	biester -- seibert [ label="8" ];
+	biester -- siebert [ label="7" ];
+	biester -- siebter [ label="5" ];
+	breites -- seibert [ label="12" ];
+	breites -- siebert [ label="13" ];
+	breites -- siebter [ label="13" ];
+	seibert -- siebert [ label="1" ];
+	seibert -- siebter [ label="3" ];
+	siebert -- siebter [ label="2" ];
+}

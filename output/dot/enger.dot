@@ -1,0 +1,12 @@
+graph {
+	enger -- genre [ label="3" ];
+	enger -- gerne [ label="4" ];
+	enger -- neger [ label="1" ];
+	enger -- regen [ label="6" ];
+	genre -- gerne [ label="1" ];
+	genre -- neger [ label="4" ];
+	genre -- regen [ label="5" ];
+	gerne -- neger [ label="5" ];
+	gerne -- regen [ label="4" ];
+	neger -- regen [ label="7" ];
+}

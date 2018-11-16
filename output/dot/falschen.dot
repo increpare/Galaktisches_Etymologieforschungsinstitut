@@ -1,0 +1,5 @@
+graph {
+	falschen -- flaschen [ label="1" ];
+	falschen -- schlafen [ label="12" ];
+	flaschen -- schlafen [ label="11" ];
+}

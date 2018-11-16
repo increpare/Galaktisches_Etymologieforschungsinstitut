@@ -1,0 +1,17 @@
+graph {
+	enterichs -- reichsten [ label="18" ];
+	enterichs -- scheitern [ label="27" ];
+	enterichs -- schreiten [ label="29" ];
+	enterichs -- sicherten [ label="28" ];
+	enterichs -- streichen [ label="20" ];
+	reichsten -- scheitern [ label="15" ];
+	reichsten -- schreiten [ label="11" ];
+	reichsten -- sicherten [ label="12" ];
+	reichsten -- streichen [ label="10" ];
+	scheitern -- schreiten [ label="4" ];
+	scheitern -- sicherten [ label="5" ];
+	scheitern -- streichen [ label="13" ];
+	schreiten -- sicherten [ label="5" ];
+	schreiten -- streichen [ label="11" ];
+	sicherten -- streichen [ label="12" ];
+}

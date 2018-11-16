@@ -1,0 +1,23 @@
+graph {
+	carets -- caster [ label="6" ];
+	carets -- caters [ label="3" ];
+	carets -- crates [ label="2" ];
+	carets -- reacts [ label="5" ];
+	carets -- recast [ label="5" ];
+	carets -- traces [ label="7" ];
+	caster -- caters [ label="3" ];
+	caster -- crates [ label="6" ];
+	caster -- reacts [ label="11" ];
+	caster -- recast [ label="9" ];
+	caster -- traces [ label="9" ];
+	caters -- crates [ label="3" ];
+	caters -- reacts [ label="8" ];
+	caters -- recast [ label="8" ];
+	caters -- traces [ label="6" ];
+	crates -- reacts [ label="5" ];
+	crates -- recast [ label="5" ];
+	crates -- traces [ label="5" ];
+	reacts -- recast [ label="2" ];
+	reacts -- traces [ label="6" ];
+	recast -- traces [ label="8" ];
+}

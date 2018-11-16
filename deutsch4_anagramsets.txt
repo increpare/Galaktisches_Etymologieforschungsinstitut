@@ -1,0 +1,477 @@
+239650 words
+calculating divisions
+on stufe 3
+on stufe 4
+on stufe 5
+on stufe 6
+on stufe 7
+on stufe 8
+on stufe 9
+on stufe 10
+on stufe 11
+on stufe 12
+on stufe 13
+on stufe 14
+on stufe 15
+on stufe 16
+on stufe 17
+on stufe 18
+on stufe 19
+on stufe 20
+on stufe 21
+on stufe 22
+on stufe 23
+on stufe 24
+on stufe 25
+on stufe 26
+on stufe 27
+on stufe 28
+on stufe 29
+on stufe 30
+on stufe 31
+on stufe 32
+on stufe 33
+on stufe 34
+on stufe 35
+processing division 0
+al, la
+is, si
+me, em
+el, le
+mi, im
+go, og
+ml, lm
+ad, da
+ms, sm
+ah, ha
+äh, hä
+na, an
+mA, Am
+ma, am
+en, ne
+er, re
+ni, in
+eh, he
+ed, de
+no, on
+
+
+
+processing division 1
+Pei, Pie
+Bio, Boi
+wen, new
+neu, une
+Eid, Edi
+Lou, Luo
+nie, ein
+Wei, Wie
+and, nad
+Gun, Gnu
+Mia, Mai
+hab, bah
+Oak, Oka
+gen, eng
+och, hoc
+dun, und
+Oil, Oli
+Ara, Aar
+Goa, Gao
+Hau, Hua
+
+
+
+processing division 2
+Line, Lien, Leni, Lein
+life, lief, fiel, feil
+Feri, Frei, Fire, Fier
+Pepi, Piep, Pipe
+Main, Mina, Mani
+Lima, Liam, Laim
+eins, sine, sein
+Gear, Gare, Gera
+Mayr, Myra, Mary
+Leon, Leno, Lone
+Kein, Kien, Knie
+Meta, Meat, Mate
+Lena, Lean, Lane
+Dime, Diem, Demi
+fuer, freu, rufe
+Mali, Mail, Mila
+Wine, Wien, Wein
+Toni, Tion, Tino
+frei, reif, rief
+taub, tabu, baut
+
+
+
+processing division 3
+leite, eitle, eitel, teile, eilte
+Baker, Barke, Berka, Break, Brake
+neunt, tunen, nuten, unten
+eigen, geien, eigne, neige
+Moers, Mores, Morse, Moser
+Pater, Petar, Petra, Parte
+Bibel, Bible, Bleib, Blieb
+Herta, Harte, Heart, Herat
+Baste, Bates, Beast, Beats
+eisen, eines, seine, seien
+Andre, Adern, Arden
+Eiern, Ernie, Einer
+eiern, reine, einer
+Pepsi, Pieps, Pipes
+Erben, Ebner, Ebern
+leiht, hielt, heilt
+Marke, Maker, Marek
+neuer, euren, reuen
+Frost, Forts, Forst
+unbar, braun, urban
+
+
+
+processing division 4
+feiner, feiern, fieren, riefen, reifen, freien, eifern
+seiden, seiend, sieden, deines, diesen
+seiner, riesen, reisen, reines, eisern
+reuten, teuren, treuen, untere, erneut
+breite, beriet, bereit, treibe
+Brauen, Braune, Bernau, Bauern
+blanke, blaken, kalben, kabeln
+Salier, Sailer, Serail, Serial
+Manier, Marien, Marine, Merian
+brauen, braune, rauben, urbane
+retten, treten, erntet, netter
+teilen, leiten, eilten, eitlen
+kalten, takeln, talken
+klärte, kälter, räkelt
+Knobel, Kloben, Kolben
+feines, fiesen, seifen
+knieen, kienen, keinen
+Bieter, Breite, Bertie
+feilen, fielen, liefen
+feiert, reifte, tiefer
+
+
+
+processing division 5
+Stieber, Siebter, Siebert, Seibert
+bereist, bereits, siebter, breites
+sichten, tischen, schneit, scheint
+gelinde, ledigen, liegend, elendig
+Flieder, Friedel, Fiedler
+stiegen, steigen, siegten
+kreativ, reaktiv, aktiver
+gestern, strenge, engster
+stieben, siebten, siebent
+steuern, streuen, unteres
+sterben, bersten, streben
+Rentier, Reitern, Reinert
+Stenger, Stegner, Strenge
+falsche, flaches, schlafe
+reinweg, weniger, weigern
+reiches, sichere, schiere
+befreit, bereift, fiebert
+behagen, abgehen, gehaben
+raschen, crashen, scharen
+getaner, anregte, geraten
+
+
+
+processing division 6
+erschien, schieren, schreien, sicheren
+Kroatien, Kreation, Kantorei
+einstige, einstieg, steinige
+negieren, ereignen, genieren
+erbauten, ertauben, betrauen
+erbeuten, betreuen, beteuern
+erbeutet, betreute, beteuert
+erbieten, berieten, bereiten
+erbitten, bitteren, beritten
+erhärten, ernährte, härteren
+erliegen, legieren, gelieren
+erlischt, erstlich, restlich
+erlisten, sterilen, trieseln
+erneuert, erneuter, teureren
+Schieler, Schleier, Schliere
+ersitzen, striezen, zensiert
+leistbar, blasiert, stabiler
+polstern, sporteln, stolpern
+latschig, stachlig, gastlich
+latschen, schalten, stacheln
+
+
+
+processing division 7
+sicherten, erscheint, schreiten, scheitern, streichen, reichsten
+aufseilen, ausfeilen, ausfielen, eislaufen
+verliehen, verleihen, verheilen
+verleitet, vereitelt, verteilte
+verleiten, vereiteln, verteilen
+besichern, schrieben, schreiben
+tischlern, ernstlich, stricheln
+ergreifen, gefrieren, regenfrei
+besiegten, besteigen, bestiegen
+Tischchen, Technisch, Tschechin
+besorgten, geborsten, gestorben
+erinnerte, rentieren, entrieren
+signierte, steiniger, einstiger
+erledigte, delegiert, gliederte
+austreten, erstaunte, ansteuert
+abgelenkt, angeklebt, beklagten
+vernieten, verneinte, vereinten
+erreichen, erriechen, reicheren
+verheizen, verziehen, verzeihen
+teuersten, steuerten, treuesten
+
+
+
+processing division 8
+gestielten, gelisteten, entgleiste
+abscheuern, ausbrechen, berauschen
+ankriechen, reinhacken, einkrachen
+anlatschen, anschalten, anstacheln
+vertrieben, vertreiben, verbreiten
+Verteilung, Verleitung, Vereitlung
+Hausherren, Herrenhaus, Herrhausen
+erschienen, erscheinen, einscheren
+nachreifen, nachfeiern, nacheifern
+trübsinnig, inbrünstig
+gesonderte, geordnetes
+gespielten, spiegelten
+Zotteltrab, Zottelbart
+ablatschen, abschalten
+gestiegene, geeignetes
+emphatisch, empathisch
+gestolpert, gepolstert
+abrauschen, ausbrachen
+abrutschen, schraubten
+zusprechen, zupreschen
+
+
+
+processing division 9
+gesicherten, gestenreich, gestrichene, genetischer, energetisch
+angeblicher, brachliegen, belangreich
+Fingernagel, Finalgegner, Fliegengarn
+schreienden, erscheinend, eindreschen
+vorsprechen, vorpreschen, versprochen
+anschmieren, armenischen, einramschen
+freundliche, durchfeilen, durchliefen
+erniedrigen, irgendeiner, niedrigeren
+Feilscherei, Fleischerei
+beschaulich, abscheulich
+bescheinigt, besichtigen
+Karbolineum, Kolumbianer
+beschleicht, bestechlich
+beschreiben, beschrieben
+beschreiten, bestreichen
+beschweigen, wegschieben
+Abschneiden, Abendschein
+angepeilten, eingeplante
+Kartenkunde, Kundenkarte
+simulierten, stimulieren
+
+
+
+processing division 10
+einstreichen, einschreiten, technisieren
+thesaurieren, herauseitern, herausreiten
+unterbreiten, untertreiben, untertrieben
+ausschliefen, ausfeilschen
+sterilisiert, stilisierter
+islamisieren, assimilieren
+Jugendarbeit, Jugendbeirat
+metaphysisch, sympathische
+gesetzlichen, gleichsetzen
+Sprachschule, Schulsprache
+mitscherlich, christlichem
+Straßenseite, Seitenstraße
+Spielschluss, Schlussspiel
+Spieleinsatz, Spezialisten
+verbreiteter, verbreiterte
+Strombranche, Schmorbraten
+Speisenkarte, Speisekarten
+einschrauben, unscheinbare
+einschliefen, einschleifen
+Bauernarbeit, Bauarbeitern
+
+
+
+processing division 11
+heranschieben, herabschneien, herabscheinen
+unterschieden, unterscheiden, innerdeutsche
+Projektbeirat, Projektarbeit
+Untertreibung, Unterbreitung
+Rennradfahrer, Radrennfahrer
+eisenzeitlich, eiszeitlichen
+hereinreichen, hereinriechen
+reorganisiert, organisierter
+Furchtbarkeit, Fruchtbarkeit
+realistischer, literarisches
+Familienbande, Familienabend
+Kreuzschnabel, Kanzlerbesuch
+herumfliegend, umherfliegend
+herumfuchteln, umherfuchteln
+aufgeschaltet, aufgestachelt
+herumgeistern, umhergeistern
+herumkrabbeln, umherkrabbeln
+rastgesichert, strategischer
+herumkutschen, umherkutschen
+Verkaufslager, Verkaufsregal
+
+
+
+processing division 12
+herumschlürfen, umherschlürfen
+vorbeisprechen, vorbeipreschen
+unverschleiert, verlustreichen
+unterstreichen, unterschreiten
+unterschrieben, unterschreiben
+hereinscheinen, hereinschneien
+durchstreichen, durchschreiten
+hereintrippeln, einhertrippeln
+Geistesschärfe, Geschäftsreise
+dokumentarisch, undemokratisch
+Schwanzstummel, Stummelschwanz
+durchschneiden, durchscheinend
+herumflanieren, umherflanieren
+Parteiprogramm, Programmpartei
+herumkarriolen, umherkarriolen
+Arbeitsauftrag, Auftragsarbeit
+herumschlurfen, umherschlurfen
+zusammenkochen, zusammenhocken
+herumschwärmen, umherschwärmen
+herumschwimmen, umherschwimmen
+
+
+
+processing division 13
+weiterbetreiben, weiterbetrieben
+herumschwänzeln, umherschwänzeln
+staatsrechtlich, rechtsstaatlich
+Stiftungsarbeit, Stiftungsbeirat
+Sozialberaterin, Sozialarbeitern
+Sicherheitsrats, Sicherheitsrast
+Kriegskoalition, Koalitionskrieg
+Furchtlosigkeit, Fruchtlosigkeit
+Regierungskreis, Regierungskrise
+Begriffsbildung, Bildungsbegriff
+Ausländerbeirat, Ausländerarbeit
+Unterstreichung, Unterschreitung
+herumfuhrwerken, umherfuhrwerken
+Koalitionskreis, Koalitionskrise
+herumschleichen, umherschleichen
+herumschlendern, umherschlendern
+herumschnüffeln, umherschnüffeln
+herumschnuppern, umherschnuppern
+
+
+
+processing division 14
+Redaktionsbeirat, Redaktionsarbeit
+vorüberstreichen, vorüberschreiten
+Nervenbehandlung, Nebenverhandlung
+alleinherrschend, landesherrlichen
+umherkutschieren, herumkutschieren
+Wirtschaftskreis, Wirtschaftskrise
+Weihnachtsferien, Weihnachtsfeiern
+undemokratischen, dokumentarischen
+rechtsstaatliche, staatsrechtliche
+entlangstreichen, entlangschreiten
+Silvesterkarpfen, Silvesterkrapfen
+Psychopathologie, Pathopsychologie
+Forschungsbeirat, Forschungsarbeit
+
+
+
+processing division 15
+rationalistischen, nationalistischer
+Schildkrötensuppe, Suppenschildkröte
+auseinanderfitzen, aufeinandersitzen
+auseinanderfetzen, aufeinandersetzen
+Interessenpolitik, Inspektionsleiter
+Verwaltungsarbeit, Verwaltungsbeirat
+Naturschutzarbeit, Naturschutzbeirat
+Behindertenarbeit, Behindertenbeirat
+
+
+
+processing division 16
+pathopsychologisch, psychopathologisch
+auseinandertreiben, auseinanderbreiten
+zurechnungsunfähig, unzurechnungsfähig
+umhervagabundieren, herumvagabundieren
+Durchschnittsernte, Durchschnittsrente
+
+
+
+processing division 17
+mittelosteuropäisch, ostmitteleuropäisch
+Vermögensverwaltung, Verwaltungsvermögen
+
+
+
+processing division 18
+
+
+
+processing division 19
+
+
+
+processing division 20
+
+
+
+processing division 21
+
+
+
+processing division 22
+
+
+
+processing division 23
+
+
+
+processing division 24
+
+
+
+processing division 25
+
+
+
+processing division 26
+
+
+
+processing division 27
+
+
+
+processing division 28
+
+
+
+processing division 29
+
+
+
+processing division 30
+
+
+
+processing division 31
+
+
+
+processing division 32
+
+
+
+processing division 33
+
+
+

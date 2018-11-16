@@ -1,0 +1,12 @@
+graph {
+	dearths -- hardest [ label="10" ];
+	dearths -- hatreds [ label="13" ];
+	dearths -- threads [ label="13" ];
+	dearths -- trashed [ label="15" ];
+	hardest -- hatreds [ label="5" ];
+	hardest -- threads [ label="9" ];
+	hardest -- trashed [ label="13" ];
+	hatreds -- threads [ label="4" ];
+	hatreds -- trashed [ label="8" ];
+	threads -- trashed [ label="6" ];
+}

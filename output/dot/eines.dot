@@ -1,0 +1,8 @@
+graph {
+	eines -- eisen [ label="3" ];
+	eines -- seien [ label="5" ];
+	eines -- seine [ label="4" ];
+	eisen -- seien [ label="2" ];
+	eisen -- seine [ label="3" ];
+	seien -- seine [ label="1" ];
+}

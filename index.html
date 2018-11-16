@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Parallanagram</title>
+
+
+	<style>
+		body{
+			text-align: left;
+			margin-left: 30px;
+			font-family: monospace;
+    		white-space: pre;
+    		font-size: 200%;
+    		line-height: 87%;
+		}
+		.highlight {
+			color: blue;
+		}
+		u {space			
+			font-weight: bold;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<div id="textbox">
+	Loading game (requires javascript)
+</div>
+
+<script src="wort_liste.js"  charset="UTF-8"></script>
+<script>
+
+	let cx=0;
+	let cy=0;
+	let geteilte_list_de=[];
+	let geteilte_list_en=[];
+	function getPerm(n){
+		let perms = [
+				[0,3,1,2],
+				[2,1,0,3,4],
+				[5,2,4,1,0,3],
+				[2,0,4,6,3,1,5],
+				[7,4,2,3,5,1,6,0],
+				[2,8,5,0,4,6,1,3,7],
+				[1,3,8,2,0,7,4,6,5,9],
+				[1,2,9,6,8,5,10,4,7,3,0],
+				[1,2,9,6,11,8,5,10,4,7,3,0]
+			];
+		let perm = perms[n].slice();
+		let rbool = Math.floor(Math.random() * 2);     
+		if (rbool===0){
+			perm = perm.reverse();
+		}
+		let cycle = Math.floor(Math.random() * n);
+		for (let i=0;i<perm.length;i++){
+			perm[i]=(perm[i]+cycle)%perm.length;
+		}  
+		return perm;
+	}
+
+	function verwendenPermutation(p,s){
+		let result="";
+		for (let i=0;i<s.length;i++){
+			result = result+s[p[i]];
+		}
+		return result;
+	}
+
+	let cw = 53;
+	let ch = 24;
+
+	let level=0;
+
+	let sprache="EN";
+	let modus=0;//0 titelbildschirm, 1 intro, 2 spiel
+
+	let index=0;
+
+	function checkKey(e) {
+
+	    e = e || window.event;
+
+	    if (e.keyCode == '38') {
+	        // up arrow
+	    	onInput(0);
+	    	e.preventDefault();
+	    }
+	    else if (e.keyCode == '40') {
+	        // down arrow
+	    	onInput(1);
+	    	e.preventDefault();
+	    }
+	    else if (e.keyCode == '37') {
+	       // left arrow
+	    	onInput(2);
+	    	e.preventDefault();
+	    }
+	    else if (e.keyCode == '39') {
+	       // right arrow
+	    	onInput(3);
+	    	e.preventDefault();
+	    } else if (e.keyCode == '88' || e.keyCode =='32'||e.keyCode =='13'||e.keyCode =='68'){
+	    	onInput(4);
+	    	e.preventDefault();
+	    } else if (e.keyCode=='90'||e.keyCode=='85'){
+	    	onInput(5);
+	    } else if (e.keyCode=='27'){
+	    	onInput(6);
+	    }
+
+	}
+
+	function startTitleBildschirm(){
+		modus=0;
+		index=0;
+		level=0;
+		render();
+	}
+
+	function S(de,en){
+		if (sprache==="DE"){
+			return de;
+		} else {
+			return en;
+		}
+	}
+
+	function center(t,w){
+		let padding=w-t.length;
+		let lpad = Math.floor(padding/2);
+		let rpad = w-lpad-t.length;
+
+		console.log(lpad+","+rpad);
+		for (let i=0;i<lpad;i++){
+			t=" "+t;
+		}
+		for (let i=0;i<rpad;i++){
+			t=t+" ";
+		}
+		return t;
+	}
+
+	function rendernTitelBildSchirm(){
+		let lines=[]
+		lines.push(S("==================","================="));
+		lines.push(S("  PARALLANAGRAMM","  PARALLANAGRAM"));
+		lines.push(S("==================","================="));
+		lines.push(S("von increpare","by increpare	"));
+		lines.push("");
+		lines.push("");
+
+		let t = "START";
+		if (index===0){
+			t="-> "+t;
+		} else {
+			t="   "+t;
+		}
+		// t = center(t,20);
+		lines.push(t);
+
+
+		t = S("SPRACHE (DEUTSCH)","LANGUAGE (ENGLISH)");
+		if (index===1){
+			t="-> "+t;
+		} else {
+			t="   "+t;
+		}
+		// t = center(t,20);
+
+		lines.push(t);
+
+		lines.push("");
+		lines.push("");
+		lines.push(S("Steuerung: Pfeiltasten + X", "Controls: Arrow Keys + X"));
+
+		return lines;
+	}
+
+	let blank_r_s=Array(cw+1).join(" ");
+
+	function smart_Insert(s,pos,sub_s,pre){
+		let cur_pos=0;
+		let depth=0;
+		for (let i=0;i<s.length;i++){
+			if (pre===true){
+				while (s[i]==="<"){
+					let depth=0;
+					do {
+						if (s[i]==="<"){
+							depth++;
+						}
+						if (s[i]===">"){
+							depth--;
+						}
+						i++;
+					} while (depth>0)
+				}
+			}
+			if (cur_pos===pos){
+				return s.substr(0,i)+sub_s+s.substr(i);				
+			}
+			if (pre===false){				
+				while (s[i]==="<"){
+					let depth=0;
+					do {
+						if (s[i]==="<"){
+							depth++;
+						}
+						if (s[i]===">"){
+							depth--;
+						}
+						i++;
+					} while (depth>0)
+				}
+			}
+			cur_pos++;
+		}
+		return s+sub_s;		
+	}
+
+	function overwrite(s,sub_s,pos){
+		var pre=false;
+
+		let cur_pos=0;
+		let depth=0;
+		for (let i=0;i<s.length;i++){
+			if (pre===true){
+				while (s[i]==="<"){
+					let depth=0;
+					do {
+						if (s[i]==="<"){
+							depth++;
+						}
+						if (s[i]===">"){
+							depth--;
+						}
+						i++;
+					} while (depth>0)
+				}
+			}
+			if (cur_pos===pos){
+				let result = s.substr(0,i)+sub_s+s.substr(i+sub_s.length);
+				result = result.substr(0,s.length);	
+				return result;		
+			}
+			if (pre===false){				
+				while (s[i]==="<"){
+					let depth=0;
+					do {
+						if (s[i]==="<"){
+							depth++;
+						}
+						if (s[i]===">"){
+							depth--;
+						}
+						i++;
+					} while (depth>0)
+				}
+			}
+			cur_pos++;
+		}
+
+		return s;
+	}
+
+	function zeichen_tabelle(lines,x_origin,y_origin,zeilen,spalten,zelle_breite,zelle_hoehe){
+		let zeile_breite = 1+spalten*(zelle_breite+1);
+		
+		//draw h lines
+		for (let j=0;j<zeilen+1;j++){
+
+			let chars = ["├","─","┼","┤"];
+
+			if (j===0){
+				chars=["┌","─","┬","┐"];
+			} else if (j===zeilen){
+				chars=["└","─","┴","┘"];
+			}
+			let Rand=Array(zeile_breite+1).join(chars[1]);
+
+			Rand=overwrite(Rand,chars[0],0);
+			for (let i=1;i<spalten;i++){
+				let x = x_origin+(zelle_breite+1)*i;
+				Rand=overwrite(Rand,chars[2],x);
+			}
+			Rand=overwrite(Rand,chars[3],Rand.length-1);
+
+			let r = y_origin+j*(1+zelle_hoehe);
+			lines[r]=overwrite(lines[r],Rand,x_origin);
+		}
+		//draw v lines
+		for (let i=0;i<spalten+1;i++){
+			let cur_x = x_origin+(zelle_breite+1)*i;
+			for (let j=0;j<zeilen;j++){
+				for (let j2=1;j2<=zelle_hoehe;j2++){
+					let cur_y = y_origin+j*(zelle_hoehe+1)+j2;
+
+					lines[cur_y]=overwrite(lines[cur_y],"│",cur_x);
+				}
+			}
+		}
+	}
+
+	var won=false;
+
+	function placeCursor(s,pos){
+		s = smart_Insert(s,pos,"<u>",false);
+		s = smart_Insert(s,pos+1,"</u>",false);
+		return s
+	}
+
+	var spälte = [
+		4,//4
+		4,//5
+		4,//6
+		4,//7
+		4,//8
+		4,//9
+		4,//10
+		4,//11
+		4//12
+	]
+	function rendernSpielBildSchirm(){
+		let wordlist = sprache==="DE" ? 
+				geteilte_list_de[level]:
+				geteilte_list_en[level];
+
+		let lines=[];
+
+		for (let i=0;i<ch;i++){
+			lines.push(blank_r_s);
+		}
+
+		var spälten = spälte[level];
+
+		var zeilen = 3;//Math.ceil((level+4)/spälten)
+		zeichen_tabelle(lines,0,1,zeilen,spälten,level+4,2);
+
+		let r = 1;
+		var allfound=true;
+
+		for (let i=0;i<wort_zeilen.length;i+=2){
+			var index = Math.round(i/2);
+			var x_origin = 1+(index%spälten*(level+4+1));
+			var y_origin = 2+3*Math.floor(index/spälten);
+
+			lines[y_origin]=overwrite(lines[y_origin],wort_zeilen[i],x_origin);
+			lines[y_origin+1]=overwrite(lines[y_origin+1],wort_zeilen[i+1],x_origin);
+			if (cy===0){
+				lines[y_origin]=placeCursor(lines[y_origin],x_origin+cx);
+			} else {
+				lines[y_origin+1]=placeCursor(lines[y_origin+1],x_origin+cx);		
+			}
+			var found1=wordlist.indexOf(wort_zeilen[i])>=0;
+			if (found1){
+				lines[y_origin]=smart_Insert(lines[y_origin],x_origin,"<span class='highlight'>",false)
+				lines[y_origin]=smart_Insert(lines[y_origin],x_origin+level+4,"</span>",false)
+			}
+			var found2=wordlist.indexOf(wort_zeilen[i+1])>=0;
+			if (found2){
+				lines[y_origin+1]=smart_Insert(lines[y_origin+1],x_origin,"<span class='highlight'>",false)
+				lines[y_origin+1]=smart_Insert(lines[y_origin+1],x_origin+level+4,"</span>",false)
+			}
+			if (!found1 && !found2){
+				allfound=false;
+			}
+			r+=3;
+		}
+
+		if (allfound){
+			won=true;
+			lines[0]=S("Sehr gut!  Drücken sie X um fortzufahren.","Nice! Press X to continue");
+		}
+		//draw cursor
+		return lines;
+	}
+
+	function titleInput(k){
+		if (k===0 && index>0){
+			index--;
+		}
+		if (k===1 && index<1){
+			index++;
+		}
+		if (k===4){
+			if (index===0){
+				modus=1;
+				level=0;
+			} else if (index===1){
+				if (sprache==="DE"){
+					sprache="EN";
+				} else {
+					sprache="DE";
+				}
+			}
+		}
+		if (k===2||k===3){
+			if (index===1){
+				if (sprache==="DE"){
+					sprache="EN";
+				} else {
+					sprache="DE";
+				}
+
+			}
+		}
+	}	
+
+	let wort_zeilen=[];
+
+	function setupLevel(){		
+		won=false;
+		cx=2;
+		cy=0;
+
+		let selectedWords=[];
+		let wordlist = sprache==="DE" ? 
+				geteilte_list_de[level].slice() :
+				geteilte_list_en[level].slice();
+		
+		let perm = getPerm(level);
+		
+		for(let i = 0; i < (level+4); i++) {
+		    let idx = Math.floor(Math.random() * wordlist.length);
+		    let w = wordlist[idx];
+		    w = verwendenPermutation(perm,w);
+		    selectedWords.push(w);
+		    wordlist.splice(idx, 1);
+		}
+		
+		wort_zeilen=[];
+		for (let i=0;i<selectedWords.length;i++){
+			wort_zeilen.push(selectedWords[i]);
+			wort_zeilen.push("");
+		}
+		undos=[]
+		bakUndo();
+	}
+
+	function transitionInput(k){
+		if (k===4){
+			setupLevel()
+			modus=2;
+		}	
+	}
+
+	function endeInput(k){
+		if (k===4){
+			startTitleBildschirm();
+		}	
+	}
+
+	function deepCopy(currentArray){
+		var newArray = currentArray.map(function(arr) {
+		    return arr.slice();
+		});
+		return newArray;		
+	}
+
+	var undos=[];
+	function bakUndo(){
+		undos.push(deepCopy(wort_zeilen))
+	}
+
+	function doUndo(){
+		if (undos.length>1){
+			undos.pop()
+			wort_zeilen = deepCopy(undos[undos.length-1]);
+		}
+	}
+	function spielInput(k){
+		if (k===0&&cy>0){
+			cy--;
+		}
+		if (k===1 && cy<1){
+			cy++;
+		}
+		if (k===2 && cx>0){
+			cx--;
+		}
+		if (k===3 && cx<level+4-1){
+			cx++;
+		}
+		if (k===4){
+			if (won)
+			{
+				modus=1;
+				level++;
+				if (level+4===13){
+					modus=3;
+				}
+			} else {
+				let eg_row =wort_zeilen[cy];
+				if (eg_row.length<=cx){
+					return;
+				}
+				for (let i=0;i<wort_zeilen.length;i+=2){
+					let i1=i;
+					let i2 =i+1;
+					if (cy==1){
+						i1=i+1;
+						i2=i;
+					}
+					//swap from 1 to do					
+					let c = wort_zeilen[i1][cx];
+					wort_zeilen[i1]=wort_zeilen[i1].substr(0,cx)+wort_zeilen[i1].substr(cx+1);
+					wort_zeilen[i2]+=c;
+				}
+				bakUndo();
+			}
+		}
+		if (k==5){
+			doUndo();
+		}
+	}
+
+	function onInput(k){
+		
+		if (k===6){
+			startTitleBildschirm();
+		}
+
+		switch(modus){
+			case 0:
+			titleInput(k);
+			break;
+			case 1:
+			transitionInput(k);
+			break;
+			case 2:
+			spielInput(k);
+			break;
+			case 3:
+			endeInput(k);
+			break;
+		}
+		render();
+	}
+
+	function rendernTransitionBildSchirm(){
+		let lines=[];
+		let s = "  Level "+(level+4)+S(" von "," of ")+"12.  ";
+		let estring="";
+		for (let i=0;i<s.length;i++){
+			estring+="=";
+		}
+		lines.push(estring);
+		lines.push(s);
+		lines.push(estring);
+		lines.push("");
+		lines.push(S("Drücken Sie die X Taste.","Press the X button to continue."));
+		return lines;
+	}
+
+
+	function rendernEndeBildschirm(){
+		let lines=[];
+		let s = S("  ENDE  ","  THE END  ");
+		let estring="";
+		for (let i=0;i<s.length;i++){
+			estring+="=";
+		}
+		lines.push(estring);
+		lines.push(s);
+		lines.push(estring);
+		lines.push("");
+		lines.push(S("Herzlichen Glückwunsch!",""));
+		lines.push(S("Du bist der Parallanagrameister","Congratulations! You are the PARALLANAGRAM MASTER!"));
+		lines.push(S("bzw. die Parallanagrameisterin!",""))
+		lines.push("");
+		lines.push(S("Drücken Sie die X Taste.","Press the X button to continue."));
+		return lines;
+	}
+
+	function pad_right(s){
+		while(s.length<cw){
+			s+=" ";
+		}
+		return s;
+	}
+
+	function render(){
+		let lines;
+		switch(modus){
+			case 0:
+			lines=rendernTitelBildSchirm();
+			break;
+			case 1:
+			lines=rendernTransitionBildSchirm()
+			break;
+			case 2:
+			lines=rendernSpielBildSchirm()
+			break;
+			case 3:
+			lines=rendernEndeBildschirm()
+			break;
+		}
+
+		let text = lines.map(l=>pad_right(l)).join("<br>");
+
+		let textbox = document.getElementById("textbox");
+		textbox.innerHTML=text;
+	}
+
+	function teilenListe(){
+		geteilte_list_en=[[],[],[],[],[],[],[],[],[]];
+		geteilte_list_de=[[],[],[],[],[],[],[],[],[]];
+		for (let i=4;i<=12;i++){
+			geteilte_list_de[i-4]=wortliste_de.filter(w=>w.length===i);
+			geteilte_list_en[i-4]=wortliste_en.filter(w=>w.length===i);
+		}
+	}	
+
+	function startSpiel(){
+		teilenListe();
+		document.onkeydown = checkKey;				
+		startTitleBildschirm();
+	}
+
+	window.onload =startSpiel();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+graph {
+	eher -- ehre [ label="1" ];
+	eher -- heer [ label="1" ];
+	eher -- rehe [ label="3" ];
+	ehre -- heer [ label="2" ];
+	ehre -- rehe [ label="2" ];
+	heer -- rehe [ label="4" ];
+}

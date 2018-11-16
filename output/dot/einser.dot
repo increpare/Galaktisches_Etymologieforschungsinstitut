@@ -1,0 +1,30 @@
+graph {
+	einser -- eisern [ label="3" ];
+	einser -- reines [ label="6" ];
+	einser -- reisen [ label="7" ];
+	einser -- riesen [ label="8" ];
+	einser -- seiner [ label="3" ];
+	einser -- serien [ label="7" ];
+	einser -- sirene [ label="7" ];
+	eisern -- reines [ label="7" ];
+	eisern -- reisen [ label="4" ];
+	eisern -- riesen [ label="5" ];
+	eisern -- seiner [ label="4" ];
+	eisern -- serien [ label="4" ];
+	eisern -- sirene [ label="6" ];
+	reines -- reisen [ label="3" ];
+	reines -- riesen [ label="4" ];
+	reines -- seiner [ label="9" ];
+	reines -- serien [ label="7" ];
+	reines -- sirene [ label="7" ];
+	reisen -- riesen [ label="1" ];
+	reisen -- seiner [ label="8" ];
+	reisen -- serien [ label="4" ];
+	reisen -- sirene [ label="6" ];
+	riesen -- seiner [ label="9" ];
+	riesen -- serien [ label="5" ];
+	riesen -- sirene [ label="5" ];
+	seiner -- serien [ label="4" ];
+	seiner -- sirene [ label="4" ];
+	serien -- sirene [ label="4" ];
+}

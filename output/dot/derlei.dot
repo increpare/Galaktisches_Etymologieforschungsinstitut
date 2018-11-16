@@ -1,0 +1,5 @@
+graph {
+	derlei -- leider [ label="8" ];
+	derlei -- lieder [ label="9" ];
+	leider -- lieder [ label="1" ];
+}

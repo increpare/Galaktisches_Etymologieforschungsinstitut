@@ -2,11 +2,16 @@ graph {
 	alerting -- altering [ label="2" ];
 	alerting -- integral [ label="21" ];
 	alerting -- relating [ label="6" ];
+	alerting -- tanglier [ label="14" ];
 	alerting -- triangle [ label="14" ];
 	altering -- integral [ label="19" ];
 	altering -- relating [ label="8" ];
+	altering -- tanglier [ label="12" ];
 	altering -- triangle [ label="12" ];
 	integral -- relating [ label="19" ];
+	integral -- tanglier [ label="13" ];
 	integral -- triangle [ label="11" ];
+	relating -- tanglier [ label="20" ];
 	relating -- triangle [ label="14" ];
+	tanglier -- triangle [ label="10" ];
 }

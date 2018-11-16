@@ -3,15 +3,32 @@ const { exec } = require('child_process');
 
 var wordsList = [
 	["post", "pots", "spot", "stop", "tops"],
+	["east","eats","sate","seat","teas"],
 	["alerting", "altering", "integral", "relating", "triangle"],
 	["skate","stake","steak","takes","teaks"],
 	["reins","resin","rinse","risen","siren"],
 	["pares","parse","pears","reaps","spare","spear"],
 	["least","slate","stale","steal","tales","teals"],
 	["east","eats","sate","seat","teas"],
+	["parsley","parleys","players","replays","sparely"],
+	["dearths","hardest","hatreds","threads","trashed"],
+	["carets","caters","caster","crates","reacts","recast","traces"],
+	["altering", "tanglier", "triangle", "integral", "alerting", "relating"],
 	["eilst","leist","liest","liste","seilt","sielt","steil","stiel","stile","teils"],
-	["genre","neger","regen","gerne"],
-	["balgen","belang","gabeln"]
+	["genre","neger","regen","gerne","enger"],
+	["balgen","belang","gabeln"],
+	["feiern", "ferien", "freien", "riefen", "reifen","eifern"],
+	["roten", "orten", "toren", "tenor"],
+	["heer", "eher", "ehre","rehe"],
+	["rote", "tore", "orte"],
+	["ort", "rot", "tor"],
+	["derlei", "leider", "lieder"],
+	["schlafen", "falschen", "flaschen"],
+	["seien", "seine", "eines", "eisen"],
+	["streichen","enterichs","scheitern","schreiten","sicherten","reichsten"],
+	["galerien","rangelei","generali","genialer","anlieger","algerien"],
+	["seibert", "siebert", "siebter", "breites", "biester", "bereits", "bereist"],
+	["sirene", "serien", "reines", "seiner", "reisen", "einser", "riesen", "eisern"]
 ];
 
 //https://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Anagramme
@@ -51,8 +68,12 @@ function genGraph(words){
 	return result;
 }
 
+var cache={};
 function gdist(w1,w2,g){
-
+	var key = w1+w2;
+	if (cache.hasOwnProperty(key)){
+		return cache[key];
+	}
 	
 	if (w1==w2){
 		return 0;
@@ -68,6 +89,7 @@ function gdist(w1,w2,g){
 		for (var i=0;i<tovisit.length;i++){			
 			var w = tovisit[i];
 			if (w==w2){
+				cache[key]=dist;
 				return dist;
 			}
 			if (visited[w]===true){
@@ -93,28 +115,31 @@ function makeUnique(arr) {
 }
 
 
-function subgraphRadius(startw,r,words,g){
+function allWordsReachableWithJumps(startw,r,words,g){
 	var tovisit=[startw]
 	var visited=[]
 	while(tovisit.length>0){
 		var w = tovisit.pop();
-		var targets = g[w];
+		if (visited.indexOf(w)>=0){
+			continue;
+		}
+		visited.push(w);
+		var targets = getWordsRadiusRFrom(w,r,words,g);
 		for (var i=0;i<targets.length;i++){
-			var t=targets;
-			if (t in visited){
+			var t=targets[i];
+			if (visited.indexOf(t)>=0){
 				continue;
 			}
-			var d = gdist(w,t);
+			var d = gdist(w,t,g);
 			if (d<=r){
 				tovisit.push(t);
 			}
 		}
-		visited.push(w);
 	}
 	return visited;
 }
 
-function printPointedDists(w,words,g){
+function printRadiusPointedDists(w,words,g){
 	var word_dists = [];
 	for (var i=0;i<words.length;i++){
 		var w2 = words[i];
@@ -132,11 +157,10 @@ function printPointedDists(w,words,g){
 		}
 		if (a[1].value < b[1].value) {
 			return -1;
-		}
+					}
 		return 0;
 	}
-
-	word_dists.sort(comparePairs);
+		word_dists.sort(comparePairs);
 
 	var dists = word_dists.map( ([d,w]) => d );
 	makeUnique(dists);
@@ -146,20 +170,52 @@ function printPointedDists(w,words,g){
 
 		if (acc.length==0){
 			return [cur];
-		}
+			}
 		var last = acc[acc.length-1];
 		if (last[0]==cur[0]){
 			last.push(cur[1]);
 		} else {
 			acc.push(cur);
-		}
+				}
 		return acc;
 	}
 
-
 	var distLists = word_dists.reduce ( foldFn, [] )
 
-	printDistList(distLists);
+	// printDistList(distLists);
+
+	return distLists;
+}
+
+function getWordsRadiusRFrom(startword,r,words,g){
+	var distLists = printRadiusPointedDists(startword,words,g);
+	var l = distLists
+				.filter( (e) => (e[0]<=r) )
+				.map( (a) => a.slice(1) );
+	var result = [].concat.apply([], l)
+	return result;
+}
+
+function printPointedDists(startword,words,g){
+	var lastgraph=[];
+	for (var i=0;;i++){
+		var curradius_words=allWordsReachableWithJumps(startword,i,words,g);
+		var newwords = curradius_words.filter( (w) => lastgraph.indexOf(w)===-1 );
+
+		
+		if (newwords.length>0){
+			console.log(""+newwords);
+		}
+
+		if (curradius_words.length===words.length){
+			break;
+		}
+		if (newwords.length===0){
+			console.log(".");
+		}
+
+		lastgraph=curradius_words;
+	}
 }
 
 function printDistList(distLists){
@@ -186,7 +242,7 @@ function printDistList(distLists){
 
 
 
-function printPoints(){
+function printPoints(_words,graph){
 	for (var i=0;i<_words.length;i++){
 		var w=_words[i];
 		printPointedDists(w,_words,graph);
@@ -195,7 +251,7 @@ function printPoints(){
 }
 
 
-function printGraph(_words){
+function printGraph(_words,graph){
 	var fn = _words[0];
 
 	var s = ""
@@ -223,10 +279,11 @@ for (var i=0;i<wordsList.length;i++){
 	var graph = genGraph(perms);
 	_words.sort();
 	console.log("\n\n\n\n=========\n"+_words[0]+"\n=======\n\n")
-	printPoints(_words);
+	printPoints(_words,graph);
+	// var result = allWordsReachableWithJumps("post",2,_words,graph);
+	// console.log(JSON.stringify(result));
 
-
-	printGraph(_words);
+	printGraph(_words,graph);
 }
 
 

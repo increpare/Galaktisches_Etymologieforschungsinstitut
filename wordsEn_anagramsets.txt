@@ -1,0 +1,418 @@
+109585 words
+calculating divisions
+on stufe 1
+on stufe 2
+on stufe 3
+on stufe 4
+on stufe 5
+on stufe 6
+on stufe 7
+on stufe 8
+on stufe 9
+on stufe 10
+on stufe 11
+on stufe 12
+on stufe 13
+on stufe 14
+on stufe 15
+on stufe 16
+on stufe 17
+on stufe 18
+on stufe 19
+on stufe 20
+on stufe 21
+on stufe 22
+on stufe 23
+on stufe 25
+on stufe 28
+processing division 0
+, 
+
+
+
+processing division 1
+
+
+
+processing division 2
+no, on
+is, si
+mn, nm
+ah, ha
+al, la
+am, ma
+an, na
+wa, aw
+vt, tv
+as, sa
+ne, en
+ac, ca
+un, nu
+it, ti
+od, do
+oh, ho
+os, so
+cd, dc
+hr, rh
+he, eh
+
+
+
+processing division 3
+asp, pas, spa, sap
+ate, tea, eat, eta
+led, del, eld
+apt, pat, tap
+are, ear, era
+arm, mar, ram
+art, tar, rat
+ash, ahs, has
+per, pre, rep
+ape, pea, epa
+urb, bur, rub
+abt, bat, tab
+ups, sup, pus
+lap, pal, alp
+nit, int, tin
+now, own, won
+bro, orb, rob
+its, tis, sit
+irs, sri, sir
+opt, top, pot
+
+
+
+processing division 4
+ares, arse, sera, rase, sear, ears, eras
+opts, tops, stop, post, pots, spot
+user, sure, suer, ruse, rues
+mate, meta, team, tame, meat
+lair, lira, rail, liar, rial
+twas, wats, taws, wast, swat
+trap, part, tarp, prat, rapt
+leos, oles, lose, sole, sloe
+ores, sore, eros, rose, roes
+vale, lave, vela, veal, leva
+pare, pear, aper, rape, reap
+teas, seat, east, eats, sate
+hosp, hops, posh, soph, shop
+tsar, tars, star, arts, rats
+live, vile, veil, evil, levi
+laps, alps, pals, slap
+lait, alit, ital, tail
+neap, pane, pean, nape
+nips, pins, spin, snip
+nits, inst, tins, snit
+
+
+
+processing division 5
+apres, asper, pares, parse, pears, spear, spare, rapes, reaps, apers
+tesla, teals, tales, taels, steal, stale, least, slate, setal
+peris, piers, pries, spire, prise, spier, ripes
+pales, peals, pleas, leaps, lapse, spale, sepal
+trace, caret, carte, cater, crate, react, recta
+tides, stied, deist, sited, diets, dites, edits
+tread, trade, tared, tarde, dater, derat, rated
+onset, tones, stone, steno, seton, notes
+siren, serin, reins, risen, resin, rinse
+baste, bates, beast, beats, betas, abets
+traps, parts, tarps, strap, prats, sprat
+arced, cadre, cared, cedar, acred, raced
+veals, valse, vales, laves, slave, salve
+trees, terse, stere, steer, ester, reset
+teaks, takes, steak, stake, skate, keats
+laser, lares, seral, rales, earls, reals
+paste, pates, peats, tapes, spate, septa
+apter, parte, pater, peart, taper, prate
+arils, liras, liars, lairs, rails, rials
+sucre, cruse, cures, curse, ecrus
+
+
+
+processing division 6
+crapes, spacer, capers, casper, recaps, scrape, pacers, parsec, escarp
+niters, nitres, sinter, trines, inters, insert, inerts, estrin
+petals, plates, pleats, staple, septal, palest, palets, pastel
+crates, traces, carets, cartes, reacts, caster, caters, recast
+tensor, tenors, stoner, noster, noters, toners, nestor
+merits, smiter, mister, miters, mitres, timers, remits
+laster, alerts, talers, staler, alters, slater, salter
+spread, spared, spader, drapes, rasped, padres, parsed
+aspers, spears, sparse, spares, parses, passer, repass
+terras, arrest, starer, rarest, raster, raters
+sutler, ulster, lustre, luster, rustle, result
+tetras, taters, taster, strate, stater, treats
+stripe, sprite, priest, tripes, esprit, ripest
+lasted, staled, deltas, desalt, slated, salted
+teaser, aretes, seater, easter, eaters, reseat
+teslas, tassel, steals, stales, slates, leasts
+versal, slaver, serval, ravels, salver, lavers
+singer, signer, sering, reigns, renigs, resign
+lascar, craals, rascal, scalar, sacral
+stifle, itself, flites, fliest, filets
+
+
+
+processing division 7
+pirates, piastre, piaster, pastier, parties, traipse
+results, rustles, sutlers, ulsters, lusters, lustres
+repairs, raspier, rapiers, praiser, parries, aspirer
+esprits, priests, spriest, sprites, stripes, persist
+erasing, reginas, regains, earings, searing, gainers
+enviers, inverse, veiners, veneris, venires, versine
+retsina, retinas, retains, stainer, stearin, nastier
+dearths, hardest, hardset, hatreds, threads, trashed
+proteus, spouter, pouters, posture, petrous, troupes
+striate, tastier, iratest, attires, artiste, artiest
+retests, setters, streets, tersest, testers
+retails, saltier, realist, slatier, tailers
+rentage, reagent, grantee, greaten, negater
+eroding, redoing, groined, ignored, negroid
+entails, salient, saltine, elastin, nailset
+respect, scepter, sceptre, specter, spectre
+reviles, relives, servile, leviers, veilers
+enraged, derange, grandee, grenade, angered
+sainted, detains, destain, stained, instead
+resider, redries, serried, desirer, derries
+
+
+
+
+processing division 8
+altering, tanglier, triangle, integral, alerting, relating
+astringe, granites, ingrates, angriest, rangiest, gantries
+grantees, greatens, sergeant, estrange, negaters, reagents
+assertor, assorter, oratress, roasters, reassort
+strainer, trainers, retrains, restrain, terrains
+sceptres, scepters, respects, spectres, specters
+traipses, piastres, piasters, pastries, raspiest
+pertains, parentis, pantries, painters, repaints
+dressier, residers, derrises, desirers
+damneder, remanded, redemand, demander
+teariest, treatise, treaties, iterates
+vileness, veinless, evilness, liveness
+trounces, construe, counters, recounts
+teardrop, prorated, predator, parroted
+serrated, treaders, retreads, arrested
+triremes, rimester, miterers, merriest
+prattles, platters, sprattle, splatter
+sintered, sentried, inserted, resident
+gardened, dangered, deranged, gandered
+elastins, saltines, salients, nailsets
+
+
+
+processing division 9
+interests, insetters, triteness, resistent
+neoterics, resection, erections, secretion
+terracing, recrating, retracing, cratering
+mastering, streaming, emigrants
+monograms, nomograms, groomsman
+monograph, nomograph, phonogram
+allotypic, optically, topically
+lucrative, victualer, revictual
+amnestied, dementias, seminated
+listening, tinseling, enlisting
+listeners, reenlists, enlisters
+mutilates, ultimates, stimulate
+ligations, isolating, intaglios
+narcotine, container, crenation
+liberates, beastlier, bleariest
+reticules, cruelties, cutleries
+lathering, haltering, earthling
+neurotics, countries, cretinous
+larcenist, cisternal, clarinets
+ascertain, cartesian, sectarian
+
+
+
+processing division 10
+introduces, rediscount, reductions, discounter
+misleading, misaligned, misdealing
+iridescent, indiscrete, indiscreet
+persistent, pinsetters, prettiness
+antimonies, antinomies, semination
+banderoles, bandoleers, endorsable
+reenclosed, ensorceled
+shovelfuls, shovelsful
+patricides, pediatrics
+uncensored, denouncers
+viceregent, vicegerent
+gloominess, neologisms
+vicariates, aviatrices
+aldermanry, marylander
+letterings, resettling
+tapestries, striptease
+coinferred, reinforced
+tantaluses, sultanates
+collapsing, scalloping
+unarrested, underrates
+
+
+
+processing division 11
+activations, vacationist, cavitations
+transportee, penetrators, paternoster
+mutilations, stimulation
+discoverers, rediscovers
+discernment, rescindment
+discernable, rescindable
+directional, clitoridean
+disinterest, dentistries
+mensuration, numerations
+sketchiness, thicknesses
+detonations, denotations
+serviceable, receivables
+ministerial, matrilinies
+sentimental, entailments
+dominations, admonitions
+undercoated, undecorated
+semiprivate, imperatives
+desecration, considerate
+description, predictions
+misbehavior, behaviorism
+
+
+
+processing division 12
+premeditates, preestimated
+indirections, indiscretion
+iridectomies, mediocrities
+adulterating, triangulated
+conversation, conservation
+coalitionist, solicitation
+teaspoonfuls, teaspoonsful
+reinterprets, interpreters
+contrariness, constrainers
+reinstructed, unrestricted
+straightener, restraighten
+protectional, lactoprotein
+strengthener, restrengthen
+despoliation, depositional
+customshouse, customhouses
+hairbreadths, hairsbreadth
+delicatessen, delicateness
+probationers, reabsorption
+oscillations, colonialists
+reenlightens, enlighteners
+
+
+
+processing division 13
+certification, rectification
+straighteners, restraightens
+discriminator, doctrinairism
+microclimates, commercialist
+perfectionism, imperfections
+impregnations, impersonating
+biopsychology, psychobiology
+paternalistic, antiparticles
+tentativeness, attentiveness
+psychosomatic, somatopsychic
+tastelessness, statelessness
+verifications, versification
+commissioners, recommissions
+strengtheners, restrengthens
+
+
+
+processing division 14
+impressiveness, permissiveness
+impressibility, permissibility
+disintegration, disorientating
+rectifications, certifications
+conservational, conversational
+tablespoonsful, tablespoonfuls
+
+
+
+processing division 15
+microphotograph, photomicrograph
+constructionism, misconstruction
+radiotelegraphy, teleradiography
+
+
+
+processing division 16
+microphotographs, photomicrographs
+microphotography, photomicrography
+
+
+
+processing division 17
+photomicrographic, microphotographic
+
+
+
+processing division 18
+
+
+
+processing division 19
+
+
+
+processing division 20
+
+
+
+processing division 21
+
+
+
+processing division 22
+
+
+
+processing division 23
+
+
+
+processing division 24
+
+
+
+processing division 25
+
+
+
+triangle, integral, relating, altering, alerting
+pertains, parentis, pantries, painters, repaints
+strainer, trainers, retrains, restrain, terrains
+teardrop, prorated, predator, parroted
+petals, plates, pleats, staple,, palest, pastel
+crates, traces, carets, reacts, caster, caters, recast
+tesla, teals, tales, steal, stale, least, slate
+iridescent, indiscrete, indiscreet
+lair, lira, rail, liar
+teas, seat, east, eats, sate
+tsar, tars, star, arts, rats
+nips, pins, spin, snip
+laps, alps, pals, slap
+trees, terse, steer, ester, reset
+now, own, won
+lap, pal, alp
+opts, tops, stop, post, pots, spot
+trap, part, tarp, prat, rapt
+siren, reins, risen, resin, rinse
+
+DEUTSCH
+
+scheinen, schienen, chinesen, schneien
+riefen, reifen, freien, ferien, feiern
+lieder, leider, derlei
+toren, tenor, roten, orten
+seine, seien, eisen, eines
+genetischer, gesicherten, gestenreich, gestrichene, energetisch
+tischchen, schichten, technisch, tschechin
+galerien, rangelei, generali, genialer, anlieger, algerien
+scheint, schneit, sichten, stichen, nitsche, tischen
+sirene, serien, reines, seiner, reisen, einser, riesen, eisern, eisner
+breite, bereit, beriet, bertie, triebe, treibe, bieter
+sterne, tresen, resten, nester, ersten, ernste, ernest
+nagel, galen, angel, lange, lagen, algen
+reaktion, kantorei, kroatien, kreation
+niere, eiern, einer, reine
+vorsprechen, vorpreschen, versprochen
+gestrichene, gestenreich, gesicherten, genetischer, energetisch
