@@ -1,5 +1,5 @@
 graph {
-	einser -- eisern [ label="3" ];
+	einser -- eisern [ label="5" ];
 	einser -- reines [ label="6" ];
 	einser -- reisen [ label="7" ];
 	einser -- riesen [ label="8" ];

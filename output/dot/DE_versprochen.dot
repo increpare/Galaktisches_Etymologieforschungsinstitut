@@ -1,0 +1,5 @@
+graph {
+	versprochen -- vorpreschen [ label="11" ];
+	versprochen -- vorsprechen [ label="9" ];
+	vorpreschen -- vorsprechen [ label="3" ];
+}

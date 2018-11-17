@@ -1,5 +1,5 @@
 graph {
-	restrain -- retrains [ label="5" ];
+	restrain -- retrains [ label="7" ];
 	restrain -- strainer [ label="10" ];
 	restrain -- terrains [ label="8" ];
 	restrain -- trainers [ label="13" ];

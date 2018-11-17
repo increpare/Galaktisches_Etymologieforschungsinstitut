@@ -4,5 +4,5 @@ graph {
 	eher -- rehe [ label="3" ];
 	ehre -- heer [ label="2" ];
 	ehre -- rehe [ label="2" ];
-	heer -- rehe [ label="4" ];
+	heer -- rehe [ label="5" ];
 }

@@ -83,55 +83,61 @@ function allPerms(string) {
     return permutations;
 }
 
-function genGraph(words){
-	result = {};
-	for (let i=0;i<words.length;i++){
-		let w = words[i];
-		let targets = [];
-		for (let j=0;j<w.length-1;j++){
-			let wn = w.substr(0,j)+w[j+1]+w[j]+w.substr(j+2);
-			targets.push(wn);
-		}
-		result[w]=targets;
-	}
-	return result;
-}
 
-let gdist_cache={};
-function gdist(w1,w2,g){
+var gdist_cache = {};
+function gdist(w1,w2){
 	if (w1==w2){
 		return 0;
 	}
-
-	let key = w1+w2;
+	var key = w1+w2;
 	if (gdist_cache.hasOwnProperty(key)){
 		return gdist_cache[key];
 	}
 
-	let visited = {};
-	let tovisit = g[w1];
-	let dist=0;
-	let nexttovisit = [];
+	//1 generate abstract permutation
+	var already_assigned = [];
+	for (var i=0;i<w1.length;i++){
+		already_assigned.push(false)
+	}
 
-	while(true){
-		dist++;
-		for (let i=0;i<tovisit.length;i++){			
-			let w = tovisit[i];
-			if (w==w2){
-				gdist_cache[key]=dist;
-				return dist;
+	var wl = w1.length;
+	var perm = [];
+	for (var i=0;i<wl;i++){
+		var c1 = w1[i];
+		if (already_assigned[i]==false && w2[i]==c1){
+			perm.push(i);
+			continue;
+		}
+		for (var j=0;j<wl;j++){
+			if (already_assigned[j]==true){
+				continue;
 			}
-			if (visited[w]===true){
-
-			} else {
-				visited[w]=true;
-				nexttovisit = nexttovisit.concat(g[w]);
+			var c2 = w2[j];
+			if (c2==c1){
+				already_assigned[j]=true;
+				perm.push(j);
+				break;
 			}
 		}
-
-		tovisit=nexttovisit;
-		nexttovisit=[];
 	}
+
+
+	var dist=0;
+
+	for (var i=0;i<perm.length;i++){
+		var pi=perm[i];
+
+		for (var j=i+1;j<wl;j++){
+			var pj=perm[j];
+			if (pi>pj){
+				dist++
+			}
+		}
+	}
+
+	var result=dist;
+	gdist_cache[key]=result;
+	return result;
 }
 
 function makeUnique(arr) {
@@ -145,7 +151,7 @@ function makeUnique(arr) {
 
 
 
-function allWordsReachableWithJumps(startw,r,words,g){
+function allWordsReachableWithJumps(startw,r,words){
 
 	let tovisit=[startw]
 	let visited=[]
@@ -155,13 +161,13 @@ function allWordsReachableWithJumps(startw,r,words,g){
 			continue;
 		}
 		visited.push(w);
-		let targets = getWordsRadiusRFrom(w,r,words,g);
+		let targets = getWordsRadiusRFrom(w,r,words);
 		for (let i=0;i<targets.length;i++){
 			let t=targets[i];
 			if (visited.indexOf(t)>=0){
 				continue;
 			}
-			let d = gdist(w,t,g);
+			let d = gdist(w,t);
 			if (d<=r){
 				tovisit.push(t);
 			}
@@ -170,13 +176,13 @@ function allWordsReachableWithJumps(startw,r,words,g){
 	return visited;
 }
 
-function printRadiusPointedDists(w,words,g){
+function printRadiusPointedDists(w,words){
 	let key = w;
 
 	let word_dists = [];
 	for (let i=0;i<words.length;i++){
 		let w2 = words[i];
-		let d = gdist(w,w2,g);
+		let d = gdist(w,w2);
 		word_dists.push([d,w2]);
 	}
 
@@ -218,9 +224,9 @@ function printRadiusPointedDists(w,words,g){
 	return distLists;
 }
 
-function getWordsRadiusRFrom(startword,r,words,g){
+function getWordsRadiusRFrom(startword,r,words){
 
-	let distLists = printRadiusPointedDists(startword,words,g);
+	let distLists = printRadiusPointedDists(startword,words);
 	let l = distLists
 				.filter( (e) => (e[0]<=r) )
 				.map( (a) => a.slice(1) );
@@ -228,10 +234,10 @@ function getWordsRadiusRFrom(startword,r,words,g){
 	return result;
 }
 
-function printPointedDists(startword,words,g){
+function printPointedDists(startword,words){
 	let lastgraph=[];
 	for (let i=0;;i++){
-		let curradius_words=allWordsReachableWithJumps(startword,i,words,g);
+		let curradius_words=allWordsReachableWithJumps(startword,i,words);
 		let newwords = curradius_words.filter( (w) => lastgraph.indexOf(w)===-1 );
 
 		
@@ -276,7 +282,7 @@ function printDistList(distLists){
 
 
 
-function printGraph(_words,graph,sprache){
+function printGraph(_words,sprache){
 	console.log("PG");
 	let fn = _words[0];
 
@@ -287,47 +293,35 @@ function printGraph(_words,graph,sprache){
 	for (let i=0;i<_words.length;i++){
 		let w1=_words[i];
 		for (let j=i+1;j<_words.length;j++){
-			let w2=_words[j];
-			console.log(w1+"\t"+w2)
-		
-			let d = gdist(w1,w2,graph);
-			console.log("d = "+d)
+			let w2=_words[j];		
+			let d = gdist(w1,w2);
 			s += `\t${w1} -- ${w2} [ label="${d}" ];\n`
 		}
 	}
 	s += "}"
-	console.log("EXEC")
 	fs.writeFileSync(`output/dot/${sprache}_${fn}.dot`, s);
 	exec(`dot -Tpng output/dot/${sprache}_${fn}.dot > output/png/${sprache}_${fn}.png`);
-	console.log("BEXEC")
 }
 
 
-function printPoints(_words,graph){
+function printPoints(_words){
 	for (let i=0;i<_words.length;i++){
 		let w=_words[i];
-		console.log("WAERA "+w)
-		printPointedDists(w,_words,graph);
+		printPointedDists(w,_words);
 		console.log("\n");
-		console.log("UBA "	)
 	}
 }
 
-for (let i=37;i<wordsList.length;i++){
+for (let i=0;i<wordsList.length;i++){
 	gdist_cache={}
 
 	sprache = i<=22 ? "EN":"DE";
 
 	let _words = wordsList[i];
 
-	console.log("ASDFASDFASDFASDF "+_words[0]);
-	let perms = allPerms(_words[0]);
-	console.log("asdfasdf 123");
-	let graph = genGraph(perms);
-	console.log("asdfasdf 465");
 	_words.sort();
 	console.log("\n\n\n\n=========\n"+_words[0]+"\n=======\n\n")
-	printPoints(_words,graph);
-	printGraph(_words,graph,sprache);
+	printPoints(_words);
+	printGraph(_words,sprache);
 }
 

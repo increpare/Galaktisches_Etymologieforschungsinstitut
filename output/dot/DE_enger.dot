@@ -4,9 +4,9 @@ graph {
 	enger -- neger [ label="1" ];
 	enger -- regen [ label="6" ];
 	genre -- gerne [ label="1" ];
-	genre -- neger [ label="4" ];
-	genre -- regen [ label="5" ];
-	gerne -- neger [ label="5" ];
-	gerne -- regen [ label="4" ];
+	genre -- neger [ label="5" ];
+	genre -- regen [ label="6" ];
+	gerne -- neger [ label="6" ];
+	gerne -- regen [ label="5" ];
 	neger -- regen [ label="7" ];
 }

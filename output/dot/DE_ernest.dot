@@ -1,0 +1,23 @@
+graph {
+	ernest -- ernste [ label="2" ];
+	ernest -- ersten [ label="4" ];
+	ernest -- nester [ label="7" ];
+	ernest -- resten [ label="6" ];
+	ernest -- sterne [ label="8" ];
+	ernest -- tresen [ label="9" ];
+	ernste -- ersten [ label="6" ];
+	ernste -- nester [ label="5" ];
+	ernste -- resten [ label="4" ];
+	ernste -- sterne [ label="6" ];
+	ernste -- tresen [ label="7" ];
+	ersten -- nester [ label="8" ];
+	ersten -- resten [ label="1" ];
+	ersten -- sterne [ label="5" ];
+	ersten -- tresen [ label="4" ];
+	nester -- resten [ label="9" ];
+	nester -- sterne [ label="7" ];
+	nester -- tresen [ label="10" ];
+	resten -- sterne [ label="6" ];
+	resten -- tresen [ label="3" ];
+	sterne -- tresen [ label="6" ];
+}

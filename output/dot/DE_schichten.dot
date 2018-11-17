@@ -1,0 +1,8 @@
+graph {
+	schichten -- technisch [ label="19" ];
+	schichten -- tischchen [ label="9" ];
+	schichten -- tschechin [ label="11" ];
+	technisch -- tischchen [ label="14" ];
+	technisch -- tschechin [ label="15" ];
+	tischchen -- tschechin [ label="8" ];
+}

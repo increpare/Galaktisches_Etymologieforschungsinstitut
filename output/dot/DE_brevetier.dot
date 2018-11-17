@@ -1,0 +1,23 @@
+graph {
+	brevetier -- verbreite [ label="11" ];
+	brevetier -- verbriete [ label="12" ];
+	brevetier -- verreibet [ label="15" ];
+	brevetier -- verriebet [ label="16" ];
+	brevetier -- vertreibe [ label="14" ];
+	brevetier -- vertriebe [ label="15" ];
+	verbreite -- verbriete [ label="3" ];
+	verbreite -- verreibet [ label="8" ];
+	verbreite -- verriebet [ label="10" ];
+	verbreite -- vertreibe [ label="7" ];
+	verbreite -- vertriebe [ label="8" ];
+	verbriete -- verreibet [ label="9" ];
+	verbriete -- verriebet [ label="8" ];
+	verbriete -- vertreibe [ label="9" ];
+	verbriete -- vertriebe [ label="7" ];
+	verreibet -- verriebet [ label="2" ];
+	verreibet -- vertreibe [ label="7" ];
+	verreibet -- vertriebe [ label="6" ];
+	verriebet -- vertreibe [ label="9" ];
+	verriebet -- vertriebe [ label="7" ];
+	vertreibe -- vertriebe [ label="3" ];
+}

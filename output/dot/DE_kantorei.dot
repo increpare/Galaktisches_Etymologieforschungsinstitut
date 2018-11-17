@@ -1,0 +1,8 @@
+graph {
+	kantorei -- kreation [ label="12" ];
+	kantorei -- kroatien [ label="11" ];
+	kantorei -- reaktion [ label="15" ];
+	kreation -- kroatien [ label="7" ];
+	kreation -- reaktion [ label="3" ];
+	kroatien -- reaktion [ label="10" ];
+}

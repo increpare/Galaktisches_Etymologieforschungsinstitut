@@ -6,7 +6,7 @@ graph {
 	eifern -- riefen [ label="5" ];
 	feiern -- ferien [ label="2" ];
 	feiern -- freien [ label="3" ];
-	feiern -- reifen [ label="6" ];
+	feiern -- reifen [ label="8" ];
 	feiern -- riefen [ label="7" ];
 	ferien -- freien [ label="1" ];
 	ferien -- reifen [ label="4" ];

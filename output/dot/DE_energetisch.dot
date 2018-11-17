@@ -1,0 +1,12 @@
+graph {
+	energetisch -- genetischer [ label="15" ];
+	energetisch -- gesicherten [ label="30" ];
+	energetisch -- gestenreich [ label="15" ];
+	energetisch -- gestrichene [ label="26" ];
+	genetischer -- gesicherten [ label="15" ];
+	genetischer -- gestenreich [ label="12" ];
+	genetischer -- gestrichene [ label="14" ];
+	gesicherten -- gestenreich [ label="19" ];
+	gesicherten -- gestrichene [ label="11" ];
+	gestenreich -- gestrichene [ label="10" ];
+}

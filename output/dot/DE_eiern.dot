@@ -1,0 +1,8 @@
+graph {
+	eiern -- einer [ label="2" ];
+	eiern -- niere [ label="6" ];
+	eiern -- reine [ label="4" ];
+	einer -- niere [ label="4" ];
+	einer -- reine [ label="4" ];
+	niere -- reine [ label="6" ];
+}
