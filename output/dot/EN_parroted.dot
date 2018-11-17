@@ -1,0 +1,8 @@
+graph {
+	parroted -- predator [ label="12" ];
+	parroted -- prorated [ label="4" ];
+	parroted -- teardrop [ label="17" ];
+	predator -- prorated [ label="12" ];
+	predator -- teardrop [ label="15" ];
+	prorated -- teardrop [ label="21" ];
+}

@@ -1,0 +1,8 @@
+graph {
+	nips -- pins [ label="3" ];
+	nips -- snip [ label="3" ];
+	nips -- spin [ label="6" ];
+	pins -- snip [ label="6" ];
+	pins -- spin [ label="3" ];
+	snip -- spin [ label="3" ];
+}

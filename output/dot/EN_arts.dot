@@ -1,0 +1,12 @@
+graph {
+	arts -- rats [ label="1" ];
+	arts -- star [ label="5" ];
+	arts -- tars [ label="2" ];
+	arts -- tsar [ label="4" ];
+	rats -- star [ label="6" ];
+	rats -- tars [ label="3" ];
+	rats -- tsar [ label="5" ];
+	star -- tars [ label="3" ];
+	star -- tsar [ label="1" ];
+	tars -- tsar [ label="2" ];
+}

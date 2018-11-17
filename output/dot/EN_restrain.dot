@@ -1,0 +1,12 @@
+graph {
+	restrain -- retrains [ label="5" ];
+	restrain -- strainer [ label="10" ];
+	restrain -- terrains [ label="8" ];
+	restrain -- trainers [ label="13" ];
+	retrains -- strainer [ label="15" ];
+	retrains -- terrains [ label="3" ];
+	retrains -- trainers [ label="8" ];
+	strainer -- terrains [ label="14" ];
+	strainer -- trainers [ label="7" ];
+	terrains -- trainers [ label="7" ];
+}

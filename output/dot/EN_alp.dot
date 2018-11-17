@@ -1,0 +1,5 @@
+graph {
+	alp -- lap [ label="1" ];
+	alp -- pal [ label="2" ];
+	lap -- pal [ label="3" ];
+}

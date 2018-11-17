@@ -1,0 +1,5 @@
+graph {
+	indiscreet -- indiscrete [ label="1" ];
+	indiscreet -- iridescent [ label="14" ];
+	indiscrete -- iridescent [ label="15" ];
+}

@@ -1,0 +1,17 @@
+graph {
+	palest -- pastel [ label="5" ];
+	palest -- petals [ label="5" ];
+	palest -- plates [ label="3" ];
+	palest -- pleats [ label="3" ];
+	palest -- staple [ label="9" ];
+	pastel -- petals [ label="6" ];
+	pastel -- plates [ label="6" ];
+	pastel -- pleats [ label="8" ];
+	pastel -- staple [ label="6" ];
+	petals -- plates [ label="6" ];
+	petals -- pleats [ label="4" ];
+	petals -- staple [ label="10" ];
+	plates -- pleats [ label="2" ];
+	plates -- staple [ label="10" ];
+	pleats -- staple [ label="12" ];
+}

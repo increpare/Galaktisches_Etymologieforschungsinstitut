@@ -1,4 +1,9 @@
 graph {
+	opts -- post [ label="2" ];
+	opts -- pots [ label="1" ];
+	opts -- spot [ label="4" ];
+	opts -- stop [ label="5" ];
+	opts -- tops [ label="2" ];
 	post -- pots [ label="1" ];
 	post -- spot [ label="2" ];
 	post -- stop [ label="5" ];

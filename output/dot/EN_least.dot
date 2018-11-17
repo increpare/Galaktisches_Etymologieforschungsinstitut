@@ -4,14 +4,20 @@ graph {
 	least -- steal [ label="8" ];
 	least -- tales [ label="6" ];
 	least -- teals [ label="6" ];
+	least -- tesla [ label="7" ];
 	slate -- stale [ label="3" ];
 	slate -- steal [ label="5" ];
 	slate -- tales [ label="7" ];
 	slate -- teals [ label="9" ];
+	slate -- tesla [ label="6" ];
 	stale -- steal [ label="2" ];
 	stale -- tales [ label="4" ];
 	stale -- teals [ label="6" ];
+	stale -- tesla [ label="5" ];
 	steal -- tales [ label="6" ];
 	steal -- teals [ label="4" ];
+	steal -- tesla [ label="3" ];
 	tales -- teals [ label="2" ];
+	tales -- tesla [ label="5" ];
+	teals -- tesla [ label="3" ];
 }

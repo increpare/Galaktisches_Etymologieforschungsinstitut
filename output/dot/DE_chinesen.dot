@@ -1,0 +1,8 @@
+graph {
+	chinesen -- scheinen [ label="7" ];
+	chinesen -- schienen [ label="6" ];
+	chinesen -- schneien [ label="7" ];
+	scheinen -- schienen [ label="1" ];
+	scheinen -- schneien [ label="2" ];
+	schienen -- schneien [ label="3" ];
+}

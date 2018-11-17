@@ -1,0 +1,12 @@
+graph {
+	part -- prat [ label="1" ];
+	part -- rapt [ label="3" ];
+	part -- tarp [ label="5" ];
+	part -- trap [ label="6" ];
+	prat -- rapt [ label="2" ];
+	prat -- tarp [ label="6" ];
+	prat -- trap [ label="5" ];
+	rapt -- tarp [ label="4" ];
+	rapt -- trap [ label="3" ];
+	tarp -- trap [ label="1" ];
+}

@@ -1,0 +1,5 @@
+graph {
+	now -- own [ label="2" ];
+	now -- won [ label="3" ];
+	own -- won [ label="1" ];
+}

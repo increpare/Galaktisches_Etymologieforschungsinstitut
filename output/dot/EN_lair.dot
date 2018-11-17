@@ -1,0 +1,8 @@
+graph {
+	lair -- liar [ label="1" ];
+	lair -- lira [ label="2" ];
+	lair -- rail [ label="5" ];
+	liar -- lira [ label="1" ];
+	liar -- rail [ label="6" ];
+	lira -- rail [ label="5" ];
+}
