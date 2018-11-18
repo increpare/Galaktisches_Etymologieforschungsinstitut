@@ -1,0 +1,23 @@
+digraph {
+	"laps(4)" -> "parsley(5)";
+	"laps(4)" -> "petals(6)";
+	"east(5)" -> "skate(5)";
+	"east(5)" -> "tesla(7)";
+	"east(5)" -> "dearths(5)";
+	"east(5)" -> "strainer(5)";
+	"east(5)" -> "petals(6)";
+	"east(5)" -> "carets(7)";
+	"reins(5)" -> "iridescent(3)";
+	"reins(5)" -> "strainer(5)";
+	"pares(6)" -> "parsley(5)";
+	"tesla(7)" -> "petals(6)";
+	"tsar(5)" -> "dearths(5)";
+	"tsar(5)" -> "strainer(5)";
+	"tsar(5)" -> "carets(7)";
+	"lair(4)" -> "alerting(5)";
+	"trees(5)" -> "iridescent(3)";
+	"lap(3)" -> "laps(4)";
+	"lap(3)" -> "parsley(5)";
+	"lap(3)" -> "petals(6)";
+	"trap(5)" -> "teardrop(4)";
+}

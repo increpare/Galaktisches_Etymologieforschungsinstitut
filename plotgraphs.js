@@ -1,7 +1,10 @@
+//wichtiges regex \n\n([^\n^\.^,^=]+\n)+\n
+
 const fs = require('fs');
 const { exec } = require('child_process');
 
 let wordsList = [
+	["laps", "alps", "pals", "slap"],
 	["post", "pots", "spot", "stop", "tops","opts"],
 	["east","eats","sate","seat","teas"],
 	["alerting", "altering", "integral", "relating", "triangle"],
@@ -18,9 +21,7 @@ let wordsList = [
 	["lair", "lira", "rail", "liar"],
 	["petals", "plates", "pleats", "staple", "palest", "pastel"],
 	["carets","caters","caster","crates","reacts","recast","traces"],
-	["altering", "tanglier", "triangle", "integral", "alerting", "relating"],
 	["nips", "pins", "spin", "snip"],
-	["laps", "alps", "pals", "slap"],
 	["trees", "terse", "steer", "ester", "reset"],
 	["now", "own", "won"],
 	["lap", "pal", "alp"],
@@ -38,8 +39,6 @@ let wordsList = [
 	["schlafen", "falschen", "flaschen"],
 	["seien", "seine", "eines", "eisen"],
 	["streichen","enterichs","scheitern","schreiten","sicherten","reichsten"],
-	["galerien","rangelei","generali","genialer","anlieger","algerien"],
-	["seibert", "siebert", "siebter", "breites", "biester", "bereits", "bereist"],
 	["sirene", "serien", "reines", "seiner", "reisen", "einser", "riesen", "eisern"],
 
 
@@ -56,8 +55,8 @@ let wordsList = [
 	["niere", "eiern", "einer", "reine"],
 	["vorsprechen", "vorpreschen", "versprochen"],
 	["verbreite", "verbriete", "verreibet", "verriebet", "vertreibe", "vertriebe", "brevetier"],
-	["agileren", "anlieger", "einlager", "einlagre", "galerien", "genialer", "inegaler", "rangelei", "regalien"],
-	["triebes", "siebter", "seibert", "riebest", "reibest", "breites", "bieters", "biester", "bereits", "bereist", "beierst"],
+	["agileren", "anlieger", "einlager", "einlagre", "galerien", "algerien", "genialer", "inegaler", "rangelei", "regalien"],
+	["triebes", "siebter", "siebert", "seibert", "riebest", "biester", "reibest", "breites", "bieters", "bereits", "bereist", "beierst"],
 ];
 
 //https://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Anagramme
@@ -283,7 +282,7 @@ function printDistList(distLists){
 
 
 function printGraph(_words,sprache){
-	console.log("PG");
+
 	let fn = _words[0];
 
 	let s = ""
@@ -324,4 +323,7 @@ for (let i=0;i<wordsList.length;i++){
 	printPoints(_words);
 	printGraph(_words,sprache);
 }
+
+
+
 

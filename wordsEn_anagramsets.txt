@@ -26,7 +26,6 @@ on stufe 23
 on stufe 25
 on stufe 28
 processing division 0
-, 
 
 
 
@@ -35,26 +34,6 @@ processing division 1
 
 
 processing division 2
-no, on
-is, si
-mn, nm
-ah, ha
-al, la
-am, ma
-an, na
-wa, aw
-vt, tv
-as, sa
-ne, en
-ac, ca
-un, nu
-it, ti
-od, do
-oh, ho
-os, so
-cd, dc
-hr, rh
-he, eh
 
 
 
@@ -79,6 +58,7 @@ bro, orb, rob
 its, tis, sit
 irs, sri, sir
 opt, top, pot
+ort, tor, rot
 
 
 
@@ -103,6 +83,175 @@ lait, alit, ital, tail
 neap, pane, pean, nape
 nips, pins, spin, snip
 nits, inst, tins, snit
+noes, nose, ones, eons
+aids, dais, dias, said
+kins, inks, skin, sink
+twos, tows, stow, wots
+nope, open, peon, pone
+lese, lees, eels, else
+tush, thus, huts, shut
+nows, owns, sown, snow
+tubs, bust, buts, stub
+vade, dave, deva, veda
+mane, amen, mean, name
+odor, ordo, door, rood
+used, sued, deus, dues
+oils, soli, soil, silo
+ogre, gore, goer, ergo
+tosh, hots, host, shot
+mite, item, time, emit
+tors, orts, sort, rots
+bast, bats, tabs, stab
+cast, cats, acts, scat
+made, dame, mead, edam
+mesa, meas, seam, same
+pans, span, snap, naps
+leas, ales, seal, sale
+tied, tide, diet, edit
+pars, spar, raps, rasp
+pass, spas, asps, saps
+past, pats, taps, spat
+this, hits, hist, shit
+pest, pets, step, sept
+bate, beat, beta, abet
+tear, tare, rate, erat
+leap, pale, peal, plea
+sung, guns, snug, gnus
+lead, lade, dale, deal
+slit, lits, silt, list
+nest, nets, tens, sent
+lire, lier, rile, riel
+mars, arms, rams
+khan, ankh, hank
+mode, demo, dome
+boer, bore, robe
+naut, tuna, aunt
+lean, lane, elan
+bolo, obol, lobo
+keep, peek, peke
+leak, lake, kale
+modo, mood, doom
+afro, fora, faro
+brag, grab, garb
+nots, tons, snot
+tups, supt, puts
+tuns, nuts, stun
+feta, feat, fate
+tugs, guts, gust
+bead, abed, bade
+tuba, tabu, abut
+nubs, buns, snub
+laws, slaw, awls
+bros, orbs, robs
+neat, ante, etna
+yeas, easy, ayes
+oars, soar, rosa
+oats, taos, stoa
+trio, tiro, riot
+trig, grit, girt
+ires, sire, rise
+ired, dire, ride
+iran, rain, rani
+mali, mail, lima
+odes, does, dose
+laud, auld, dual
+tref, fret, reft
+amid, maid, diam
+ogle, loge, geol
+aery, year, yare
+mope, poem, pome
+came, mace, acme
+late, teal, tale
+cams, macs, scam
+last, slat, salt
+once, cone, econ
+yaws, ways, sway
+opes, peso, pose
+nevi, vine, vein
+toto, otto, toot
+leon, noel, lone
+news, wens, sewn
+mash, hams, sham
+care, acre, race
+orgy, gyro, gory
+toro, roto, root
+orth, thro, thor
+oslo, loos, solo
+cars, arcs, scar
+lams, alms, slam
+most, toms, mots
+lame, male, meal
+anew, wean, wane
+owls, lows, slow
+wets, west, stew
+lama, alma, mala
+wolf, fowl, flow
+tire, tier, rite
+tips, pits, spit
+leis, isle, lies
+lags, slag, gals
+nile, line, lien
+labs, albs, slab
+urbs, burs, rubs
+kris, irks, risk
+pate, peat, tape
+thru, hurt, ruth
+paws, wasp, swap
+pays, yaps, spay
+peas, apes, apse
+bard, brad, drab
+nobs, bons, snob
+teem, meet, mete
+mats, mast, tams
+kits, kist, skit
+idle, deli, lied
+ides, dies, side
+idem, diem, dime
+code, coed, deco
+pish, hips, ship
+tags, stag, gats
+swop, pows, wops
+swan, sawn, awns
+mine, mein, mien
+lear, earl, real
+hose, hoes, shoe
+bare, bear, brae
+love, vole, levo
+polo, pool, loop
+pols, lops, slop
+mugs, gums, smug
+hisn, sinh, shin
+lots, lost, slot
+corp, crop, proc
+cost, cots, scot
+hear, hare, rhea
+hays, ashy, shay
+hats, hast, shat
+hash, hahs, shah
+pres, reps, resp
+aims, amis, siam
+prod, dorp, drop
+hags, gash, shag
+loin, lion, lino
+dare, dear, read
+darn, rand, nard
+gras, gars, rags
+snag, nags, sang
+dens, send, ends
+ughs, hugs, gush
+slip, lisp, lips
+mire, emir, rime
+visa, vias, avis
+tyro, troy, tory
+gins, sing, sign
+vied, vide, dive
+sift, fits, fist
+kids, skid, disk
+raft, frat, fart
+doer, redo, rode
+sees, eses, esse
+aves, save, vase
+life, lief, file
 
 
 
@@ -127,6 +276,305 @@ paste, pates, peats, tapes, spate, septa
 apter, parte, pater, peart, taper, prate
 arils, liras, liars, lairs, rails, rials
 sucre, cruse, cures, curse, ecrus
+agers, gears, rages, sarge, sager
+argle, large, lager, glare, regal
+deers, sered, seder, redes, reeds
+horse, hoers, heros, shore, shoer
+swear, wears, sawer, resaw, wares
+trois, trios, torsi, tiros, riots
+danes, deans, andes, sedan, saned
+swore, sower, serow, worse, resow
+manse, names, manes, amens, means
+miter, mitre, merit, timer, remit
+leads, dales, lased, deals, lades
+maser, marse, mares, smear, reams
+istle, islet, lites, tiles, stile
+hears, hares, shear, share, rheas
+isled, idles, delis, slide, sidle
+caper, carpe, pacer, crape, recap
+mites, items, times, smite, emits
+teams, tames, steam, meats, mates
+cions, icons, coins, sonic, scion
+aster, tears, tares, stare, rates
+truce, cruet, cuter, recut, eruct
+ashed, heads, hades, deash, shade
+peins, penis, pines, spine, snipe
+trine, inter, inert, niter, nitre
+pores, poser, spore, prose, ropes
+panel, penal, plane, plena, nepal
+bares, baser, bears, braes, saber
+lives, veils, levis, elvis, evils
+wired, wierd, wider, wried, weird
+astir, tarsi, stria, stair, sitar
+nares, nears, snare, earns, saner
+poems, pomes, mopes, epsom
+nates, neats, antes, etnas
+hanks, ankhs, shank, khans
+calor, carlo, carol, coral
+doers, doser, redos, rosed
+fetas, feats, feast, fates
+leaks, lakes, slake, kales
+angel, angle, glean, genal
+ogres, gorse, gores, goers
+grade, garde, raged, edgar
+heats, hates, haste, haets
+sober, boers, bores, robes
+liers, slier, riles, riels
+coder, cored, credo, decor
+armed, derma, madre, dream
+named, maned, amend, admen
+caner, carne, nacre, crane
+aptly, patly, platy, typal
+lifer, flier, filer, rifle
+nails, snail, slain, anils
+leary, layer, early, relay
+lotos, loots, tools, stool
+leash, heals, hales, shale
+males, lames, meals, salem
+capes, paces, space, scape
+stain, antis, satin, saint
+loops, pools, spool, sloop
+alert, taler, alter, later
+tours, torus, routs, roust
+alefs, leafs, fleas, false
+limes, smile, slime, miles
+terns, stern, nerts, rents
+petal, plate, pleat, leapt
+tries, tires, tiers, rites
+verdi, diver, drive, rived
+loses, loess, soles, sloes
+cider, cried, dicer, riced
+adder, dared, dread, readd
+torso, toros, roots, roost
+wiser, wires, wries, weirs
+cares, acres, races, scare
+perdu, prude, drupe, duper
+versa, avers, raves, saver
+carps, craps, scrap, scarp
+ascot, coast, coats, tacos
+loser, lores, sorel, roles
+bared, beard, debar, bread
+verse, veers, sever, serve
+outer, outre, utero, route
+pedro, pored, doper, roped
+overs, verso, servo, roves
+inset, tines, stein, senti
+aspen, panes, napes, neaps
+toner, tenor, noter, notre
+hires, heirs, shire, shier
+dares, dears, rased, reads
+flied, filed, field, fidel
+abler, baler, blare, blear
+ables, bales, blase, sable
+palms, plasm, psalm, lamps
+odors, ordos, doors, roods
+asset, seats, easts, sates
+suers, users, russe, ruses
+deary, deray, rayed, ready
+argon, orang, organ, groan
+mires, miser, emirs, rimes
+aimer, marie, amire, ramie
+padre, pared, drape, raped
+litre, liter, tiler, relit
+hoots, sooth, shoot
+meter, metre, remet
+aimed, amide, media
+paint, inapt, pinta
+paled, pedal, plead
+livre, liver, viler
+aider, aired, deair
+ceres, crees, scree
+palsy, plays, splay
+aspic, picas, spica
+tills, lilts, still
+chams, chasm, machs
+lists, slits, silts
+tomes, smote, motes
+parti, atrip, tapir
+tonal, talon, notal
+pated, taped, adept
+throw, wroth, worth
+akron, krona, koran
+three, there, ether
+payer, apery, repay
+thous, south, shout
+those, shote, ethos
+peaks, speak, spake
+thole, hotel, helot
+modes, demos, domes
+links, slink, kilns
+pedes, speed, deeps
+aside, aides, ideas
+melba, amble, blame
+peeks, pekes, keeps
+peens, penes, pense
+peers, peres, spree
+carve, caver, crave
+topes, poets, estop
+toras, taros, roast
+pelts, spelt, slept
+thaws, swath, whats
+tores, store, rotes
+miasm, imams, maims
+lodes, soled, doles
+toter, torte, otter
+alecs, laces, scale
+orbed, bored, robed
+carbo, carob, cobra
+pesos, poses, posse
+pests, steps, septs
+arson, sonar, roans
+optic, topic, picot
+terne, enter, entre
+opted, toped, depot
+terce, crete, erect
+arses, rases, sears
+phase, heaps, shape
+opens, peons, pones
+wines, swine, sinew
+claps, clasp, scalp
+velar, laver, ravel
+pikes, spike, kepis
+piles, plies, spiel
+teats, taste, state
+marcs, crams, scram
+voles, solve, loves
+logan, along, anglo
+clods, colds, scold
+nadir, dinar, drain
+alien, aline, anile
+onces, cones, scone
+idols, lidos, solid
+canst, cants, scant
+pinto, piton, point
+loins, lions, linos
+abuts, tubas, tsuba
+caned, acned, dance
+trams, marts, smart
+oiler, oriel, reoil
+baals, balsa, basal
+tangs, gnats, angst
+aries, arise, raise
+talus, sault, tulsa
+manor, norma, roman
+vanes, naves, evans
+trays, stray, satyr
+ofter, forte, fetor
+naris, rains, ranis
+narks, snark, ranks
+bagel, gleba, gable
+swede, sewed, weeds
+argus, sugar, guars
+swart, straw, warts
+sward, draws, wards
+wolfs, fowls, flows
+bairn, brain, brian
+baker, brake, break
+plums, slump, lumps
+treat, tetra, tater
+calks, lacks, slack
+mania, amain, anima
+lever, elver, revel
+ceder, cered, creed
+argot, groat, gator
+mason, moans, manos
+vadis, davis, divas
+trews, strew, wrest
+stupe, upset, setup
+strop, ports, sport
+stoup, pouts, spout
+stops, posts, spots
+hists, shits, shist
+tribe, tiber, biter
+bards, drabs, brads
+trice, citer, recti
+milos, limos, moils
+copes, copse, scope
+amber, embar, bream
+cores, corse, score
+cades, cased, daces
+massa, assam, amass
+stele, steel, sleet
+stead, dates, sated
+moods, sodom, dooms
+herds, shred, sherd
+leeks, sleek, keels
+stark, karts, karst
+caber, acerb, brace
+ocher, ochre, chore
+obols, lobos, bolos
+loper, poler, prole
+lopes, poles, slope
+islam, limas, mails
+praos, proas, sapor
+prays, spray, raspy
+heart, hater, earth
+masse, seams, mesas
+leans, lanes, elans
+burse, rebus, rubes
+leady, layed, delay
+spued, pseud, dupes
+oared, oread, adore
+amids, midas, maids
+sprig, prigs, grips
+cruel, ulcer, lucre
+trips, strip, sprit
+hangs, gnash, sangh
+split, spilt, slipt
+pride, pried, redip
+beamy, maybe, embay
+halts, laths, shalt
+mired, dimer, rimed
+burma, umbra, rumba
+lated, dealt, delta
+lasts, slats, salts
+beets, beset, betes
+lases, seals, sales
+trite, titre, titer
+begin, being, binge
+metes, teems, meets
+afros, sofar, faros
+trope, toper, petro
+below, elbow, bowel
+grits, grist, girts
+grins, girns, rings
+greta, great, grate
+sonde, nodes, nosed
+years, sayer, resay
+defer, freed, refed
+waled, lawed, weald
+wales, swale, weals
+snore, senor, norse
+grabs, garbs, brags
+sneak, snake, skean
+bider, rebid, bride
+slued, duels, dulse
+louse, ousel, seoul
+desex, dexes, sexed
+sixte, exist, exits
+trove, voter, overt
+sired, dries, rides
+direr, drier, rider
+rafts, frats, farts
+sewer, ewers, resew
+serif, fries, fires
+trows, worts, worst
+fusel, fuels, flues
+dorsa, sarod, roads
+dover, drove, roved
+boast, boats, sabot
+dowry, wordy, rowdy
+fryer, refry, ferry
+dozen, zoned, zendo
+frier, firer, rifer
+frere, freer, refer
+frail, flair, filar
+bonos, boons, boson
+easer, saree, erase
+troys, story, tyros
+safer, fears, fares
+fibre, fiber, brief
+brute, rebut, tuber
 
 
 
@@ -151,6 +599,371 @@ versal, slaver, serval, ravels, salver, lavers
 singer, signer, sering, reigns, renigs, resign
 lascar, craals, rascal, scalar, sacral
 stifle, itself, flites, fliest, filets
+tenser, enters, ernest, resent, nester
+arches, casher, search, chares, chaser
+perdus, prudes, pursed, drupes, dupers
+argons, groans, orangs, organs, sarong
+phaser, phrase, sherpa, shaper, seraph
+steres, steers, serest, esters, resets
+corset, coster, sector, rectos, escort
+costar, castor, castro, scrota, actors
+stared, daters, derats, treads, trades
+beldam, lambed, blamed, ambled, bedlam
+warred, warder, drawer, redraw, reward
+lasing, algins, aligns, lingas, signal
+idlest, listed, delist, silted, tildes
+litres, liters, lister, tilers, relist
+danger, grande, garden, gander, ranged
+breads, debars, bardes, sabred, beards
+sparge, grapes, gasper, gapers, pagers
+sparer, rapers, rasper, parers, parser
+listen, silent, inlets, tinsel, enlist
+softer, foster, fortes, forest, fetors
+lamber, marble, blamer, ambler, ramble
+veiler, levier, relive, eviler, revile
+tapers, prates, paster, paters, repast
+trance, canter, recant, centra, nectar
+clears, lacers, sclera, scaler
+lopers, polers, proles, sloper
+horsed, hordes, shored, rhodes
+warned, warden, wander, andrew
+archon, anchor, rancho, charon
+honers, herons, nosher, senhor
+subtle, sublet, bluest, bustle
+strove, stover, voters, troves
+strode, stored, sorted, doters
+tester, street, setter, retest
+teased, adeste, sedate, seated
+strife, sifter, refits, rifest
+contra, craton, cantor, carton
+stores, sorest, tosser, rosets
+noires, nosier, irones, senior
+stones, stenos, setons, onsets
+tawers, rawest, waters, waster
+lament, mantle, mantel, mental
+boards, adsorb, broads, dobras
+persia, praise, aspire, spirea
+cosher, ochers, ochres, chores
+hereat, heater, aether, reheat
+poster, presto, tropes, topers
+petard, prated, depart, parted
+pintos, piston, pitons, points
+stance, ascent, secant, enacts
+laired, derail, dialer, railed
+crated, traced, carted, redact
+coders, credos, decors, scored
+manger, german, ragmen, engram
+tarred, darter, trader, retard
+larges, lagers, argles, glares
+spored, prosed, dopers, pedros
+cruets, curets, truces, eructs
+prides, spired, prised, spider
+livres, livers, sliver, silver
+ablest, tables, bleats, stable
+biders, debris, brides, rebids
+danker, darken, narked, ranked
+esther, ethers, threes, theres
+tamers, stream, maters, master
+aisled, ideals, ladies, sailed
+deairs, irades, raised, aiders
+player, parley, replay, pearly
+dearer, reader, reared, reread
+tubers, brutes, buster, rebuts
+binder, brined, rebind, inbred
+deigns, design, singed, signed
+bruise, buries, busier, rubies
+gourde, drogue, rouged, rogued
+tabers, breast, barest, baster
+dentin, intend, tinned, indent
+glider, girdle, gilder, regild
+detour, toured, redout, routed
+devein, veined, endive, envied
+aliens, alines, lianes, saline
+sirens, serins, resins, rinses
+triode, dotier, editor, rioted
+dieter, reedit, tiered, retied
+alined, daniel, denial, nailed
+wolfer, fowler, flower, reflow
+lifers, fliers, filers, rifles
+ancien, canine, cannie, encina
+cadres, cedars, scared, sacred
+trepan, enrapt, parent, entrap
+angers, ganser, ranges, sanger
+inures, insure, ursine, urines
+hotels, hostel, helots, tholes
+gainer, earing, regain, regina
+senate, sateen, enates, santee
+dreads, readds, sadder, adders
+secure, recuse, cereus, rescue
+sealer, leaser, resale, reseal
+scathe, sachet, chaste, cheats
+basest, basset, bastes, beasts
+corvet, covert, vector
+mapper, preamp, pamper
+largos, argols, gorals
+aliner, linear, nailer
+swears, wrasse, sawers
+hovers, shrove, shover
+undies, nudies, indues
+chiels, chiles, chisel
+meanly, namely, laymen
+larded, ladder, raddle
+horses, shores, shoers
+surest, russet, estrus
+median, maiden, aidmen
+lumina, alumin, alumni
+looter, tooler, retool
+looted, tooled, toledo
+arched, chared, chedar
+claret, cartel, rectal
+loosed, soloed, oodles
+unbred, burden, burned
+blares, blears, balers
+bedrug, budger, redbug
+sucres, curses, cusser
+looped, poodle, pooled
+arcing, racing, caring
+clarke, lacker, calker
+succor, crocus, occurs
+bleary, barely, barley
+mantes, stamen, aments
+lapses, sepals, passel
+kitsch, shtick, thicks
+stupes, setups, upsets
+argled, glared, gerald
+picots, optics, topics
+lapsed, pleads, pedals
+strive, stiver, rivets
+strips, sprits, spirts
+piecer, pierce, recipe
+modern, normed, rodmen
+luffed, duffel, duffle
+stride, direst, driest
+striae, satire, airest
+warper, prewar, rewrap
+strait, artist, traits
+hoarse, ashore, ahorse
+strafe, afters, faster
+stoups, spouts, tossup
+storey, toyers, oyster
+teener, entree, eterne
+writhe, whiter, wither
+manors, ransom, romans
+cleats, castle, eclats
+hisser, shires, shiers
+noised, onside, edison
+nomads, monads, damson
+kindle, kilned, linked
+meteor, emoter, remote
+armies, ramies, aimers
+stiles, sliest, islets
+hikers, shrike, shriek
+belows, bowels, elbows
+arnica, crania, carina
+corked, docker, rocked
+inanes, sienna, insane
+unshod, hudson, hounds
+adorer, roared, roader
+hewers, wheres, shewer
+porter, pretor, report
+steamy, mayest, mateys
+steaks, stakes, skates
+posers, spores, proses
+stayer, yarest, estray
+corses, crosse, scores
+meters, merest, metres
+marses, smears, masers
+medals, lameds, damsel
+tetrad, tarted, ratted
+posted, depots, despot
+cinema, iceman, anemic
+starve, averts, vaster
+pilots, pistol, spoilt
+logans, slogan, anglos
+stares, assert, asters
+nicest, insect, incest
+stapes, spates, pastes
+wieldy, widely, dewily
+stanch, snatch, chants
+niches, chines, inches
+stalin, instal, latins
+stains, satins, saints
+stager, greats, grates
+heists, shiest, thesis
+worses, sowers, resows
+pouter, puerto, troupe
+squire, quires, risque
+worsen, owners, resown
+hearts, haters, earths
+craned, dancer, nacred
+cranes, nacres, caners
+craped, carped, redcap
+unripe, punier, purine
+berate, rebate, beater
+crater, tracer, carter
+lubber, burble, rubble
+craven, carven, cavern
+craves, carves, cavers
+precis, prices, spicer
+creams, macers, scream
+laming, malign, lingam
+credit, direct, triced
+creeds, screed, ceders
+hatred, dearth, thread
+lamina, manila, animal
+hasten, athens, thanes
+crones, recons, censor
+prepay, yapper, papery
+lamest, samlet, metals
+warded, wadder, edward
+boring, orbing, robing
+peruse, purees, rupees
+borsht, broths, throbs
+bertha, breath, bather
+loader, ordeal, reload
+lashes, hassle, shales
+spires, prises, spiers
+visaed, advise, davies
+curers, curser, recurs
+hadjis, jihads, jadish
+lively, vilely, evilly
+ambers, breams, embars
+latent, talent, latten
+brails, brasil, libras
+braise, rabies, serbia
+braked, debark, barked
+dafter, rafted, farted
+brakes, breaks, bakers
+dagoes, dosage, seadog
+vineal, venial, veinal
+melons, solemn, lemons
+damned, demand, madden
+idlers, slider, sidler
+pester, peters, preset
+dasher, shared, shader
+dashes, shades, sashed
+washer, hawser, rewash
+lowest, towels, owlets
+lowers, slower, rowels
+grouse, rouges, rogues
+unpile, lineup, lupine
+testes, tsetse, sestet
+bestir, biters, tribes
+groins, signor, rosing
+bribed, dibber, ribbed
+soured, douser, roused
+decant, cadent, canted
+sought, toughs, oughts
+sorter, roster, resort
+tasses, stases, assets
+grides, dirges, ridges
+briefs, fibres, fibers
+grided, girded, ridged
+sombre, somber, ombres
+grease, eagers, agrees
+deduce, deuced, educed
+soiled, siloed, oldies
+grater, garter, garret
+tasked, staked, skated
+misled, smiled, slimed
+grange, nagger, ganger
+snores, sensor, senors
+lagger, gargle, raggle
+ichors, orchis, choirs
+deisms, missed, dismes
+brunet, bunter, burnet
+sniper, repins, ripens
+neuter, tenure, tureen
+snider, diners, rinsed
+delude, dueled, eluded
+verses, severs, serves
+sneaks, snakes, skeans
+verser, server, revers
+ladron, arnold, ronald
+denier, reined, nereid
+denser, sender, enders
+tartan, tantra, rattan
+denude, dundee, endued
+denver, vender, nerved
+bugler, bulger, burgle
+dermas, madres, dreams
+derris, driers, riders
+desand, sanded, sadden
+desert, deters, rested
+slayer, relays, layers
+slaves, valses, salves
+desire, eiders, reside
+venire, veiner, envier
+tarsal, altars, astral
+gleans, angels, angles
+bedrid, bidder, birded
+deuces, seduce, educes
+taring, gratin, rating
+triste, sitter, titers
+likens, silken, inkles
+louvre, louver, velour
+sixtes, sexist, exists
+avails, salvia, saliva
+israel, serial, sailer
+diaper, paired, repaid
+cohere, echoer, reecho
+analog, angola, agonal
+tented, detent, netted
+nadirs, dinars, drains
+airmen, marine, remain
+singly, lysing, lyings
+giants, gainst, sating
+placer, carpel, parcel
+lathed, halted, daleth
+wolfed, fowled, flowed
+lifter, trifle, filter
+signet, ingest, tinges
+signee, genies, seeing
+pentad, panted, pedant
+acorns, narcos, carson
+planes, naples, panels
+begins, beings, binges
+phased, hasped, shaped
+racers, carers, scarer
+caller, recall, cellar
+liefer, refile, relief
+takers, streak, skater
+garbed, badger, barged
+shears, shares, rashes
+tailer, aliter, retail
+tailed, detail, dilate
+tenons, sonnet, tonnes
+serine, seiner, nereis
+seneca, seance, encase
+perils, pliers, lisper
+dowers, dowser, drowse
+fueler, refuel, ferule
+baiter, rebait, barite
+toters, tortes, otters
+lewder, welder, reweld
+phases, shapes, pashes
+caress, scares, escars
+levers, elvers, revels
+caries, cerias, ericas
+raptly, paltry, partly
+friers, firers, ferris
+friend, redfin, finder
+please, asleep, elapse
+ouster, outers, routes
+secret, certes, erects
+duster, rusted, rudest
+earned, neared, endear
+krises, kisser, skiers
+easers, sarees, erases
+recent, center, centre
+causer, saucer, cesura
+ushers, rushes, rhesus
+reding, engird, ringed
+citrus, rustic, rictus
+infest, finest, feints
+losers, sorels, lessor
+learnt, rental, antler
+lories, oilers, oriels
 
 
 
@@ -175,7 +988,347 @@ reviles, relives, servile, leviers, veilers
 enraged, derange, grandee, grenade, angered
 sainted, detains, destain, stained, instead
 resider, redries, serried, desirer, derries
-
+scalper, placers, clasper, parcels, carpels
+scanter, recants, canters, trances, nectars
+editors, sortied, steroid, storied, triodes
+rearing, earring, rangier, grainer, angrier
+rambles, blamers, lambers, amblers, marbles
+seraphs, shapers, sherpas, phrases, phasers
+psalter, stapler, platers, plaster, palters
+reseals, resales, sealers, earless, leasers
+rescued, reduces, recused, secured, seducer
+spireas, praises, parises, paresis, aspires
+staider, tardies, tirades, astride, aridest
+replays, sparely, players, parsley, parleys
+regally, gallery, largely, allergy
+filters, stifler, trifles, lifters
+waister, waiters, wariest, wastier
+entraps, pastern, parents, trepans
+sacrals, scalars, rascals, lascars
+relates, elaters, realest, stealer
+related, treadle, altered, alerted
+resound, enduros, sounder, undoers
+resigns, signers, singers, ingress
+enlists, silents, tinsels, listens
+revised, diverse, deviser, derives
+salters, slaters, lasters, artless
+salting, slating, staling, lasting
+regilds, gilders, girdles, gliders
+reseats, easters, seaters, teasers
+reflows, flowers, fowlers, wolfers
+scalers, scleras, classer, carless
+retinal, reliant, ratline, latrine
+retrace, recrate, terrace, caterer
+scarlet, crestal, clarets, cartels
+scleral, recalls, cellars, callers
+elating, gelatin, genital, atingle
+recount, counter, cornute, trounce
+recipes, precise, pierces, piecers
+reports, pretors, sporter, porters
+reteach, hectare, teacher, cheater
+eatings, easting, seating, teasing
+reacted, created, cerated, catered
+rasping, sparing, parsing, parings
+raspers, sparers, sparser, parsers
+raptest, spatter, tapster, patters
+dopiest, deposit, posited, topside
+repeals, relapse, pleaser, leapers
+retards, darters, starred, traders
+serging, gingers, snigger, niggers
+gaiters, stagier, triages, aigrets
+sheared, headers, hearsed, adheres
+shotgun, gunshot, hognuts, noughts
+diapers, despair, praised, aspired
+devoirs, devisor, visored, voiders
+skating, staking, takings, tasking
+slander, snarled, darnels, landers
+slashes, hassels, hassles, ashless
+slather, halters, thalers, lathers
+smartie, artemis, maestri, maitres
+granite, tangier, tearing, ingrate
+declaim, decimal, claimed, medical
+sorbate, borates, boaters, boaster
+rewards, redraws, drawers, warders
+reveres, reverse, reserve, severer
+escorts, sectors, costers, corsets
+rouster, routers, tourers, trouser
+reviled, relived, deliver, livered
+erasmus, assumer, amusers, masseur
+subtler, butlers, bustler, bluster
+restack, rackets, stacker, tackers
+coalpit, topical, optical, capitol
+impaler, impearl, palmier, lempira
+tertian, iterant, nitrate, nattier
+rasters, starers, arrests
+rewarms, swarmer, warmers
+rustled, strudel, lustred
+ripened, repined, dnieper
+relayed, delayer, layered
+reveals, several, leavers
+fishers, serfish, sherifs
+enterer, reenter, terrene
+resided, desired, derides
+relater, alterer, alerter
+ripples, slipper, lippers
+saddler, raddles, ladders
+riblets, bristle, blister
+sadiron, inroads, ordains
+retrain, terrain, trainer
+sailers, serials, airless
+rescues, recuses, secures
+rickets, sticker, tickers
+enlarge, general, gleaner
+enigmas, seaming, gamines
+engrams, germans, mangers
+reified, edifier, deifier
+rescind, discern, cinders
+saltest, stalest, latests
+reheats, heaters, aethers
+rehears, shearer, hearers
+feasted, defeats, deafest
+engilds, dingles, singled
+salvers, servals, slavers
+regions, signore, ignores
+reginal, realign, aligner
+reprice, crepier, piercer
+sampler, palmers, lampers
+feigner, reefing, freeing
+sapient, spinate, panties
+sapling, palings, lapsing
+encases, seances, senecas
+satchel, chalets, latches
+sateens, senates, sensate
+restock, rockets, stocker
+saucers, cesuras, causers
+flowing, fowling, wolfing
+empires, premise, premies
+emirate, emerita, meatier
+reenact, crenate, centare
+restful, fluster, fluters
+repents, serpent, present
+scanted, descant, decants
+rooster, rooters, toreros
+eluding, dueling, indulge
+ferlies, reliefs, refiles
+scarped, redcaps, scraped
+scarper, scraper, carpers
+redoubt, doubter, obtrude
+ridable, brailed, bedrail
+rosiest, sorties, stories
+elastic, castile, laciest
+elapsed, sepaled, pleased
+scorers, recross, crosser
+eighths, heights, highest
+rosined, dineros, indorse
+recoins, cronies, coiners
+scrapes, spacers, parsecs
+reclaim, claimer, miracle
+recites, tierces, cerites
+repaved, deprave, pervade
+recedes, seceder, decrees
+recasts, casters, actress
+rebound, bounder, unrobed
+ferried, refried, refired
+editing, dieting, ignited
+rebates, berates, beaters
+rebated, debater, berated
+reavows, oversaw, avowers
+ferries, refries, refires
+scuttle, cuttles, cutlets
+repasts, sparest, pasters
+eastern, earnest, nearest
+seabird, braised, abiders
+earthen, hearten, teheran
+earplug, graupel, plaguer
+earning, grannie, nearing
+sealing, leasing, linages
+restart, ratters, starter
+secants, stances, ascents
+frantic, infarct, infract
+rattles, starlet, startle
+rattish, tartish, athirst
+rattans, tantras, tartans
+ratings, gratins, staring
+retried, retired, tireder
+repaint, pertain, painter
+ferules, refuels, fuelers
+sedated, deadest, steaded
+drogues, gourdes, groused
+estrous, sourest, ousters
+rappels, slapper, lappers
+drawled, dawdler, waddler
+seminal, malines, menials
+ranchos, archons, anchors
+dottles, dottels, slotted
+semipro, promise, imposer
+restamp, stamper, tampers
+rentals, sternal, antlers
+senator, treason, atoners
+rallied, dialler, dallier
+donator, tornado, odorant
+raising, arising, airings
+domains, daimons, madison
+espials, palsies, lapises
+gagster, stagger, taggers
+accuser, accurse, accrues
+respell, speller, presell
+servant, taverns, versant
+sestina, tansies, tisanes
+settler, trestle, letters
+distent, dentist, stinted
+shadier, dashier, hardies
+ganders, gardens, dangers
+gangers, granges, naggers
+shaping, hasping, phasing
+shatter, hatters, threats
+disport, torpids, tripods
+rousted, dourest, detours
+garnets, strange, argents
+garotes, storage, orgeats
+garrets, garters, graters
+shindig, dishing, hidings
+rachets, chaster, archest
+rabbles, slabber, barbels
+rabbets, stabber, barbets
+gateman, magenta, magnate
+quoters, questor, torques
+shocker, hockers, chokers
+shooter, soother, hooters
+shorten, hornets, thrones
+retouch, couther, toucher
+gemmier, gremmie, immerge
+sidearm, misread, admires
+sideman, maidens, medians
+diptera, pirated, partied
+gentian, antigen, anteing
+dipoles, despoil, spoiled
+dioptre, diopter, peridot
+gestapo, potages, postage
+similes, missile, mislies
+simpers, premiss, impress
+simpler, prelims, limpers
+sinatra, tsarina, artisan
+singlet, glisten, tingles
+rowdier, wordier, worried
+dialect, deltaic, citadel
+rowdies, dowries, weirdos
+fibered, debrief, briefed
+glandes, slanged, dangles
+dessert, deserts, tressed
+slacker, calkers, lackers
+erotism, mortise, moister
+slasher, lashers, ashlers
+rimiest, mistier, miriest
+rubbles, burbles, lubbers
+sleeted, deletes, steeled
+sleuths, hustles, lushest
+pussier, suspire, uprises
+slitter, tilters, litters
+slugger, gurgles, luggers
+goiters, goitres, goriest
+renamed, amender, meander
+dentins, indents, intends
+smasher, marshes, mashers
+purples, pulpers, suppler
+smiting, timings, misting
+smother, thermos, mothers
+demerit, mitered, merited
+sniggle, niggles, leggins
+fielder, refiled, defiler
+solacer, coalers, oracles
+solutes, tousles, lotuses
+declare, creedal, cleared
+erbiums, imbrues, imburse
+reunite, retinue, uterine
+sorting, storing, trigons
+sources, courses, sucrose
+resorts, rosters, sorters
+remolds, smolder, molders
+dealing, leading, aligned
+dawdles, swaddle, waddles
+daunter, unrated, natured
+ruinate, taurine, urinate
+protest, spotter, potters
+protein, pointer, tropine
+protean, pronate, operant
+spectra, precast, carpets
+specula, capsule, upscale
+spheric, ciphers, ceriphs
+rumbles, slumber, lumbers
+princes, crispen, pincers
+pretest, petters, pertest
+hawsers, swasher, washers
+predate, tapered, adepter
+preamps, pampers, mappers
+cratons, cartons, cantors
+crating, carting, tracing
+craters, carters, tracers
+crashes, chasers, cashers
+crackle, clacker, cackler
+hectors, torches, troches
+coverts, corvets, vectors
+stabled, blasted, baldest
+remelts, smelter, melters
+coulter, clouter, cloture
+corslet, colters, lectors
+stewing, twinges, westing
+stickle, tickles, keltics
+stiller, tillers, trellis
+stoners, tensors, nestors
+stouten, tenutos, teutons
+straits, tsarist, artists
+stretti, titters, tritest
+remeets, teemers, meeters
+farting, rafting, ingraft
+supered, perused, perdues
+surmise, mussier, misuser
+swelter, welters, wrestle
+remains, seminar, marines
+remails, realism, mailers
+tautens, tetanus, attunes
+pinatas, patinas, pastina
+clasher, charles, larches
+eoliths, holiest, hostile
+impetus, imputes, uptimes
+tenures, tureens, neuters
+termini, interim, mintier
+reloans, orleans, loaners
+theater, theatre, thereat
+choreal, chorale, cholera
+incepts, pectins, inspect
+inching, chining, niching
+charing, chagrin, arching
+inkling, kilning, linking
+catnaps, captans, capstan
+cations, atonics, actions
+insoles, lesions, lioness
+cassino, casinos, caisson
+onanist, nations, anoints
+onanism, amnions, mansion
+intrude, untired, untried
+cabaret, bearcat, abreact
+obverse, observe, verbose
+obtains, bonitas, bastion
+burnets, bunters, brunets
+burgles, bulgers, buglers
+broomed, boredom, bedroom
+broader, boarder, arbored
+breaths, berthas, bathers
+bolters, bolster, lobster
+unarmed, manured, maunder
+blaming, lambing, ambling
+unpiles, lineups, lupines
+laments, mantels, mantles
+laminas, animals, manilas
+newsier, weiners, wieners
+vainest, natives, naivest
+velours, louvers, louvres
+reloads, ordeals, loaders
+weather, whereat, wreathe
+magneto, montage, megaton
+manlier, marline, mineral
+mistune, minutes, minuets
+mislead, misdeal, medials
 
 
 
@@ -200,6 +1353,185 @@ prattles, platters, sprattle, splatter
 sintered, sentried, inserted, resident
 gardened, dangered, deranged, gandered
 elastins, saltines, salients, nailsets
+simpered, premised, impeders, epiderms
+diopters, peridots, topsider, riposted
+silenter, enlister, listener, reenlist
+cantered, crenated, decanter, recanted
+piecrust, pictures, crepitus, cuprites
+signaler, aligners, realigns, slangier
+salesmen, lameness, nameless, maleness
+entrails, retinals, latrines, ratlines
+inserter, reinters, reinsert, terrines
+ethicist, itchiest, chitties, theistic
+cratered, retraced, recrated, terraced
+creating, catering, argentic, reacting
+caterers, retraces, recrates, terraces
+selector, electors, corselet
+singable, signable, belgians
+assentor, senators, treasons
+silverer, revilers, sliverer
+silvered, delivers, slivered
+dilatory, adroitly, idolatry
+diluents, unlisted, insulted
+glassine, leasings, gainless
+taurines, ruinates, urinates
+coarsest, coasters, socrates
+coasting, coatings, agnostic
+devisers, disserve, dissever
+asserter, serrates, reassert
+silencer, licenser, reclines
+silenced, licensed, declines
+alterers, alerters, relaters
+clevises, viceless, vesicles
+signaled, leadings, dealings
+gearings, greasing, snaggier
+tastable, abettals, statable
+disarmer, marrieds, admirers
+sickling, lickings, slicking
+siberian, iberians, binaries
+gearless, eelgrass, largesse
+discreet, discrete, desertic
+shorties, hoisters, horsiest
+altruism, ultraism, muralist
+teatimes, estimate, meatiest
+altruist, ultraist, titulars
+worsened, endowers, reendows
+grandees, grenades, deranges
+smatters, smartest, mattress
+yearling, layering, relaying
+buggered, begrudge, debugger
+colander, conelrad, calderon
+untraced, underact, uncrated
+greenish, sheering, rehinges
+ateliers, earliest, realties
+untidies, disunite, nudities
+shearing, hearings, hearsing
+disperse, presides, despiser
+psalters, plasters, staplers
+sharping, harpings, phrasing
+proudest, postured, sprouted
+severers, reverses, reserves
+comedian, daemonic, demoniac
+takeouts, stakeout, outtakes
+unsorted, roundest, tonsured
+gelatins, genitals, stealing
+serpents, presents, pertness
+seriated, steadier, readiest
+promises, semipros, imposers
+promiser, primrose, primeros
+tristate, titrates, rattiest
+bearcats, abreacts, cabarets
+printers, sprinter, reprints
+donators, tornados, odorants
+compiles, complies, polemics
+presider, respired, reprised
+presells, respells, spellers
+swindles, windless, wildness
+prenatal, paternal, parental
+hassling, lashings, slashing
+unrested, underset, dentures
+doubters, obtrudes, redoubts
+prelates, pleaters, replates
+dourness, resounds, sounders
+claviers, visceral, cavilers
+predates, pederast, repasted
+preciser, piercers, reprices
+headpins, pinheads, deanship
+cleaners, cleanser, recleans
+hearting, earthing, ingather
+praising, pairings, aspiring
+dreaming, margined, midrange
+surprise, spurries, uprisers
+brighten, bringeth, berthing
+hepatics, pistache, pastiche
+ailments, aliments, manliest
+positron, portions, sorption
+cacklers, crackles, clackers
+securing, rescuing, recusing
+trickles, stickler, ticklers
+sectored, corseted, escorted
+secreter, erecters, reerects
+seconder, encoders, censored
+histamin, isthmian, thiamins
+searcher, research, reachers
+generals, gleaners, enlarges
+eagerest, steerage, etageres
+poisoner, spoonier, snoopier
+sealable, saleable, leasable
+calipers, spiracle, replicas
+suborned, bounders, rebounds
+edifiers, fireside, deifiers
+stumbler, tumbrels, tumblers
+hounders, unhorsed, enshroud
+contains, canonist, sanction
+stricter, critters, restrict
+hurtless, hustlers, ruthless
+adopters, pastored, readopts
+straiten, nitrates, tertians
+detrains, strained, randiest
+gentiles, steeling, sleeting
+storable, bloaters, sortable
+gentries, steering, integers
+stockier, corkiest, rockiest
+stippler, ripplets, tipplers
+canniest, instance, ancients
+bimetals, timbales, balmiest
+sistered, editress, resisted
+diastole, isolated, sodalite
+impalers, impearls, lempiras
+satanism, staminas, mantissa
+teachers, hectares, cheaters
+sterling, ringlets, tinglers
+perlites, epistler, reptiles
+energies, energise, resignee
+tourings, routings, rousting
+steelier, leeriest, sleetier
+inciters, crinites, citrines
+germanic, amercing, creaming
+enlisted, tinseled, listened
+indenter, intender, interned
+enterers, reenters, terrenes
+parsable, parables, sparable
+indurate, ruinated, urinated
+germinal, maligner, malinger
+undereat, underate, denature
+infecter, reinfect, frenetic
+stanches, chastens, snatches
+stancher, chanters, snatcher
+stainers, retsinas, artiness
+uncrates, etruscan, centaurs
+assignor, signoras, soarings
+instates, titaness, nastiest
+crashing, archings, chagrins
+teabowls, bestowal, stowable
+assented, sensated, standees
+ordinate, arointed, rationed
+giantess, seatings, eastings
+romanies, romaines, moraines
+roisters, resistor, sorriest
+clotures, clouters, coulters
+obtainer, reobtain, baritone
+riptides, spirited, tiderips
+ringside, residing, desiring
+rictuses, curtsies, citruses
+reverser, reverers, reserver
+reversed, reserved, deserver
+reversal, ravelers, slaverer
+centares, reenacts, reascent
+resigned, redesign, designer
+fernless, flensers, fresnels
+viperous, previous, pervious
+relights, lighters, slighter
+regraded, regarded, degrader
+decimals, declaims, medicals
+reforest, forester, fosterer
+reflowed, flowered, deflower
+thickset, thickets, thickest
+deforest, forested, fostered
+reclaims, miracles, claimers
+christen, snitcher, citherns
+magister, ragtimes, migrates
+magnetos, montages, megatons
 
 
 
@@ -224,6 +1556,40 @@ lathering, haltering, earthling
 neurotics, countries, cretinous
 larcenist, cisternal, clarinets
 ascertain, cartesian, sectarian
+aspersing, preassign, repassing
+aspirates, parasites, satrapies
+assertors, assorters, reassorts
+attainers, tearstain, reattains
+auctioned, cautioned, education
+obtainers, baritones, reobtains
+ironsides, resinoids, derisions
+accouters, accoutres, coruscate
+integrals, triangles, gnarliest
+palestine, penalties, tapelines
+infecters, frenetics, reinfects
+impingers, premising, simpering
+burbliest, stubblier, rubbliest
+idolaters, steroidal, estradiol
+torchiers, chorister, rhetorics
+hesitater, heartiest, earthiest
+hellfires, fleshlier, shellfire
+cattiness, tacitness, scantiest
+tiredness, residents, dissenter
+prentices, prescient, reinspect
+presenter, repenters, represent
+threnodes, dethrones, shortened
+adsorbing, boardings, signboard
+grenadine, engrained, endearing
+greatness, estranges, sergeants
+tasseling, stealings, slangiest
+tarriness, strainers, restrains
+girasoles, gasoliers, seraglios
+gardening, gandering, deranging
+fosterers, foresters, reforests
+recordist, creditors, directors
+consigned, encodings, seconding
+reprising, respiring, springier
+corseting, escorting, sectoring
 
 
 
@@ -234,114 +1600,36 @@ iridescent, indiscrete, indiscreet
 persistent, pinsetters, prettiness
 antimonies, antinomies, semination
 banderoles, bandoleers, endorsable
-reenclosed, ensorceled
-shovelfuls, shovelsful
-patricides, pediatrics
-uncensored, denouncers
-viceregent, vicegerent
-gloominess, neologisms
-vicariates, aviatrices
-aldermanry, marylander
-letterings, resettling
-tapestries, striptease
-coinferred, reinforced
-tantaluses, sultanates
-collapsing, scalloping
-unarrested, underrates
 
 
 
 processing division 11
 activations, vacationist, cavitations
 transportee, penetrators, paternoster
-mutilations, stimulation
-discoverers, rediscovers
-discernment, rescindment
-discernable, rescindable
-directional, clitoridean
-disinterest, dentistries
-mensuration, numerations
-sketchiness, thicknesses
-detonations, denotations
-serviceable, receivables
-ministerial, matrilinies
-sentimental, entailments
-dominations, admonitions
-undercoated, undecorated
-semiprivate, imperatives
-desecration, considerate
-description, predictions
-misbehavior, behaviorism
 
 
 
 processing division 12
-premeditates, preestimated
-indirections, indiscretion
-iridectomies, mediocrities
-adulterating, triangulated
-conversation, conservation
-coalitionist, solicitation
-teaspoonfuls, teaspoonsful
-reinterprets, interpreters
-contrariness, constrainers
-reinstructed, unrestricted
-straightener, restraighten
-protectional, lactoprotein
-strengthener, restrengthen
-despoliation, depositional
-customshouse, customhouses
-hairbreadths, hairsbreadth
-delicatessen, delicateness
-probationers, reabsorption
-oscillations, colonialists
-reenlightens, enlighteners
 
 
 
 processing division 13
-certification, rectification
-straighteners, restraightens
-discriminator, doctrinairism
-microclimates, commercialist
-perfectionism, imperfections
-impregnations, impersonating
-biopsychology, psychobiology
-paternalistic, antiparticles
-tentativeness, attentiveness
-psychosomatic, somatopsychic
-tastelessness, statelessness
-verifications, versification
-commissioners, recommissions
-strengtheners, restrengthens
 
 
 
 processing division 14
-impressiveness, permissiveness
-impressibility, permissibility
-disintegration, disorientating
-rectifications, certifications
-conservational, conversational
-tablespoonsful, tablespoonfuls
 
 
 
 processing division 15
-microphotograph, photomicrograph
-constructionism, misconstruction
-radiotelegraphy, teleradiography
 
 
 
 processing division 16
-microphotographs, photomicrographs
-microphotography, photomicrography
 
 
 
 processing division 17
-photomicrographic, microphotographic
 
 
 
@@ -377,42 +1665,3 @@ processing division 25
 
 
 
-triangle, integral, relating, altering, alerting
-pertains, parentis, pantries, painters, repaints
-strainer, trainers, retrains, restrain, terrains
-teardrop, prorated, predator, parroted
-petals, plates, pleats, staple,, palest, pastel
-crates, traces, carets, reacts, caster, caters, recast
-tesla, teals, tales, steal, stale, least, slate
-iridescent, indiscrete, indiscreet
-lair, lira, rail, liar
-teas, seat, east, eats, sate
-tsar, tars, star, arts, rats
-nips, pins, spin, snip
-laps, alps, pals, slap
-trees, terse, steer, ester, reset
-now, own, won
-lap, pal, alp
-opts, tops, stop, post, pots, spot
-trap, part, tarp, prat, rapt
-siren, reins, risen, resin, rinse
-
-DEUTSCH
-
-scheinen, schienen, chinesen, schneien
-riefen, reifen, freien, ferien, feiern
-lieder, leider, derlei
-toren, tenor, roten, orten
-seine, seien, eisen, eines
-genetischer, gesicherten, gestenreich, gestrichene, energetisch
-tischchen, schichten, technisch, tschechin
-galerien, rangelei, generali, genialer, anlieger, algerien
-scheint, schneit, sichten, stichen, nitsche, tischen
-sirene, serien, reines, seiner, reisen, einser, riesen, eisern, eisner
-breite, bereit, beriet, bertie, triebe, treibe, bieter
-sterne, tresen, resten, nester, ersten, ernste, ernest
-nagel, galen, angel, lange, lagen, algen
-reaktion, kantorei, kroatien, kreation
-niere, eiern, einer, reine
-vorsprechen, vorpreschen, versprochen
-gestrichene, gestenreich, gesicherten, genetischer, energetisch

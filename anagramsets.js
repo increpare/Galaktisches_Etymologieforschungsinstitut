@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var content=String(fs.readFileSync("deutsch4_lc.txt"));
+var content=String(fs.readFileSync("wordsEn.txt"));
 var words = content.split("\n");
 console.log(words.length + " words")
 

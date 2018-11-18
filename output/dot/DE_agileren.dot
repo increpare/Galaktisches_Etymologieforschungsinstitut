@@ -1,4 +1,5 @@
 graph {
+	agileren -- algerien [ label="4" ];
 	agileren -- anlieger [ label="11" ];
 	agileren -- einlager [ label="14" ];
 	agileren -- einlagre [ label="13" ];
@@ -7,6 +8,14 @@ graph {
 	agileren -- inegaler [ label="13" ];
 	agileren -- rangelei [ label="14" ];
 	agileren -- regalien [ label="11" ];
+	algerien -- anlieger [ label="11" ];
+	algerien -- einlager [ label="14" ];
+	algerien -- einlagre [ label="13" ];
+	algerien -- galerien [ label="2" ];
+	algerien -- genialer [ label="13" ];
+	algerien -- inegaler [ label="17" ];
+	algerien -- rangelei [ label="12" ];
+	algerien -- regalien [ label="9" ];
 	anlieger -- einlager [ label="9" ];
 	anlieger -- einlagre [ label="10" ];
 	anlieger -- galerien [ label="13" ];
