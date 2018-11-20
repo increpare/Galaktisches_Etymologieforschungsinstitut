@@ -238,7 +238,6 @@ function printPointedDists(startword,words){
 	for (let i=0;;i++){
 		let curradius_words=allWordsReachableWithJumps(startword,i,words);
 		let newwords = curradius_words.filter( (w) => lastgraph.indexOf(w)===-1 );
-
 		
 		if (newwords.length>0){
 			console.log(""+newwords);
@@ -247,6 +246,7 @@ function printPointedDists(startword,words){
 		if (curradius_words.length===words.length){
 			break;
 		}
+		
 		if (newwords.length===0){
 			console.log(".");
 		}

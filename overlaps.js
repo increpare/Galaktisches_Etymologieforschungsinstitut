@@ -24,6 +24,28 @@ let wordsList = [
 	["now", "own", "won"],
 	["lap", "pal", "alp"],
 	["trap", "part", "tarp", "prat", "rapt"],
+	["psalter", "stapler", "platers", "plaster"],
+	["prattles", "platters", "splatter"],
+	["retails", "saltier", "realist"],
+	["singer", "signer", "reigns", "resign"],
+	["signaler", "aligners", "realigns"],
+	["alerts", "staler", "alters", "slater", "salter"],
+	["teslas", "tassel", "steals", "slates"],
+	["elastins", "saltines", "salients", "nailsets"],
+	["striate", "tastier", "iratest", "attires", "artiste", "artiest"],
+	["treatise", "treaties", "iterates"],
+	["tenser", "enters", "ernest", "resent", "nester"],
+	["sintered", "sentried", "inserted", "resident"],
+	["iridescent", "indiscrete", "indiscreet"],
+	["recount", "counter", "trounce"],
+	["trounces", "construe", "counters", "recounts"],
+	["introduces", "rediscount", "reductions", "discounter"],
+	["pertains", "parentis", "pantries", "painters", "repaints"],
+	["serrated", "treaders", "retreads", "arrested"],
+	["rawest", "waters", "waster"],
+	["tamers", "stream", "maters", "master"],
+	["dearths", "hardest", "hardset", "hatreds", "threads", "trashed"],
+
 
 	["eilst","leist","liest","liste","seilt","sielt","steil","stiel","stile","teils"],
 	["genre","neger","regen","gerne","enger"],
@@ -38,13 +60,9 @@ let wordsList = [
 	["seien", "seine", "eines", "eisen"],
 	["streichen","enterichs","scheitern","schreiten","sicherten","reichsten"],
 	["sirene", "serien", "reines", "seiner", "reisen", "einser", "riesen", "eisern"],
-
-
 	["scheinen", "schienen", "chinesen", "schneien"],
 	["genetischer", "gesicherten", "gestenreich", "gestrichene", "energetisch"],
-
 	["tischchen", "schichten", "technisch", "tschechin"],
-
 	["scheint", "schneit", "sichten", "stichen", "nitsche", "tischen"],
 	["breite", "bereit", "beriet", "bertie", "triebe", "treibe", "bieter"],
 	["sterne", "tresen", "resten", "nester", "ersten", "ernste", "ernest"],
@@ -55,11 +73,23 @@ let wordsList = [
 	["verbreite", "verbriete", "verreibet", "verriebet", "vertreibe", "vertriebe", "brevetier"],
 	["agileren", "anlieger", "einlager", "einlagre", "galerien", "algerien", "genialer", "inegaler", "rangelei", "regalien"],
 	["triebes", "siebter", "siebert", "seibert", "riebest", "biester", "reibest", "breites", "bieters", "biester", "bereits", "bereist", "beierst"],
+	["sicheren", "schreine", "schreien", "schieren", "riechens", "einscher", "erschein", "erschien", "reichens"],
+	["gestrichene", "gestenreich", "gesicherten", "genetischer", "energetisch"],
+	["negierest", "negiertes", "seigerten", "ereignest", "ersteigen", "erstiegen", "erstiegne", "genierest", "geniertes", "gereisten", "geriesten"],
+	["abreisten", "abreitens", "absentier", "anbieters", "antriebes", "arbeitens", "basierten"],
+	["reifendes", "riefendes", "seifender", "seifernde", "eiferndes", "feierndes", "fierendes", "freiendes"],
+	["stedinger", "steigernd", "tigerndes", "trendiges", "designter", "erdigsten", "geisternd"],
+	["abseilen", "anbliese", "balinese", "einblase", "einsalbe", "libanese"],
+	["libanesen", "anbliesen", "balinesen", "biennales", "einblasen", "einsalben"],
+	["verholten", "verlohnet", "verlohnte", "verlohten", "vorlehnet", "vorlehnte"],
+	["nordseite", "serientod", "sondieret", "sondierte", "steroiden", "desertion", "dosierten", "dotierens", "drosteien"],
+
 ];
 
 var chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","ü","ö","ä"]
 var wordvecs=[];
 for (var i=0;i<wordsList.length;i++){
+	console.log(wordsList[i]);
 	var w = wordsList[i][0];
 	var key = [];
 	for (var j=0;j<chars.length;j++){
@@ -84,12 +114,16 @@ function overlaps(vec1,vec2){
 
 
 function containedin(vec1,vec2){
+	var equal=true;
 	for (var i=0;i<vec1.length;i++){
 		if (vec1[i]>vec2[i]){
 			return false;
 		}
+		if (vec1[i]!==vec2[i]){
+			equal=false;
+		}
 	}
-	return true;	
+	return equal===false;	
 }
 
 var sprach_index=0;
@@ -98,19 +132,32 @@ let text = ["",""]
 text[0] += `digraph {\n`
 text[1] += `digraph {\n`
 
+var firstdeutsch = 43;
+
+function noContainedBetween(wv1,wv2){
+	for (var i=0;i<wordvecs.length;i++){
+		var w_cand = wordvecs[i];
+		if (containedin(wv1[1],w_cand[1]) && containedin(w_cand[1],wv2[1])){
+			return false;
+		}
+	}
+	return true;
+}
+
 for (var i=0;i<wordvecs.length;i++){
-	if (i===22){
+	if (i===firstdeutsch){
 		sprach_index=1;
 	}
 	var word1 = wordvecs[i];
 	for (var j=0;j<wordvecs.length;j++){
-		if ( (i<22 && j>=22) || (j<22  && i>=22) || (i===j)){
+		if ( (i<firstdeutsch && j>=firstdeutsch) || (j<firstdeutsch  && i>=firstdeutsch) || (i===j)){
 			continue;
 		}
 		var word2 = wordvecs[j];
 		if (containedin(word1[1],word2[1])){
-			console.log(sprach_index+"\t"+word1[0]+"\t"+word2[0]);
-			text[sprach_index] += `\t"${word1[0]}(${word1[2].length})" -> "${word2[0]}(${word2[2].length})";\n`;
+			if (noContainedBetween(word1,word2)){
+				text[sprach_index] += `\t"${word1[0]}(${word1[2].length})" -> "${word2[0]}(${word2[2].length})";\n`;
+			}
 		} 
 	}
 }

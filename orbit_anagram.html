@@ -171,8 +171,102 @@ let planet_maske = [
 "  oooo  "
 ]
 
+
+let planet_aussere_maske = 
+`...##...
+.######.
+########
+########
+.######.`;
+
+
+
+let planet_umriss_vvsm = 
+` _ 
+|_|`;
+
+let planet_vvsm_aussere_maske = 
+`.#.
+###`;
+
+let planet_umriss_vsm = 
+` __ 
+/  \\
+\\__/`;
+
+let planet_vsm_aussere_maske = 
+`.##.
+####
+####`;
+
+let planet_umriss_sm = 
+`  ___  
+ /   \\ 
+|     |
+ \\___/ `;
+
+let planet_sm_aussere_maske = 
+`..###..
+.#####.
+#######
+.#####.`;
+
+function fillRect(c,w,h){
+	let r = "";
+	for (let i=0;i<h;i++){
+		for (let j=0;j<w;j++){
+			r+=c;
+		}
+		if (i<h-1){
+			r+="\n";
+		}
+	}
+	return r;
+}
+
+function getStrW(s){
+	return (s+"\n").indexOf("\n");
+}
+function getStrH(s){
+	return (s.length+1)/(getStrW(s)+1)
+}
+
+function pickMipMap(anims,d){
+	if (d>anims[0][0]){
+		return null;
+	}
+
+	for (let i=1;i<anims.length-1;i++){
+		let anim=anims[i];
+		if (d>anim[0]){
+			return anims[i-1];
+		}
+	}
+	return anims[anims.length-1];
+}
+
+function genAllFrames(sourceLayout,waterIndex,landIndex){
+	let anims=[
+	//d,w,h,frames
+		[100,0,0,[[".",""+waterIndex,"#"]]],
+		[0.8,0,0,[["o",""+waterIndex,"#"]]],
+		[0.7,0,0,[["O",""+waterIndex,"#"]]],
+		[0.6,0,0,[[planet_umriss_vvsm,fillRect(waterIndex,3,2),planet_vvsm_aussere_maske]]],
+		[0.5,0,0,[[planet_umriss_vsm,fillRect(waterIndex,4,3),planet_vsm_aussere_maske]]],
+		[0.4,0,0,[[planet_umriss_sm,fillRect(waterIndex,7,4),planet_sm_aussere_maske]]],
+		[0.3,0,0,genBigFrames(sourceLayout,waterIndex,landIndex)]
+	];	
+	for(let i=0;i<anims.length;i++){
+		let anim = anims[i];
+		let frame1 = anim[3][0][0];
+		anim[1]=getStrW(frame1);
+		anim[2]=getStrH(frame1);
+	}
+	return anims;
+}
+
 //color indices 5->9
-function genFrames(sourceLayout,waterIndex,landIndex){
+function genBigFrames(sourceLayout,waterIndex,landIndex){
 	let anim=[];
 	let eingeweide = Planet_Eingeweide[sourceLayout];
 
@@ -183,13 +277,13 @@ function genFrames(sourceLayout,waterIndex,landIndex){
 
 		for (let y=0;y<5;y++){
 			for (let x=0;x<8;x++){
-				var stringindex=x+8*y;
-				var c = planet_umriss[y][x];
-				var f = waterIndex;
+				let stringindex=x+8*y;
+				let c = planet_umriss[y][x];
+				let f = waterIndex;
 				if (planet_maske[y][x]==="o")
 				{
 					let eingeweide_index = (8+x+i)%15;
-					var egi = eingeweide[y][eingeweide_index];
+					let egi = eingeweide[y][eingeweide_index];
 					if (egi!==" ") {
 						c = egi;
 						f=landIndex;
@@ -204,7 +298,7 @@ function genFrames(sourceLayout,waterIndex,landIndex){
 			}
 		}
 
-		let frame = [planetkonturen,farbemaske]
+		let frame = [planetkonturen,farbemaske,planet_aussere_maske]
 		anim.push(frame);
 	}
 	return anim;
@@ -408,6 +502,111 @@ let planet_anim = [
 
 ]
 
+let wordLength=3;
+let vis=[];
+
+let words = ["dcba","dcab","dbac","dbca","dabc","dacb","cdba","cdab","cbad","cbda","cabd","cacb","bcda","bcad","bdac","bdca","badc","bacd","acbd","acdb","abdc","abcd","adbc","adcb"]
+//let words = ["cba","cab","bac","bca","abc","acb"]
+
+let perms = [];
+let rperms = [];
+function generateWordPerms(){
+	perms=[];
+	rperms=[];
+	let base = words[0];
+	for (let i=0;i<words.length;i++){
+		let word = words[i];
+		let perm=[];
+		let rperm=[];
+		for (let j=0;j<word.length;j++){
+			let basechar = base[j];
+			let wordchar = word[j];
+			perm.push(word.indexOf(basechar));
+			rperm.push(base.indexOf(wordchar));
+		}
+		perms.push(perm);
+		rperms.push(rperm);
+	}
+}
+
+
+generateWordPerms();
+
+console.log("words");
+console.log(words);
+
+console.log("perms");
+console.log(perms);
+
+console.log("rperms");
+console.log(rperms);
+
+
+
+function permToVec(p){
+	console.log (" p = "+p);
+	let dim=p.length;
+	let s =0;
+	for (let i=0;i<p.length;i++){
+		    s+=p[i];
+	}	
+	let v1 = p.slice();
+	for (let i=0;i<v1.length;i++){
+		v1[i]=(v1[i]-s)/dim;
+	}
+	console.log (" v1 = "+v1);
+
+	let v2 = [];
+	for (let i=1;i<p.length;i++){
+		v2.push((p[i]-s)/dim);
+	}
+
+	console.log( "v2 = "+v2)
+
+	return v2;
+}
+
+function vdist(v1,v2){
+	let d = 0;
+	for (let i=0;i<v1.length;i++){
+		let diff = v2[i]-v1[i];
+		d+=diff*diff;
+	}
+	return Math.sqrt(d);
+}
+
+function swap(v1,gap){
+	let result = v1.slice();
+	let t = result[gap];
+	result[gap]=result[gap+1];
+	result[gap+1]=t;
+	return result;
+}
+
+function invertPerm(p){
+	let result=[];
+	for (let i=0;i<p.length;i++){
+		result.push(p.indexOf(i));
+	}
+	return result;
+}
+
+
+let p1 = perms[5];
+let p2 = invertPerm(swap(invertPerm(p1),0));
+
+let v1 = permToVec(p1)
+let v2 = permToVec(p2)
+
+console.log("p1")
+console.log(p1)
+console.log(v1)
+
+console.log("p2")
+console.log(p2)
+console.log(v2)
+
+console.log("dist = " + vdist(v1,v2));
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -415,12 +614,12 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var col1_i = getRandomInt(0,5);
-var col2_i = getRandomInt(1,5);
+let col1_i = getRandomInt(0,5);
+let col2_i = getRandomInt(1,5);
 
-var c1 = col1_i+5;
-var c2 = (5)+( (col1_i+col2_i)%5 );
-planet_anim = genFrames(
+let c1 = col1_i+5;
+let c2 = (5)+( (col1_i+col2_i)%5 );
+planet_anim = genBigFrames(
 	getRandomInt(0,Planet_Eingeweide.length),
 	c1,
 	c2
@@ -434,7 +633,7 @@ console.log(planet_anim);
 	let letterbuffer=[];
 	let colorbuffer=[];
 
-	let dimensionen=4;
+	let dimensionen=3;
 	let origin=[0,0,0,0];
 	let campos=[0,0,-1,0];
 
@@ -449,6 +648,9 @@ console.log(planet_anim);
 		campos[2]=-1;
 	}
 	let sterne=[];
+	let planeten=[];
+
+	let MAX_DEPTH=1000;
 
 	function dist(p1,p2){
 		let s=0;
@@ -460,25 +662,49 @@ console.log(planet_anim);
 		return s;
 	}
 
+
+	function vectLen(v){
+		let d = 0;
+		for (let i=0;i<v.length;i++){
+			d += v[i] * v[i];
+		}
+		return Math.sqrt(d);
+	}
+
+	function normalizeVect(v){
+		let l = vectLen(v);
+		if (l===0){
+			return v;
+		}
+		let result = v.slice();
+		for (let i=0;i<result.length;i++){
+			result[i]/=l;
+		}
+		return result;
+	}
+
 	function createBuffer(){
 		letterbuffer=[];
 		colorbuffer=[];
+		depthbuffer=[];
 
 		for (let i=0;i<cw;i++){
 			let letter_r = [];
 			let color_r = [];
+			let depth_r = [];
 
 			for (let j=0;j<ch;j++){
 				color_r.push(0);
 				letter_r.push(" ");
+				depth_r.push(MAX_DEPTH);
 			}
 
 			letterbuffer.push(letter_r);
 			colorbuffer.push(color_r);
+			depthbuffer.push(depth_r);
 		}
 
 		sterne=[]
-
 
 		for (let i=0;i<30;i++){
 			let stern = [];
@@ -490,15 +716,97 @@ console.log(planet_anim);
 				sterne.push(stern);
 			}
 		}
+
+		planeten=[];
+
+
+		for (let i=0;i<10;i++){
+			let coord=[];
+			for (let j=0;j<dimensionen;j++){
+				coord.push((Math.random()-0.5)*2.0);
+			}
+			let normalized = normalizeVect(coord);
+
+			let col1_i = getRandomInt(0,5);
+			let col2_i = getRandomInt(1,5);
+			let c1 = col1_i+5;
+			let c2 = (5)+( (col1_i+col2_i)%5 );
+			let my_planet_anim = genAllFrames(
+				getRandomInt(0,Planet_Eingeweide.length),
+				c1,
+				c2
+				);
+
+			let planet = [normalized,my_planet_anim];
+
+			planeten.push(planet);
+		}
+
 		console.log("sternen: "+sterne.length);
 	}
 
-	function blit(img,x,y){
+	function drawSprite(planet){
+
+		let cx = Math.floor(cw/2);
+		let cy = Math.floor(ch/2);
+
+		let coord = planet[0];
+		let mipmaps = planet[1];
+		let sx = coord[0];
+		let sy = coord[1];
+		let d = dist(campos,coord);
+
+		let frame_dat = pickMipMap(mipmaps,d);
+
+		let framew=frame_dat[1];
+		let frameh=frame_dat[2];
+		let frames=frame_dat[3];
+
+		let frameo_x=-Math.floor(framew/2);
+		let frameo_y=-Math.floor(frameh/2);
+
+		if (frames===null){
+			return;
+		}
+			
+		sx*=cx/(2);
+		sy*=cy/(2);
+
+		sx+=cx+frameo_x;
+		sy+=cy+frameo_y;
+
+		sx = Math.floor(sx);
+		sy = Math.floor(sy);
+
+
+		let frame = Math.floor(frames.length*time/(3*1000))%frames.length;
+		console.log(frames[frame]);
+		blit(frames[frame],sx,sy,1);
+
+	}
+
+	function blit(img,x,y,depth){		
 		let text=img[0].split("\n");
 		let cols=img[1].split("\n");
+		let mask=img[2].split("\n");
+
+		let w =text[0].length;
+		let h = text.length;
+
+		if (x>=cw || y>=ch || x+w<=0 || y+h<=0){
+			return;
+		}
+				
 
 		for (let i=0;i<text.length;i++){
 			for (let j=0;j<text[i].length;j++){
+				if (x+j<0 || y+i<0 || x+j>=cw || y+i>=ch){
+					continue;
+				}
+
+				if ( mask[i][j] === "." || depthbuffer[x+j][y+i]<depth){
+					continue;
+				}
 
 				let b = text[i][j];
 				let col = cols[i][j];
@@ -509,6 +817,7 @@ console.log(planet_anim);
 
 				letterbuffer[x+j][y+i]=b;
 				colorbuffer[x+j][y+i]=col;
+				depthbuffer[x+j][y+i]=depth;
 			}
 		}
 	}
@@ -519,6 +828,7 @@ console.log(planet_anim);
 			for (let j=0;j<ch;j++){
 				letterbuffer[i][j]=" ";
 				colorbuffer[i][j]=1;
+				depthbuffer[i][j]=MAX_DEPTH;
 			}
 		}
 	}
@@ -610,48 +920,54 @@ console.log(planet_anim);
 		let cy = Math.floor(ch/2);
 
 
-		let frame = Math.floor(planet_anim.length*time/(3*1000))%planet_anim.length;
-		blit(planet_anim[frame],cx-4,cy-4);
+		// let frame = Math.floor(planet_anim.length*time/(3*1000))%planet_anim.length;
+		// blit(planet_anim[frame],cx-4,cy-4,1);
 
-		for (let i=0;i<sterne.length;i++){			
-			let s = sterne[i];
-			let sx = s[0];
-			let sy = s[1];
-			let d = dist(campos,s);
-			
-			sx*=cx/(2);
-			sy*=cy/(2);
 
-			sx+=cx;
-			sy+=cy;
-
-			sx = Math.floor(sx);
-			sy = Math.floor(sy);
-			
-			if (sx>=cw || sy>=ch || sx<0 || sy<0){
-				continue;
-			}
-
-			if (d>1.2){				
-				if (colorbuffer[sx][sy]>1){
-					continue;
-				}
-				letterbuffer[sx][sy]=".";
-			} else if (d>0.8){
-				letterbuffer[sx][sy]="o";
-			} else {
-				letterbuffer[sx][sy]="O";				
-			}
-			let col;
-			if (d>1.5){
-				col=4;
-			} else if (d>0.2){
-				col=3;
-			} else {
-				col=2;
-			}
-			colorbuffer[sx][sy]=col;
+		for (let i=0;i<planeten.length;i++){	
+			let planet = planeten[i];
+			drawSprite(planet);
 		}
+
+		// for (let i=0;i<sterne.length;i++){			
+		// 	let s = sterne[i];
+		// 	let sx = s[0];
+		// 	let sy = s[1];
+		// 	let d = dist(campos,s);
+			
+		// 	sx*=cx/(2);
+		// 	sy*=cy/(2);
+
+		// 	sx+=cx;
+		// 	sy+=cy;
+
+		// 	sx = Math.floor(sx);
+		// 	sy = Math.floor(sy);
+			
+		// 	if (sx>=cw || sy>=ch || sx<0 || sy<0){
+		// 		continue;
+		// 	}
+
+		// 	if (d<depthbuffer[sx][sy]){
+		// 		if (d>1.2){			
+		// 			letterbuffer[sx][sy]=".";
+		// 		} else if (d>0.8){
+		// 			letterbuffer[sx][sy]="o";
+		// 		} else {
+		// 			letterbuffer[sx][sy]="O";				
+		// 		}
+		// 		let col;
+		// 		if (d>1.5){
+		// 			col=4;
+		// 		} else if (d>0.2){
+		// 			col=3;
+		// 		} else {
+		// 			col=2;
+		// 		}
+		// 		colorbuffer[sx][sy]=col;
+		// 		depthbuffer[sx][sy]=d;
+		// 	}
+		// }
 
 		flipBuffer();
 	}
@@ -673,13 +989,17 @@ console.log(planet_anim);
 	let time=0;
 	function tick(){
 		time+=deltatime;
-		let theta = 2*Math.PI*deltatime/(6*1000);
+		let theta = 2*Math.PI*deltatime/(12*1000);
 		for (let i=0;i<sterne.length;i++){
 			let s = sterne[i];
 			rot(s,0,2,theta);
-			// rot(s,1,3,theta/2);
-			// rot(s,2,5,theta/2);
 		}
+
+		for (let i=0;i<planeten.length;i++){
+			let planet = planeten[i];
+			rot(planet[0],0,2,theta);
+		}
+
 		render();
 	}
 	let deltatime=100;
