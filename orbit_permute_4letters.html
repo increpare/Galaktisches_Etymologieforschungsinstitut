@@ -33,7 +33,7 @@
 			background-color: black;
 		}
 		.col3 {
-			color:darkgray;
+			color:gray;
 			background-color: black;
 		}
 		.col4 {
@@ -58,10 +58,6 @@
 		}
 		.col9 {
 			color:fuchsia;
-			background-color: black;
-		}
-		.col0 {
-			color:purple;
 			background-color: black;
 		}
 		u {			
@@ -511,8 +507,8 @@ let vis=[];
 
 // let words = ["12345","21345","31245","13245","23145","32145","32415","23415","43215","34215","24315","42315","41325","14325","34125","43125","13425","31425","21435","12435","42135","24135","14235","41235","51234","15234","25134","52134","12534","21534","21354","12354","32154","23154","13254","31254","35214","53214","23514","32514","52314","25314","15324","51324","31524","13524","53124","35124","45123","54123","14523","41523","51423","15423","15243","51243","21543","12543","52143","25143","24153","42153","12453","21453","41253","14253","54213","45213","25413","52413","42513","24513","34512","43512","53412","35412","45312","54312","54132","45132","15432","51432","41532","14532","13542","31542","51342","15342","35142","53142","43152","34152","14352","41352","31452","13452","23451","32451","42351","24351","34251","43251","43521","34521","54321","45321","35421","53421","52431","25431","45231","54231","24531","42531","32541","23541","53241","35241","25341","52341"]
 // let words = ["apres", "asper", "pares", "parse", "pears", "spear", "spare", "rapes", "reaps", "apers"]
-// let words = ["dcba","dcab","dbac","dbca","dabc","dacb","cdba","cdab","cbad","cbda","cabd","cacb","bcda","bcad","bdac","bdca","badc","bacd","acbd","acdb","abdc","abcd","adbc","adcb"]
-let words = ["cba","cab","bac","bca","abc","acb"]
+let words = ["dcba","dcab","dbac","dbca","dabc","dacb","cdba","cdab","cbad","cbda","cabd","cacb","bcda","bcad","bdac","bdca","badc","bacd","acbd","acdb","abdc","abcd","adbc","adcb"]
+// let words = ["cba","cab","bac","bca","abc","acb"]
 
 let perms = [];
 let rperms = [];
@@ -536,7 +532,6 @@ function generateWordPerms(){
 }
 
 
-let wort = "canoe";
 
 
 
@@ -764,12 +759,7 @@ console.log(planet_anim);
 		let mipmaps = planet[1];
 		let sx = coord[0];
 		let sy = coord[1];
-
-		let d = dist(campos,coord)/2;
-		if (dimensionen<4)
-		{
-			d = coord[2]-campos[2];
-		} 
+		let d = coord[2]-campos[2];
 
 		let frame_dat = pickMipMap(mipmaps,d);
 
@@ -923,83 +913,6 @@ console.log(planet_anim);
 		textbox.innerHTML=text;
 	}
 
-	let sprache="DE";
-	fuction S(de,en){
-		if (sprache==="DE"){
-			return de;
-		} else {
-			return en;
-		}
-	}
-
-	function drawBox(x,y,w,h,c){
-		letterbuffer[x][y]="+";
-		letterbuffer[x+w-1][y]="+";
-		letterbuffer[x][y+h-1]="+";
-		letterbuffer[x+w-1][y+h-1]="+";
-
-		colorbuffer[x][y]=c;
-		colorbuffer[x+w-1][y]=c;
-		colorbuffer[x][y+h-1]=c;
-		colorbuffer[x+w-1][y+h-1]=c;
-
-		for (var i=1;i<w-1;i++){
-			letterbuffer[x+i][y]="-";
-			letterbuffer[x+i][y+h-1]="-";
-
-			colorbuffer[x+i][y]=c;
-			colorbuffer[x+i][y+h-1]=c;
-
-			for (var j=1;j<h-1;j++){
-				letterbuffer[x+i][y+j]=" ";
-			}
-		}
-
-		for (var j=1;j<h-1;j++){
-			letterbuffer[x][y+j]="|";
-			letterbuffer[x+w-1][y+j]="|";
-
-			colorbuffer[x][y+j]=c;
-			colorbuffer[x+w-1][y+j]=c;
-		}
-
-	}
-
-	let fuelcapacity=4;
-	let fuelamount=3;
-
-	function printText(s,x,y,c){
-		for (var i=0;i<s.length;i++){
-			letterbuffer[x+i][y]=s[i];
-			colorbuffer[x+i][y]=c;
-		}
-	}
-	function renderOberfläche(){
-
-		let fuelkistebottom = ch-2;
-		let fuelkisteheight=2+fuelcapacity;
-
-		let fuelkistetop=fuelkistebottom-fuelkisteheight+1;
-
-		//fuel
-		drawBox(1,fuelkistetop,3,fuelkisteheight,0);
-		printText(S("TREIBSTOFF","FUEL"),1,ch-1,3)
-
-		var bx = 10;
-		var by = 11;
-		var bw = cw-10-10+1;
-		var bh = 3;
-		drawBox(10,11,bw,bh,6);
-		printText("compass",10,11+3,3)
-
-		var tx=  bx+1+1;
-		var ty = by+2;
-		var tw = bw-2-2;
-
-		var letterspacing=Math.floor(tw/wort.length)-1;
-		var zentrum = cw;
-	}
-
 	function render(){
 		clearBuffer();
 
@@ -1055,8 +968,6 @@ console.log(planet_anim);
 		// 		depthbuffer[sx][sy]=d;
 		// 	}
 		// }
-
-		renderOberfläche();
 
 		flipBuffer();
 	}
