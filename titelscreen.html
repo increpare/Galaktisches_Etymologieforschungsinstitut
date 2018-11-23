@@ -1162,57 +1162,34 @@ console.log(planet_anim);
 		//sequenz 1
 		[
 			[
-				[
-					"SAG",
-					"Was ist Zivilisation?",
-				],
-				[
-					"SAG",
-					"Sei Zivilisation etwas, was Sinn macht.",
-				],
-				[
-					"SAG",
-					"Verstände ich naturlich meine eigene Zivilisation.",
-				],
-				[
-					"WORT",
-					"TOR",
-				],
-				[
-					"SAG",
-					"Sei meine eigene Zivilisation ein Tor zum größeren Sinn.",
-				],
-				[
-					"SAG",
-					"Seien wir losgegangen.",
-				]
+				"SAG",
+				"Was ist Zivilisation?",
+				"What is civilization?"
 			],
-
 			[
-				[
-					"SAG",
-					"What is civilization?"
-				],
-				[
-					"SAG",
-					"Assume civilization is what makes sense."
-				],
-				[
-					"SAG",
-					"Assume my own civilization makes sense to me."
-				],
-				[
-					"WORT",
-					"ALP"
-				],
-				[
-					"SAG",
-					"Assume my civilization a mountain, and the range still to be explored."
-				],
-				[
-					"SAG",
-					"Let us have set off."
-				]
+				"SAG",
+				"Sei Zivilisation etwas, was Sinn macht.",
+				"Let civilization be something that makes sense."
+			],
+			[
+				"SAG",
+				"Verstände ich naturlich meine eigene Zivilisation.",
+				"Let my own civilization be understood to me."
+			],
+			[
+				"WORT",
+				"TOR",
+				"ALP"
+			],
+			[
+				"SAG",
+				"Sei meine eigene Zivilisation ein Tor zum größeren Sinn.",
+				"Let my civilization be but a mountain, and the range still to be explored."
+			],
+			[
+				"SAG",
+				"Seien wir losgegangen.",
+				"Let us have set off."
 			]
 		]
 
@@ -1287,26 +1264,10 @@ console.log(planet_anim);
 		}
 	}
 
-	let keyAllowed = {};
-
-	function onFocus(e){
-		keyAllowed = {};
-	}
-
-	function onKeyup(e){
-		keyAllowed [e.which] = true;
-	}
-
 	function checkKey(e) {
+
 	    e = e || window.event;
 
-		if (keyAllowed [e.which] === false) {
-			if (e.keyCode == '88' || e.keyCode =='32'||e.keyCode =='13'||e.keyCode =='68'){
-				return;
-			}
-		}
-		keyAllowed [e.which] = false;
-		 
 	    if (e.keyCode == '38') {
 	        // up arrow
 	    	onInput(0);
@@ -1470,15 +1431,14 @@ console.log(planet_anim);
 
 	function sequenzSchritt(){
 		sequenzindex++;
-		let spracheindex = sprache==="DE"?0:1;
-		if (sequenzindex>=sequenzen[level][spracheindex].length){
+		if (sequenzindex>=sequenzen[level].length){
 			sequenzEnde=0;
 			return;
 		}
 
-		let entry = sequenzen[level][spracheindex][sequenzindex];
+		let entry = sequenzen[level][sequenzindex];
 		let action = entry[0];
-		let txt = entry[1];
+		let txt = S(entry[1],entry[2]);
 		switch(action){
 			case "SAG":
 			sichtbareBuchstaben=1;
@@ -2080,7 +2040,7 @@ console.log(planet_anim);
 	}
 
 	let sequenzindex=0;
-	let sequenzEndeDauer=1.0;
+	let sequenzEndeDauer=0.5;
 	let sequenzEnde=0;
 
 	function startSequenz(){
@@ -2090,6 +2050,7 @@ console.log(planet_anim);
 		zeigsequenzwort=false;
 		setDimensionen(3)
 
+		document.onkeydown = checkKey;	
 
 		createBuffer();		
 		planeten=[];
@@ -2126,6 +2087,7 @@ console.log(planet_anim);
 	function startSpiel(){
 		setDimensionen(words[0].length-1)
 
+		document.onkeydown = checkKey;	
 
 		createBuffer();		
 
@@ -2139,8 +2101,6 @@ console.log(planet_anim);
 		setInterval(tick, deltatime);
 
 		document.onkeydown = checkKey;	
-		document.onkeyup = onKeyup;	
-		document.onfocus = onFocus;	
 
 		createBuffer();		
 
