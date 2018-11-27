@@ -21,9 +21,7 @@
 		    padding: 0;
 		    font-family: "Lucida Console", Monaco, monospace;
     		white-space: pre;
-    		font-size: 1.6vw;
-    		/*font-size: 2.4vh;	*/
-    		/*font-size: calc(min(1.6vw,2.4vh));	*/
+    		font-size: 1.6vw;	
     		/*line-height: 1;*/
 			color:white;
 		}
@@ -161,33 +159,6 @@ let Planet_Eingeweide = [
 "   ||           ",
 ]
 ];
-
-let planet_cursor_highlight = [
-` __      __ 
-|          |
-|          |
-            
-            
-|          |
-|__      __|`,
-`888888888888
-888888888888
-888888888888
-888888888888
-888888888888
-888888888888
-888888888888`,
-`.##......##.
-#..........#
-#..........#
-............
-............
-#..........#
-###......###`
-]
-
-
-
 
 let planet_umriss = [
 "   __   ",
@@ -735,28 +706,10 @@ let planet_anim = [
 
 ]
 
-let levelwords=[
-//deu
-	[
-		["abcd","acbd","cbad","dbca"],
-		["tor","rot","ort"],
-		["rote", "tore", "orte"],
-		["roten", "orten", "toren", "tenor"],
-		["nordseite", "serientod", "sondieret", "sondierte", "steroiden", "desertion", "dosierten", "dotierens", "drosteien"],
-	],
-//eng
-	[
-		["alp","lap","pal"],
-		["laps", "alps", "pals", "slap"],
-		["petals", "plates", "pleats", "staple", "palest", "pastel"],
-	],
-];
-
 let wordLength=3;
 let vis=[];
 
 let titelwords = ["dcba","dcab","dbac","dbca","dabc","dacb","cdba","cdab","cbad","cbda","cabd","cacb","bcda","bcad","bdac","bdca","badc","bacd","acbd","acdb","abdc","abcd","adbc","adcb"]
-
 
 let level=0;
 let gameState="TITEL";
@@ -769,25 +722,11 @@ let words = titelwords;
 // let words = ["bepis","ebpsi","bpeis"]
 // let words = ["cba","cab","bac","bca","abc","acb"]
 
-function permToStr(p){
-	let r = "";
-	for (let i=0;i<p.length;i++){
-		r+=p[i].toString(16);
-	}
-	return r;
-}
-
 let perms = [];
 let rperms = [];
-let perms_str = [];
-let rperms_str = [];
-
 function generateWordPerms(){
 	perms=[];
 	rperms=[];
-	perms_str = [];
-	rperms_str = [];
-
 	let base = words[0];
 	for (let i=0;i<words.length;i++){
 		let word = words[i];
@@ -799,17 +738,13 @@ function generateWordPerms(){
 			perm.push(word.indexOf(basechar));
 			rperm.push(base.indexOf(wordchar));
 		}
-
 		perms.push(perm);
 		rperms.push(rperm);
-
-		perms_str.push(permToStr(perm));
-		rperms_str.push(permToStr(rperm));
 	}
 }
 
+
 let wort = "epbis";
-let baseword = wort;
 let cursorPos=1;
 let lastCursorPos=cursorPos;
 let cursorPos_Base=cursorPos;
@@ -831,34 +766,11 @@ function permToVec(p){
 	for (let i=1;i<p.length;i++){
 		v2.push(2*(p[i]-(dim-1)/2)/dim);
 	}
-	// v2=normalizedVect(v2);
+	// v2=normalizeVect(v2);
 
 	// console.log( "v2 = "+v2)
 
 	return v2;
-}
-
-function vectLerp(v1,v2,a){
-	let r = [];
-	for (let i=0;i<v1.length;i++){
-		r.push((1-a)*v1[i]+a*v2[i]);
-	}
-	return r;
-}
-
-function vectAdd(v1,v2){
-	let r = [];
-	for (let i=0;i<v1.length;i++){
-		r.push(v1[i]+v2[i]);
-	}
-	return r;
-}
-function vectSub(v1,v2){
-	let r = [];
-	for (let i=0;i<v1.length;i++){
-		r.push(v1[i]-v2[i]);
-	}
-	return r;
 }
 
 function vdist(v1,v2){
@@ -930,54 +842,18 @@ console.log(planet_anim);
 
 	let dimensionen=3;
 	let origin=[0,0,0,0];
-
-	let campos=[0,0,-0.5,0];
-	let oldcampos = campos;
-	
-	let camright=[1,0,0,0]
-	let camup=[0,-1,0,0];
-	let camforward=[0,0,1,0];
-
-	function dot(v1,v2){
-		let s = 0;
-		for (let i=0;i<v1.length;i++){
-			s+=v1[i]*v2[i];
-		}
-		return s;
-	}
-
-	function smul(s,v){
-		let k = v.slice();
-		for (let i=0;i<k.length;i++){
-			k[i]=s*k[i];
-		}
-		return k;
-	}
+	let campos=[0,0,-1,0];
 
 	function setDimensionen(n){
 		dimensionen=n;
 		origin=[]
 		campos=[]
-		camforward=[]
-		camup=[]
-		camright=[]
-
 		for (let i=0;i<dimensionen;i++){
 			origin.push(0);
 			campos.push(0);
-
-			camforward.push(0);
-			camup.push(0);
-			camright.push(0);
 		}
-		campos[2]=-0.7;
-		oldcampos=campos.slice();
-
-		camforward[2]=1;
-		camup[1]=1;
-		camright[0]=1;
+		campos[2]=-1;
 	}
-
 	let sterne=[];
 	let planeten=[];
 
@@ -1002,14 +878,7 @@ console.log(planet_anim);
 		return Math.sqrt(d);
 	}
 
-	//project b onto a
-	function project(b,a){
-		let d = dot(a,b);
-		let amag = vectLen(a);
-		return smul(d/(amag*amag),a);
-	}
-
-	function normalizedVect(v){
+	function normalizeVect(v){
 		let l = vectLen(v);
 		if (l===0){
 			return v;
@@ -1048,6 +917,20 @@ console.log(planet_anim);
 		planeten=[];
 
 
+		generateWordPerms();
+
+		console.log("words");
+		console.log(words);
+
+		console.log("perms");
+		console.log(perms);
+
+		console.log("rperms");
+		console.log(rperms);
+
+		spawnTitelPlaneten();
+
+		console.log("sternen: "+sterne.length);
 	}
 
 
@@ -1103,15 +986,15 @@ console.log(planet_anim);
 			planeten.push(planet);
 		}
 	}
-	function drawSprite(planet,highlight){
+	function drawSprite(planet){
 
 		let cx = Math.floor(cw/2);
 		let cy = Math.floor(ch/2);
 
-		let coord = vectSub(planet[0],campos);
+		let coord = planet[0];
 		let mipmaps = planet[1];
-		let sx = dot(coord,camright);
-		let sy = dot(coord,camup);
+		let sx = coord[0];
+		let sy = coord[1];
 
 		let d = dist(campos,coord)/2;
 		if (dimensionen<4)
@@ -1132,7 +1015,7 @@ console.log(planet_anim);
 			return;
 		}
 			
-		sx*=1.8*cx/(2);
+		sx*=1.3*cx/(2);
 		sy*=1.8*cy/(2);
 
 		sx+=cx+frameo_x;
@@ -1141,18 +1024,9 @@ console.log(planet_anim);
 		sx = Math.floor(sx);
 		sy = Math.floor(sy);
 
-		if(gameState==="SPIEL"){
-			sy-=3;
-		}
-
 
 		let frame = Math.floor(frames.length*time/(3*1000))%frames.length;
 		blit(frames[frame],sx,sy,d);
-
-		if (highlight){
-			let frame = Math.floor(frames.length*time/(3*1000))%frames.length;
-			blit(planet_cursor_highlight,sx-2,sy-1,d-0.01);			
-		}
 
 	}
 
@@ -1515,9 +1389,6 @@ console.log(planet_anim);
 	}
 
 	function drawBox(x,y,w,h,c){
-		if (w<=0||h<=0){
-			return;
-		}
 		letterbuffer[x][y]="+";
 		letterbuffer[x+w-1][y]="+";
 		letterbuffer[x][y+h-1]="+";
@@ -1554,9 +1425,9 @@ console.log(planet_anim);
 	let fuelamount=3;
 
 	function printText(s,x,y,c){
-		let origx=x;
+		var origx=x;
 		for (let i=0;i<s.length;i++){
-			let char = s[i];
+			var char = s[i];
 			if (char==="\n"){
 				y++;
 				x=origx-(i+1);
@@ -1597,13 +1468,9 @@ console.log(planet_anim);
 	let sequenzWrapSpalten=30;
 	let sichtbarerTextlinien=1;
 
-	function spracheIndex(){		
-		return sprache==="DE"?0:1;
-	}
-
 	function sequenzSchritt(){
 		sequenzindex++;
-		let spracheindex = spracheIndex();
+		let spracheindex = sprache==="DE"?0:1;
 		if (sequenzindex>=sequenzen[level][spracheindex].length){
 			sequenzEnde=0;
 			return;
@@ -1627,11 +1494,11 @@ console.log(planet_anim);
 	}
 
 	function wordwrap( long_string, colcount ) {
-		let words = long_string.split(" ");
-		let result="";
-		let curlinelen=0;
-		for (let i=0;i<words.length;i++){
-			let word=words[i];
+		var words = long_string.split(" ");
+		var result="";
+		var curlinelen=0;
+		for (var i=0;i<words.length;i++){
+			var word=words[i];
 			if (word==="\n"){
 				continue;
 			}
@@ -1646,7 +1513,7 @@ console.log(planet_anim);
 			}
 
 			result+=word;
-			let nll = word.lastIndexOf("\n");
+			var nll = word.lastIndexOf("\n");
 			if (nll>=0){
 				curlinelen=word.length-(nll+1);
 			} else {
@@ -1665,25 +1532,6 @@ console.log(planet_anim);
 
 		if (sequenzEnde<sequenzEndeDauer){
 			sequenzEnde+=deltatime/1000;
-
-
-
-			let pc=1;
-			if (sequenzEnde<sequenzEndeDauer){
-				pc=sequenzEnde/sequenzEndeDauer;
-			}
-			
-			let tbw = sequenzWrapSpalten+6;
-			let tbh = sichtbarerTextlinien+4;
-			let oldtbw=tbw;
-			let oldtbh=tbh;
-
-			tbw = (Math.floor(tbw*(1-pc*3)));
-			tbh = (Math.floor(tbh*(1-pc*3)));
-			let tby = 4+Math.floor((oldtbh-tbh)/2);//Math.floor((ch-tbh)/2);
-			let tbx = Math.floor((cw-tbw)/2);
-			drawBox(tbx,tby,tbw,tbh,8);
-
 			if (sequenzEnde>=sequenzEndeDauer){				
 				setGameState("SPIEL");
 			}
@@ -1691,14 +1539,14 @@ console.log(planet_anim);
 
 			let tbw = sequenzWrapSpalten+6;
 			let tbh = sichtbarerTextlinien+4;
-			let tby = 4;//Math.floor((ch-tbh)/2);
-			let tbx = Math.floor((cw-tbw)/2);
+			var tby = 4;//Math.floor((ch-tbh)/2);
+			var tbx = Math.floor((cw-tbw)/2);
 				//bottom soll 8 sein
 
 			tby=8-tbh+1;
 
 			if (sichtbarerText.length>0){
-				drawBox(tbx,tby,tbw,tbh,8);
+				drawBox(tbx,tby,tbw,sichtbarerTextlinien+4,8);
 
 				printText(sichtbarerText.substring(0,sichtbareBuchstaben),tbx+2,tby+2,8);
 			}
@@ -2023,20 +1871,16 @@ console.log(planet_anim);
 		// let frame = Math.floor(planet_anim.length*time/(3*1000))%planet_anim.length;
 		// blit(planet_anim[frame],cx-4,cy-4,1);
 
-		let selectionIndex=words.indexOf(wort);
+
 		for (let i=0;i<planeten.length;i++){	
 			let planet = planeten[i];
-			let highlight = gameState ==="SPIEL" && selectionIndex===i && tauschanimation>=tauschanimationdauer;
-			drawSprite(planet,highlight);
+			drawSprite(planet);
 		}
 
 		for (let i=0;i<sterne.length;i++){			
 			let s = sterne[i];
-			let coord = s;
-
-			let sx = dot(coord,camright);
-			let sy = dot(coord,camup);
-
+			let sx = s[0];
+			let sy = s[1];
 			let d = dist(campos,s);
 			
 			sx*=cx/(2);
@@ -2105,32 +1949,12 @@ console.log(planet_anim);
 	}
 
 	function startTitleBildschirm(){
-		words = titelwords;
-		setDimensionen(words[0].length-1);
-		generateWordPerms();
-
-		console.log("words");
-		console.log(words);
-
-		console.log("perms");
-		console.log(perms);
-
-		console.log("rperms");
-		console.log(rperms);
 
 		spawnTitelPlaneten();
-
-		console.log("sternen: "+sterne.length);
-		console.log("CAM POS "+campos);
-		console.log("CAM DIR "+camforward);
-
 		render();
 	}
 
 	function rot(p,i_axis,j_axis,theta){
-		if (j_axis>=dimensionen){
-			j_axis=dimensionen-1;
-		}
 		let pi = p[i_axis];
 		let pj = p[j_axis];
 		let ct = Math.cos(theta);
@@ -2142,7 +1966,7 @@ console.log(planet_anim);
 
 	let time=0;
 
-	let tauschanimationdauer=5;
+	let tauschanimationdauer=0.5;
 	let tauschanimation=tauschanimationdauer;
 
 	let bewegunganimationdauer=0.5;
@@ -2212,7 +2036,7 @@ console.log(planet_anim);
 			let planet = planeten[i];
 			if (tauschanimation<tauschanimationdauer){
 				for (let j=0;j<dimensionen;j++){
-					// rot(planet[0],j,2,-5*theta/(j+1));
+					rot(planet[0],j,2,-5*theta/(j+1));
 				}
 			}
 			if (dimensionen>2){
@@ -2226,7 +2050,6 @@ console.log(planet_anim);
 				// rot(planet[0],0,1,-theta);
 			}
 		}
-		setGameCamPos(false);
 	}
 
 	function sequenzTick(){
@@ -2268,6 +2091,7 @@ console.log(planet_anim);
 		setDimensionen(3)
 
 
+		createBuffer();		
 		planeten=[];
 
 		let my_planet_anim = genAllFrames(
@@ -2298,139 +2122,13 @@ console.log(planet_anim);
 		sequenzSchritt();		
 	}
 
-	function setGameCamPos(reset_cam_dir){
-		let wortindex = words.indexOf(wort);
-		let wordpos = permToVec(wordToPerm(baseword, wort));
-		let camDist=10;
-		let wordpos_len = vectLen(wordpos);
-
-		let camback = normalizedVect(wordpos);
-
-		let reset_cam_pos = tauschanimation>=tauschanimationdauer;
-		
-
-		camforward = smul(-1,camback);
-
-		// jumpcampos=true;
-		let targetcampos = smul(wordpos_len+camDist,camback);	
-		
-		if (reset_cam_pos){
-			campos=targetcampos;
-			oldcampos=campos;
-		} else {
-			let pc = tauschanimation/tauschanimationdauer;
-			campos = vectLerp(oldcampos,targetcampos,pc);		
-		}
-
-		if (reset_cam_dir){
-			//camup, normal to camforward
-			//https://math.stackexchange.com/questions/133177/finding-a-unit-vector-perpendicular-to-another-vector
-			camup = origin.slice();
-			let n =0;
-			let m = 0;
-			for (m=0;m<camup.length;m++){
-				if (Math.abs(camforward[m])>0.001){
-					n=0;
-					if (m===0){
-						n=1;
-					}
-					camup[n]=camforward[m];
-					camup[m]=-camforward[n];
-					break;
-				}
-			}
-			camup = normalizedVect(camup);
-
-			if (dimensionen>=3){
-				let o=0;
-				for(o=0;o<3;o++){
-					if (o===m||o===n){
-						//boo
-					} else {
-						break;
-					}
-				}
-				//get the cross product in indices o, m, and n?
-				console.log("omn"+o+","+m+","+n);
-				camright=highercross(camup,camforward,o,m,n);
-			} else {
-				camright=camforward;
-			}
-		} else {
-			//camup and cam right
-
-			let camup_residue = project(camup,camforward);
-			camup = vectSub(camup,camup_residue);
-			camup = smul(1/vectLen(camup),camup);
-
-
-			let camright_residue1 = project(camright,camforward);
-			camright = vectSub(camright,camright_residue1);
-			
-			let camright_residue2 = project(camright,camup);
-			camright = vectSub(camright,camright_residue2);
-
-			camright = smul(1/vectLen(camup),camup);
-		}
-
-		// targetcampos = vectAdd(targetcampos,smul(0.2,camup));
-
-
-		//camright
-
-	} 
-
-	function highercross(a,b,i1,i2,i3){
-		let o = origin.slice();
-		o[i1]=a[i2]*b[i3]-a[i3]*b[i2];
-		o[i2]=a[i3]*b[i1]-a[i1]*b[i3];
-		o[i3]=a[i1]*b[i2]-a[i2]*b[i1];
-		return o;
-	}
-
-	function wordToPerm(grundwort,w){
-		let p = [];
-		for (let i=0;i<grundwort.length;i++){
-			p.push(i);
-		}
-
-		for (let i=0;i<grundwort.length;i++){
-			let c = grundwort[i];
-			let cindex = w.indexOf(c);
-			p[i] = cindex;
-		}
-		return p
-	}
-
-
-
-
-	function wordToRPerm(grundwort,w){
-		let p = [];
-		for (let i=0;i<grundwort.length;i++){
-			p.push(i);
-		}
-
-		for (let i=0;i<grundwort.length;i++){
-			let c = grundwort[i];
-			let cindex = w.indexOf(c);
-			p[cindex] = i;
-		}
-		return p;
-	}
 	
 	function startSpiel(){
-		let spracheindex = spracheIndex();
-		words = levelwords[spracheindex][level];
-		wort = words[0];
-		baseword = wort;
-
-		generateWordPerms();
-		
 		setDimensionen(words[0].length-1)
-		spawnTitelPlaneten();
 
-		setGameCamPos(true);
+
+		createBuffer();		
+
 	}
 
 	let deltatime=100;
@@ -2446,8 +2144,7 @@ console.log(planet_anim);
 
 		createBuffer();		
 
-		// setGameState("SPIEL")
-		setGameState("TITEL")
+		startTitleBildschirm();
 	}
 
 	window.onload =globalSetup;

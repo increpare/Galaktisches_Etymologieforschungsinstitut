@@ -20,6 +20,7 @@ let wordsList = [
 	["tsar", "tars", "star", "arts", "rats"],
 	["lair", "lira", "rail", "liar"],
 	["petals", "plates", "pleats", "staple", "palest", "pastel"],
+	["psalter", "stapler", "platers", "plaster", "palters"],
 	["carets","caters","caster","crates","reacts","recast","traces"],
 	["nips", "pins", "spin", "snip"],
 	["trees", "terse", "steer", "ester", "reset"],
