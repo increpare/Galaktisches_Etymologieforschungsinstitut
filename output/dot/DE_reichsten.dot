@@ -1,0 +1,12 @@
+graph {
+	reichsten -- scheitern [ label="15" ];
+	reichsten -- schreiten [ label="11" ];
+	reichsten -- sicherten [ label="12" ];
+	reichsten -- streichen [ label="10" ];
+	scheitern -- schreiten [ label="4" ];
+	scheitern -- sicherten [ label="5" ];
+	scheitern -- streichen [ label="16" ];
+	schreiten -- sicherten [ label="5" ];
+	schreiten -- streichen [ label="11" ];
+	sicherten -- streichen [ label="12" ];
+}

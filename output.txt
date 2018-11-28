@@ -868,6 +868,55 @@ pastel,plates,petals,palest,pleats
 
 
 =========
+palters
+=======
+
+
+palters
+platers
+.
+plaster,psalter
+.
+stapler
+
+
+plaster
+.
+.
+psalter,platers,palters
+.
+stapler
+
+
+platers
+palters
+.
+plaster,psalter
+.
+stapler
+
+
+psalter
+.
+.
+plaster,platers,palters
+.
+stapler
+
+
+stapler
+.
+.
+.
+.
+psalter,palters,plaster,platers
+
+
+
+
+
+
+=========
 carets
 =======
 
@@ -1109,63 +1158,56 @@ eilst
 eilst
 .
 leist,liest,liste
-seilt,steil,stile,stiel,sielt
+seilt,steil,stile,stiel
 teils
 
 
 leist
 liest
 eilst,liste
-seilt,steil,stile,stiel,sielt
+seilt,steil,stile,stiel
 teils
 
 
 liest
 leist
 liste,eilst
-seilt,steil,stile,stiel,sielt
+seilt,steil,stile,stiel
 teils
 
 
 liste
 .
 liest,leist,eilst
-seilt,steil,stile,stiel,sielt
+seilt,steil,stile,stiel
 teils
 
 
 seilt
-sielt
+.
 .
 steil,stile,stiel,eilst,liest,liste,leist
-teils
-
-
-sielt
-seilt
-.
-stiel,stile,steil,eilst,liest,liste,leist
 teils
 
 
 steil
 stiel,stile
 .
-seilt,eilst,liest,liste,leist,sielt
+seilt,eilst,liest,liste,leist
 teils
 
 
 stiel
 stile,steil
 .
-sielt,seilt,eilst,liest,liste,leist
+seilt,eilst,liest,liste,leist
 teils
 
 
 stile
 stiel,steil
 .
-seilt,eilst,liest,liste,leist,sielt
+seilt,eilst,liest,liste,leist
 teils
 
 
@@ -1173,7 +1215,7 @@ teils
 .
 .
 .
-steil,sielt,stile,stiel,seilt,eilst,liest,liste,leist
+steil,seilt,stiel,stile,eilst,liest,liste,leist
 
 
 
@@ -1313,14 +1355,18 @@ orten
 
 orten
 roten
-toren
+.
+.
+.
 .
 tenor
 
 
 roten
 orten
-toren
+.
+.
+.
 .
 tenor
 
@@ -1329,14 +1375,9 @@ tenor
 .
 .
 .
-toren,roten,orten
-
-
-toren
+.
 .
 orten,roten
-.
-tenor
 
 
 
@@ -1547,29 +1588,8 @@ eines
 
 
 =========
-enterichs
+reichsten
 =======
-
-
-enterichs
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-reichsten,scheitern,streichen,sicherten,schreiten
 
 
 reichsten
@@ -1584,13 +1604,6 @@ reichsten
 .
 streichen
 schreiten,sicherten,scheitern
-.
-.
-.
-.
-.
-.
-enterichs
 
 
 scheitern
@@ -1605,13 +1618,6 @@ sicherten
 .
 .
 streichen,reichsten
-.
-.
-.
-.
-.
-.
-enterichs
 
 
 schreiten
@@ -1626,13 +1632,6 @@ sicherten
 .
 .
 streichen,reichsten
-.
-.
-.
-.
-.
-.
-enterichs
 
 
 sicherten
@@ -1647,13 +1646,6 @@ schreiten,scheitern
 .
 .
 streichen,reichsten
-.
-.
-.
-.
-.
-.
-enterichs
 
 
 streichen
@@ -1668,13 +1660,6 @@ streichen
 .
 reichsten
 schreiten,sicherten,scheitern
-.
-.
-.
-.
-.
-.
-enterichs
 
 
 
@@ -2635,7 +2620,7 @@ beierst
 .
 bereist,bereits,breites
 bieters,biester
-reibest,riebest,siebter,seibert,siebert
+siebter,seibert,reibest,riebest
 triebes
 
 
@@ -2644,7 +2629,7 @@ bereits
 .
 beierst,breites
 bieters,biester
-reibest,siebter,seibert,siebert,riebest
+reibest,siebter,seibert,riebest
 triebes
 
 
@@ -2653,7 +2638,7 @@ bereist
 .
 breites,beierst
 bieters,biester
-reibest,riebest,siebter,seibert,siebert
+siebter,seibert,reibest,riebest
 triebes
 
 
@@ -2662,7 +2647,7 @@ biester
 .
 .
 bieters,beierst,bereits,breites,bereist
-siebter,seibert,siebert,reibest,riebest
+siebter,seibert,reibest,riebest
 triebes
 
 
@@ -2671,7 +2656,7 @@ bieters
 .
 biester
 beierst,bereits,breites,bereist
-reibest,riebest,siebter,seibert,siebert
+siebter,seibert,reibest,riebest
 triebes
 
 
@@ -2680,7 +2665,7 @@ breites
 .
 bereits,bereist,beierst
 bieters,biester
-siebter,seibert,siebert,reibest,riebest
+siebter,seibert,reibest,riebest
 triebes
 
 
@@ -2689,7 +2674,7 @@ riebest
 .
 .
 .
-breites,beierst,biester,siebter,seibert,siebert,bieters,bereits,bereist
+breites,beierst,biester,siebter,seibert,bieters,bereits,bereist
 triebes
 
 
@@ -2698,32 +2683,23 @@ reibest
 .
 .
 .
-breites,beierst,biester,siebter,seibert,siebert,bieters,bereits,bereist
+breites,beierst,biester,siebter,seibert,bieters,bereits,bereist
 triebes
 
 
 seibert
-siebert
-siebter
 .
+.
+siebter
 .
 biester,beierst,breites,reibest,riebest,bereist,bereits,bieters
 triebes
 
 
-siebert
+siebter
+.
+.
 seibert
-siebter
-.
-.
-biester,beierst,breites,reibest,riebest,bereist,bereits,bieters
-triebes
-
-
-siebter
-.
-.
-seibert,siebert
 .
 biester,beierst,breites,reibest,riebest,bereist,bereits,bieters
 triebes
@@ -2735,6 +2711,6 @@ triebes
 .
 .
 .
-riebest,breites,bieters,bereits,reibest,bereist,beierst,biester,siebter,seibert,siebert
+riebest,bereist,reibest,breites,bieters,bereits,beierst,biester,siebter,seibert
 
 

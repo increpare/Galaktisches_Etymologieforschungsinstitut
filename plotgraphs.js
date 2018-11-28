@@ -28,18 +28,18 @@ let wordsList = [
 	["lap", "pal", "alp"],
 	["trap", "part", "tarp", "prat", "rapt"],
 
-	["eilst","leist","liest","liste","seilt","sielt","steil","stiel","stile","teils"],
+	["eilst","leist","liest","liste","seilt","steil","stiel","stile","teils"],
 	["genre","neger","regen","gerne","enger"],
 	["balgen","belang","gabeln"],
 	["feiern", "ferien", "freien", "riefen", "reifen","eifern"],
-	["roten", "orten", "toren", "tenor"],
+	["roten", "orten",  "tenor"],
 	["heer", "eher", "ehre","rehe"],
 	["rote", "tore", "orte"],
 	["ort", "rot", "tor"],
 	["derlei", "leider", "lieder"],
 	["schlafen", "falschen", "flaschen"],
 	["seien", "seine", "eines", "eisen"],
-	["streichen","enterichs","scheitern","schreiten","sicherten","reichsten"],
+	["streichen","scheitern","schreiten","sicherten","reichsten"],
 	["sirene", "serien", "reines", "seiner", "reisen", "einser", "riesen", "eisern"],
 
 
@@ -57,7 +57,7 @@ let wordsList = [
 	["vorsprechen", "vorpreschen", "versprochen"],
 	["verbreite", "verbriete", "verreibet", "verriebet", "vertreibe", "vertriebe", "brevetier"],
 	["agileren", "anlieger", "einlager", "einlagre", "galerien", "algerien", "genialer", "inegaler", "rangelei", "regalien"],
-	["triebes", "siebter", "siebert", "seibert", "riebest", "biester", "reibest", "breites", "bieters", "bereits", "bereist", "beierst"],
+	["triebes", "siebter", "seibert", "riebest", "biester", "reibest", "breites", "bieters", "bereits", "bereist", "beierst"],
 ];
 
 //https://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Anagramme

@@ -1,8 +1,5 @@
 graph {
 	orten -- roten [ label="1" ];
 	orten -- tenor [ label="6" ];
-	orten -- toren [ label="2" ];
 	roten -- tenor [ label="7" ];
-	roten -- toren [ label="3" ];
-	tenor -- toren [ label="4" ];
 }

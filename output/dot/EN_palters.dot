@@ -1,0 +1,12 @@
+graph {
+	palters -- plaster [ label="4" ];
+	palters -- platers [ label="1" ];
+	palters -- psalter [ label="5" ];
+	palters -- stapler [ label="10" ];
+	plaster -- platers [ label="3" ];
+	plaster -- psalter [ label="3" ];
+	plaster -- stapler [ label="8" ];
+	platers -- psalter [ label="6" ];
+	platers -- stapler [ label="11" ];
+	psalter -- stapler [ label="5" ];
+}
