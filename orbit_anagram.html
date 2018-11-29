@@ -87,6 +87,27 @@
 </div>
 <script>
 
+
+function setVal(key,val){
+	if (typeof(Storage) !== "undefined") {
+	    localStorage.setItem(key,val);
+	}
+}
+
+function getVal(key, default_val){
+	if (typeof(Storage) !== "undefined") {
+	    let val = localStorage.getItem(key);
+	    if (val===null){
+	    	return default_val;
+	    } else {
+	    	return val;
+	    }
+	} else {
+    	return default_val;
+	}
+}
+
+
 //from https://jsfiddle.net/Dwaaren/j9zahaLL/
 	function vwTOpx(value) {
     var w = window,
@@ -1408,6 +1429,7 @@ planet_anim = genBigFrames(
 		} else {
 			sprache="DE";
 		}
+		setVal("sprache",sprache);
 	}
 
 	function onTitelInput(k){
@@ -1945,7 +1967,7 @@ planet_anim = genBigFrames(
 		textbox.innerHTML=text;
 	}
 
-	let sprache="EN";
+	let sprache=getVal("sprache","EN");
 	function S(de,en){
 		if (sprache==="DE"){
 			return de;
