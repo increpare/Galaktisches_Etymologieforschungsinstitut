@@ -784,49 +784,49 @@ let planet_anim = [
 ]
 
 let leveldats =  [
-	[//deu	
-		[//l1		
-			["tor",2],
-			["ort",0],
-			["rot",0],
+	[//DEU	
+		[//L1		
+			["TOR",2],
+			["ORT",0],
+			["ROT",0],
 		],
 		[
 
-			["ehre",2],
-			["rehe",0],
-			["heer",0],
-			["eher",0],
+			["EHRE",2],
+			["REHE",0],
+			["HEER",0],
+			["EHER",0],
 		],
-		[//l2		
-			["seien",1],
-			["seine",1],
-			["eisen",1],
-			["eines",0],
+		[//L2		
+			["SEIEN",1],
+			["SEINE",1],
+			["EISEN",1],
+			["EINES",0],
 		],
-		[//l3
-			["reisen",1],
-			["riesen",2],
-			["reines",1],
-			["serien",0],
-			["sirene",0],
-			["seiner",0],
-			["eisern",0],
-			["einser",0],
+		[//L3
+			["REISEN",1],
+			["RIESEN",2],
+			["REINES",1],
+			["SERIEN",0],
+			["SIRENE",0],
+			["SEINER",0],
+			["EISERN",0],
+			["EINSER",0],
 		],
-		[//l4
-			["streichen",5],
-			["scheitern",3],
-			["schreiten",3],
-			["sicherten",0],
-			["reichsten",0],
+		[//L4
+			["STREICHEN",5],
+			["SCHEITERN",3],
+			["SCHREITEN",3],
+			["SICHERTEN",0],
+			["REICHSTEN",0],
 		],
-		[//l5
-			["eifern",2],
-			["ferien",1],
-			["feiern",0],
-			["freien",0],//könnte auch das punkte geben (statt ferien)
-			["riefen",0],
-			["reifen",0],
+		[//L5
+			["EIFERN",2],
+			["FERIEN",1],
+			["FEIERN",0],
+			["FREIEN",0],//KÖNNTE AUCH DAS PUNKTE GEBEN (STATT FERIEN)
+			["RIEFEN",0],
+			["REIFEN",0],
 		],
 	],
 	[//eng
@@ -1489,7 +1489,7 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Sei meine eigene Zivilisation ein Tor zum größeren Sinn.",
+					"Sei meine eigene Zivilisation ein TOR zum größeren Sinn.",
 				],
 				[
 					"SAG",
@@ -2326,37 +2326,47 @@ planet_anim = genBigFrames(
 		let fuelkistebottom = fuelkistetop+fuelkisteheight-1;
 
 		//offset anim
-		
+		let segmentheight=Math.max(fuelkistebottom,2+entdeckungmax);
+		//should go from -segmentheight to 0
+		let frameprogress=segmentheight-Math.min(spielticker,segmentheight);
+
 		//fuel
-		drawBox(0,fuelkistetop,3,fuelkisteheight,0);
-		printText(S("Treibstoff","fuel"),0,0,3)
+		drawBox(0,fuelkistetop-frameprogress,3,fuelkisteheight,0);
+		printText(S("Treibstoff","fuel"),0,0-frameprogress,3)
 
 		for (let i=0;i<fuelamount;i++){
-			letterbuffer[2][fuelkistebottom-1-i]="=";
-			colorbuffer[2][fuelkistebottom-1-i]=9;
+			let ypos= fuelkistebottom-1-i;
+			ypos-=frameprogress;
+			if (ypos>0){
+				letterbuffer[1][ypos]="=";
+				colorbuffer[1][ypos]=9;
+			}
 		}
 
 		//discovery
+
 
 		let entdeckungkistebottom = ch-2;
 		let entdeckungkisteheight=2+entdeckungmax;
 
 		let entdeckungkistetop=entdeckungkistebottom-entdeckungkisteheight+1;
 
+
+
 		let dbox_w=wort.length+2;
 		let dbox_h=entdeckungmax+2;
 		let dbox_x=cw-1-dbox_w;
 		let dbox_y=1;
-		drawBox(dbox_x,dbox_y,dbox_w,dbox_h,5);
+		drawBox(dbox_x,dbox_y-frameprogress,dbox_w,dbox_h,5);
 
 		for (let i=0;i<entdeckung;i++){
 			let w = visitedlist[i];
 			let d_col = w===wort?10:2;
-			printText(w,dbox_x+1,dbox_y+1+i,d_col)
+			printText(w,dbox_x+1,dbox_y+1+i-frameprogress,d_col)
 		}
 
 		var dtext = S("Entdeckung","discovery")
-		printText(dtext,cw-dtext.length-1,0,3)
+		printText(dtext,cw-dtext.length-1,0-frameprogress,3)
 
 
 		if (wonlevel){
@@ -2737,6 +2747,7 @@ planet_anim = genBigFrames(
 
 		}
 	}
+
 
 	function render(){
 		clearBuffer();
