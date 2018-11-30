@@ -1,19 +1,13 @@
 graph {
 	bereit -- beriet [ label="1" ];
-	bereit -- bertie [ label="2" ];
 	bereit -- bieter [ label="6" ];
 	bereit -- breite [ label="3" ];
 	bereit -- treibe [ label="10" ];
 	bereit -- triebe [ label="11" ];
-	beriet -- bertie [ label="3" ];
 	beriet -- bieter [ label="5" ];
 	beriet -- breite [ label="2" ];
 	beriet -- treibe [ label="9" ];
 	beriet -- triebe [ label="10" ];
-	bertie -- bieter [ label="5" ];
-	bertie -- breite [ label="2" ];
-	bertie -- treibe [ label="7" ];
-	bertie -- triebe [ label="8" ];
 	bieter -- breite [ label="7" ];
 	bieter -- treibe [ label="12" ];
 	bieter -- triebe [ label="9" ];

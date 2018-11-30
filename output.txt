@@ -1944,28 +1944,16 @@ technisch
 
 
 =========
-nitsche
+scheint
 =======
 
 
-nitsche
-.
-.
-.
-.
-.
-.
-tischen,sichten,schneit,scheint,stichen
-
-
 scheint
 .
 schneit
 .
 .
 sichten,tischen,stichen
-.
-nitsche
 
 
 schneit
@@ -1974,8 +1962,6 @@ scheint
 .
 .
 sichten,tischen,stichen
-.
-nitsche
 
 
 sichten
@@ -1984,8 +1970,6 @@ sichten
 stichen,tischen
 .
 scheint,schneit
-.
-nitsche
 
 
 stichen
@@ -1994,8 +1978,6 @@ tischen
 sichten
 .
 scheint,schneit
-.
-nitsche
 
 
 tischen
@@ -2004,8 +1986,6 @@ stichen
 sichten
 .
 scheint,schneit
-.
-nitsche
 
 
 
@@ -2019,7 +1999,7 @@ bereit
 
 bereit
 beriet
-bertie,breite
+breite
 .
 .
 bieter
@@ -2029,17 +2009,7 @@ treibe,triebe
 
 beriet
 .
-breite,bertie,bereit
-.
-.
-bieter
-.
-treibe,triebe
-
-
-bertie
-.
-breite,beriet,bereit
+breite,bereit
 .
 .
 bieter
@@ -2052,14 +2022,14 @@ bieter
 .
 .
 .
-bertie,beriet,breite,bereit
+beriet,breite,bereit
 .
 treibe,triebe
 
 
 breite
 .
-bertie,beriet,bereit
+beriet,bereit
 .
 .
 bieter
@@ -2074,7 +2044,7 @@ triebe
 .
 .
 .
-breite,bieter,bereit,bertie,beriet
+breite,bieter,bereit,beriet
 
 
 triebe
@@ -2084,7 +2054,7 @@ treibe
 .
 .
 .
-breite,bieter,bereit,bertie,beriet
+breite,bieter,bereit,beriet
 
 
 

@@ -154,7 +154,7 @@ function getVal(key, default_val){
 
 function handleresize(){
 	//calc(min(1.6vw,2.4vh));
-	let vw=1.6;
+	let vw=2.0;
 	let vh=2.75;
 	let px_16vw = vwTOpx(vw);
 	let px_24vh = vhTOpx(vh);
@@ -935,10 +935,10 @@ let leveldats =  [
 			["staple",0],
 		],
 		[//lv7
-			["parsley",2],
-			["parleys",0],
-			["sparely",0],
-			["players",0],
+			["parsley",3],
+			["parleys",1],
+			["sparely",1],
+			["players",1],
 			["replays",0],
 		],
 		[//l8
@@ -1513,6 +1513,9 @@ planet_anim = genBigFrames(
 		let menügröße = getVal("level"+sprache,0)===0?3:4;
 		startcursorIndex=menügröße-1;
 		setVal("sprache",sprache);
+
+		
+		document.title = S("Galaktisches Etymologieforschungsinstitut","Galactic Center for Etymological Research");
 
 		playSound(2);
 	}
@@ -3298,7 +3301,7 @@ let sequenzen =[];
 				5,//blue
 				6//green
 				);
-		let planetframes = [my_planet_anim[7]];
+		let planetframes = [my_planet_anim[8]];
 		planetframes[0][0]=100;
 		let planet = [ origin.slice(), planetframes];
 		planeten.push(planet);
@@ -3618,6 +3621,8 @@ let sequenzen =[];
 
 	function globalSetup(){
 		soundInit();
+
+		document.title = S("Galaktisches Etymologieforschungsinstitut","Galactic Center for Etymological Research");
 
 		setDimensionen(words[0].length-1)
 

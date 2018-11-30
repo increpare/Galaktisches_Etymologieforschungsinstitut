@@ -1,0 +1,12 @@
+graph {
+	scheint -- schneit [ label="2" ];
+	scheint -- sichten [ label="5" ];
+	scheint -- stichen [ label="8" ];
+	scheint -- tischen [ label="10" ];
+	schneit -- sichten [ label="7" ];
+	schneit -- stichen [ label="10" ];
+	schneit -- tischen [ label="12" ];
+	sichten -- stichen [ label="3" ];
+	sichten -- tischen [ label="5" ];
+	stichen -- tischen [ label="2" ];
+}

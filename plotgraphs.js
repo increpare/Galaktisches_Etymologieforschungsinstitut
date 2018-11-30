@@ -48,8 +48,8 @@ let wordsList = [
 
 	["tischchen", "schichten", "technisch", "tschechin"],
 
-	["scheint", "schneit", "sichten", "stichen", "nitsche", "tischen"],
-	["breite", "bereit", "beriet", "bertie", "triebe", "treibe", "bieter"],
+	["scheint", "schneit", "sichten", "stichen", "tischen"],
+	["breite", "bereit", "beriet", "triebe", "treibe", "bieter"],
 	["sterne", "tresen", "resten", "nester", "ersten", "ernste", "ernest"],
 	["nagel", "angel", "lange", "lagen", "algen"],
 	["reaktion", "kantorei", "kroatien", "kreation"],
