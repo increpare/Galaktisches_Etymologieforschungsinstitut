@@ -1,0 +1,1 @@
+for i in *.wav; do lame "$i" -o "`basename "$i" .wav`.mp3"; done;

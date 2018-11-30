@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Explore the Universe</title>
+	<title>Galaktisches Etymologieforschungsinstitut</title>
 
 
 	<style>	
@@ -72,6 +72,10 @@
 			color:lightblue;
 			background-color: black;
 		}
+		.col11{/*status-bar*/
+			color:black;
+			background-color: #333333;
+		}
 		u {			
 			/*font-weight: bold;*/
 			background-color: black;
@@ -85,14 +89,25 @@
 <div id="console">
 	Loading game (requires javascript)
 </div>
+
+<script type="text/javascript" src="soundjs-NEXT.min.js"></script>
+
 <script>
 
+function playSound(id,vol=0.2){
+	if (audio==="1"){
+		var a = createjs.Sound.play(id);
+		a.volume=vol;
+	}
+}
 
 function setVal(key,val){
 	if (typeof(Storage) !== "undefined") {
 	    localStorage.setItem(key,val);
 	}
 }
+
+let f = x => x*2
 
 function getVal(key, default_val){
 	if (typeof(Storage) !== "undefined") {
@@ -138,7 +153,7 @@ function getVal(key, default_val){
 function handleresize(){
 	//calc(min(1.6vw,2.4vh));
 	var vw=1.6;
-	var vh=3.0;
+	var vh=2.75;
 	let px_16vw = vwTOpx(vw);
 	let px_24vh = vhTOpx(vh);
 
@@ -352,7 +367,8 @@ function pickMipMap(anims,d){
 function genAllFrames(sourceLayout,waterIndex,landIndex){
 	let anims=[
 	//d,w,h,frames
-		[100,0,0,[[" ",""+waterIndex,"#"]]],
+		[10000,0,0,[[" ",""+waterIndex,"#"]]],
+		[100,0,0,[[".",""+waterIndex,"#"]]],
 		[7,0,0,[[".",""+waterIndex,"#"]]],
 		[6,0,0,[["o",""+waterIndex,"#"]]],
 		[5,0,0,[["O",""+waterIndex,"#"]]],
@@ -811,35 +827,30 @@ let leveldats =  [
 			["ORT",0],
 			["ROT",0],
 		],
-		[
+		[//l2
 
 			["EHRE",2],
 			["REHE",0],
 			["HEER",0],
 			["EHER",0],
 		],
-		[//L2		
+		[//L3		
 			["SEIEN",1],
 			["SEINE",1],
 			["EISEN",1],
 			["EINES",0],
 		],
-		[//L3
-			["REISEN",1],
-			["RIESEN",2],
-			["REINES",1],
-			["SERIEN",0],
-			["SIRENE",0],
-			["SEINER",0],
-			["EISERN",0],
-			["EINSER",0],
-		],
 		[//L4
-			["STREICHEN",5],
-			["SCHEITERN",3],
-			["SCHREITEN",3],
-			["SICHERTEN",0],
-			["REICHSTEN",0],
+			["LISTE",2],
+			["EILST",1],
+			["LEIST",0],
+			["LIEST",0],
+			["STIEL",1],
+			["SEILT",0],
+			["SIELT",0],
+			["STEIL",0],
+			["STILE",0],
+			["TEILS",0]
 		],
 		[//L5
 			["EIFERN",2],
@@ -849,12 +860,38 @@ let leveldats =  [
 			["RIEFEN",0],
 			["REIFEN",0],
 		],
+		[//L6
+			["REISEN",1],
+			["RIESEN",2],
+			["REINES",1],
+			["SERIEN",0],
+			["SIRENE",0],
+			["SEINER",0],
+			["EISERN",0],
+			["EINSER",0],
+		],
+		[//L7
+			["SCHEINEN",1],
+			["SCHIENEN",1],
+			["SCHNEIEN",4],
+			["CHINESEN",1],
+		],
+		[//L8
+			["STREICHEN",5],
+			["SCHEITERN",3],
+			["SCHREITEN",3],
+			["SICHERTEN",0],
+			["REICHSTEN",0],
+		],
+
 	],
 	[//eng
 		[//l1
-			["now",2],
-			["own",0],
-			["won",0]
+			["star",1],
+			["tsar",1],
+			["tars",0],
+			["arts",0],
+			["rats",0]
 		],
 		[//l2
 			["east",1],
@@ -864,24 +901,50 @@ let leveldats =  [
 			["teas",0],
 		],
 		[//l3
+			["trees",2],
+			["terse",2],
+			["steer",1],
+			["ester",0],
+			["reset",0]
+		],
+		[//l4
 			["steak",2],
 			["stake",1],
 			["skate",1],
-			["teak",0],
-			["taxes",0]
-		],
-		[//l4
-			["parse",1],
-			["pares",1],
-			["pears",1],
-			["spare",1],
-			["spear",1],
-			["reaps",0],
+			["teaks",0],
+			["takes",0]
 		],
 		[//l5
-			["alerting",2],
-			["alerting",4],
-			["relating",6]
+			["parse",1],
+			["apres",1],
+			["rapes",1],
+			["pares",0],
+			["reaps",0],
+			["pears",0],
+			["spare",0],
+			["spear",0],
+		],
+		[//l6
+			["pleats",2],
+			["plates",1],
+			["palest",1],
+			["petals",1],
+			["pastel",1],
+			["staple",0],
+		],
+		[//lv7
+			["parsley",2],
+			["parleys",0],
+			["sparely",0],
+			["players",0],
+			["replays",0],
+		],
+		[//l8
+			["hatreds",4],
+			["threads",1],
+			["hardest",1],
+			["trashed",4],
+			["dearths",0]
 		],
 	]
 ]
@@ -1149,7 +1212,7 @@ planet_anim = genBigFrames(
 	let sterne=[];
 	let planeten=[];
 
-	let MAX_DEPTH=1000;
+	let MAX_DEPTH=10000;
 
 	function dist(p1,p2){
 		let s=0;
@@ -1204,6 +1267,10 @@ planet_anim = genBigFrames(
 				letter_r.push(" ");
 				depth_r.push(MAX_DEPTH);
 			}
+			//status-bar
+			color_r.push(0);
+			letter_r.push(" ");
+			depth_r.push(MAX_DEPTH);
 
 			letterbuffer.push(letter_r);
 			colorbuffer.push(color_r);
@@ -1420,7 +1487,14 @@ planet_anim = genBigFrames(
 	}
 
 	function toggleAudio(){
-		audio=!audio;
+		if (audio==="1"){
+			audio="0";
+		} else {
+			audio="1";
+		}
+
+		setVal("audio",""+audio);
+		playSound(2);
 	}
 
 	function toggleSprache(){
@@ -1429,7 +1503,12 @@ planet_anim = genBigFrames(
 		} else {
 			sprache="DE";
 		}
+
+		let menügröße = getVal("level"+sprache,0)===0?3:4;
+		startcursorIndex=menügröße-1;
 		setVal("sprache",sprache);
+
+		playSound(2);
 	}
 
 	function onTitelInput(k){
@@ -1438,7 +1517,7 @@ planet_anim = genBigFrames(
 			return;
 		}
 
-		let menügröße = savegame===null?3:4;
+		let menügröße = getVal("level"+sprache,0)===0?3:4;
 		let audiooption = (menügröße===3 && startcursorIndex===1) || (menügröße===4 && startcursorIndex===2);
 		let spracheoption = (menügröße===3 && startcursorIndex===2) || (menügröße===4 && startcursorIndex===3);
 		let neuesspiel = startcursorIndex===0;
@@ -1447,12 +1526,14 @@ planet_anim = genBigFrames(
 		switch(k){
 			case 0://u
 			if (startcursorIndex>0){
-				startcursorIndex--;
+				startcursorIndex--;				
+				playSound(1);
 			}
 			break;
 			case 1://d
 			if (startcursorIndex+1<menügröße){
 				startcursorIndex++;
+				playSound(1);
 			}
 			break;
 			case 2://l
@@ -1472,6 +1553,7 @@ planet_anim = genBigFrames(
 				}
 			break;
 			case 4://x
+				playSound(3);
 				if (audiooption){
 					toggleAudio();
 				}
@@ -1479,6 +1561,7 @@ planet_anim = genBigFrames(
 					toggleSprache();
 				}
 				if (fortsetzen){
+					level=getVal("level"+sprache,0);
 					exitanim=0;
 				}
 				if (neuesspiel){
@@ -1490,7 +1573,7 @@ planet_anim = genBigFrames(
 
 	}
 
-	sequenzen = [
+	sequenzen = [ 
 		[
 			[//DEU - LEVEL 1
 				[
@@ -1522,15 +1605,19 @@ planet_anim = genBigFrames(
 			[//ENG - LEVEL 1
 				[
 					"SAG",
-					"What is civilization?"
+					"If you like words, and if you like planets, and you like EXPLORING, you've come to the right place!"
 				],
 				[
 					"SAG",
-					"Assume civilization is what makes sense."
+					"We're trying to understand the universe, and all the planets in it."
 				],
 				[
 					"SAG",
-					"Assume my own civilization makes sense to me."
+					"We don't know why planets are they way they are, and because of this we always end up giving them silly names."
+				],
+				[
+					"SAG",
+					"Our current planet has a rather dissonant name indeed:"
 				],
 				[
 					"WORT",
@@ -1538,7 +1625,7 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Assume that we must leave NOW."
+					"Star! What a name for a planet.  Well whatever.  Go fly around, and see what sense you can't make of this planetary system."
 				],
 			]
 		],
@@ -1557,7 +1644,7 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Was ist das wort?",
+					"Was ist das Wort?",
 				],
 				[
 					"WORT",
@@ -1572,15 +1659,11 @@ planet_anim = genBigFrames(
 			[//ENG - LEVEL 2
 				[
 					"SAG",
-					"What level is it?"
+					"The cardinal directions of north, south, east and west have no meaning in space."
 				],
 				[
 					"SAG",
-					"Level 2? Nice!"
-				],
-				[
-					"SAG",
-					"And wot's the word?"
+					"Or they shouldn't, but, well..."
 				],
 				[
 					"WORT",
@@ -1588,8 +1671,16 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Awesome. Let's go!"
-				]
+					"East? Really? Who named these things anyway?"
+				],
+				[
+					"SAG",
+					"Oh, don't mind my ranting, I'm sure you're itching to get going."
+				],
+				[
+					"SAG",
+					"Have fun!"
+				],
 			]
 		],
 
@@ -1607,7 +1698,7 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Was ist das wort?",
+					"Was ist das Wort?",
 				],
 				[
 					"WORT",
@@ -1622,15 +1713,15 @@ planet_anim = genBigFrames(
 			[//ENG - LEVEL 3
 				[
 					"SAG",
-					"What level is it?"
+					"Things exist at different scales, from atomic scale to galactic scale."
 				],
 				[
 					"SAG",
-					"Level 3? Nice!"
+					"Rarely do they interact with eachother."
 				],
 				[
 					"SAG",
-					"And wot's the word?"
+					"Except for this planet.  Which planet?"
 				],
 				[
 					"WORT",
@@ -1638,8 +1729,12 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Awesome. Let's go!"
-				]
+					"Planet \"tree\" of course.",
+				],
+				[
+					"SAG",
+					"I hope you manage to find some more appropriate-named planets on your trip today :)",
+				],
 			]
 		],
 
@@ -1657,7 +1752,7 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Was ist das wort?",
+					"Was ist das Wort?",
 				],
 				[
 					"WORT",
@@ -1672,15 +1767,15 @@ planet_anim = genBigFrames(
 			[//ENG - LEVEL 4
 				[
 					"SAG",
-					"What level is it?"
+					"Would you eat a planet?",
 				],
 				[
 					"SAG",
-					"Level 4? Nice!"
+					"I wouldn't.",
 				],
 				[
 					"SAG",
-					"And wot's the word?"
+					"So be careful the next time you order steak, because this planet happens to be called...",
 				],
 				[
 					"WORT",
@@ -1688,9 +1783,9 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Awesome. Let's go!"
+					"Let me know if you find out who named this on your travels so I can send them a sternly-worded letter.",
 				]
-			]
+			],
 		],
 
 
@@ -1707,7 +1802,7 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Was ist das wort?",
+					"Was ist das Wort?",
 				],
 				[
 					"WORT",
@@ -1722,15 +1817,15 @@ planet_anim = genBigFrames(
 			[//ENG - LEVEL 5
 				[
 					"SAG",
-					"What level is it?"
+					"Things are things and words are words."
 				],
 				[
 					"SAG",
-					"Level 5? Nice!"
+					"We give things names, but there's no special meaning to that."
 				],
 				[
 					"SAG",
-					"And wot's the word?"
+					"The essence of an object has nothing to do with its name."
 				],
 				[
 					"WORT",
@@ -1738,7 +1833,204 @@ planet_anim = genBigFrames(
 				],
 				[
 					"SAG",
-					"Awesome. Let's go!"
+					"Which, in the case of \"Parse\" nobody was going to dispute anyway..."
+				],
+				[
+					"SAG",
+					"Anyway, don't let me keep you.  Have fun mapping out this system!"
+				],
+			]
+		],
+
+
+
+
+		[
+			[//DEU - LEVEL 6
+				[
+					"SAG",
+					"Welcher Level ist es?",
+				],
+				[
+					"SAG",
+					"Level 6? Juhu!",
+				],
+				[
+					"SAG",
+					"Was ist das Wort?",
+				],
+				[
+					"WORT",
+					"WORT",
+				],
+				[
+					"SAG",
+					"Toll! Los geht's!",
+				]
+			],
+
+			[//ENG - LEVEL 6
+				[
+					"SAG",
+					"Planets are round.",
+				],
+				[
+					"SAG",
+					"This planet, being a planet, is round.",
+				],
+				[
+					"SAG",
+					"But it's called \"Pleats\"",
+				],
+				[
+					"WORT",
+					"WORT",
+				],
+				[
+					"SAG",
+					"These planets continue to be strangely named.  There can be no sense to it, but I do wonder...",
+				]
+			],
+		],
+
+
+
+
+
+		[
+			[//DEU - LEVEL 7
+				[
+					"SAG",
+					"Welcher Level ist es?",
+				],
+				[
+					"SAG",
+					"Level 7? Juhu!",
+				],
+				[
+					"SAG",
+					"Was ist das Wort?",
+				],
+				[
+					"WORT",
+					"WORT",
+				],
+				[
+					"SAG",
+					"Toll! Los geht's!",
+				]
+			],
+
+			[//ENG - LEVEL 7
+				[
+					"SAG",
+					"I just had a thought."
+				],  
+				[
+					"SAG",
+					"The planets are not arranged in an orderly fashion, but, using our planetary coordinate system, it seems that wherever there is a word there is in the corresponding spot planet."
+				],
+				[	"SAG",
+					"Maybe, instead of naming planets after things, we named *things* after *planets*?"
+				],
+				[
+					"SAG",
+					"Like I said, just a thought."
+				],
+				[
+					"SAG",
+					"Now, getting back to the matter at hand:"				
+				],
+				[
+					"SAG",
+					"Gaia theory posits that plants are living organisms."
+				],
+				[
+					"SAG",
+					"So maybe it's grand that this planet is named \"Parsley\"."
+				],
+				[
+					"WORT",
+					"WORT",
+				],
+				[
+					"SAG",
+					"I wonder how many other planets are named after herbs?"
+				]
+			]
+		],
+
+
+
+
+		[
+			[//DEU - LEVEL 8
+				[
+					"SAG",
+					"Welcher Level ist es?",
+				],
+				[
+					"SAG",
+					"Level 8? Juhu!",
+				],
+				[
+					"SAG",
+					"Was ist das Wort?",
+				],
+				[
+					"WORT",
+					"WORT",
+				],
+				[
+					"SAG",
+					"Toll! Los geht's!",
+				]
+			],
+
+			[//ENG - LEVEL 8
+				[
+					"SAG",
+					"Words grow and perish, and planets grown and perish."
+				],
+				[
+					"SAG",
+					"I've been looking at historical data"
+				],
+				[
+					"SAG",
+					"It seems that when a word falls out of use, the planet vanishes,"
+				],
+				[
+					"SAG",
+					"and when a new word emerges, a planet springs into existence."
+				],
+				[
+					"SAG",
+					"This raises the question:"
+				],
+				[
+					"SAG",
+					"How did the first world come into existence?"
+				],
+				[
+					"SAG",
+					"I will think about this more now and we can talk more after your further explorations."
+				],
+				[
+					"SAG",
+					"Where are you starting off from today today?"
+				],
+				[
+					"SAG",
+					"From a planet that appeared in sad times:"
+				],
+				[
+					"WORT",
+					"WORT",
+				],
+				[
+					"SAG",
+					"Thank heavens planets and meanings seem to have little to do with eachother."
 				]
 			]
 		],
@@ -1764,21 +2056,41 @@ planet_anim = genBigFrames(
 			[//ENG - END
 				[
 					"SAG",
-					"Done!"
+					"To part one's lips and speak a word"
 				],
 				[
 					"SAG",
-					"There's nothing more to understand."
+					"That is to create a world."
 				],
 				[
 					"SAG",
-					"Have a lovely even, jo!"
+					"Words are worlds and worlds are words."
+				],
+				[
+					"SAG",
+					"We thought we were searching for meaning, but we were just searching for words."
+				],
+				[
+					"SAG",
+					"Our mission's over."
+				],
+				[
+					"SAG",
+					"Thank's so much for helping. It's never easy when we don't get the answers we hoped for."
+				],
+				[
+					"SAG",
+					"Let us meet another time, to start a new search:"
+				],
+				[
+					"SAG",
+					"A search for meaning beyond words, and beyond worlds."
 				]
 			]
 		],
 
 
-	]
+	];
 
 
 	function onSequenzInput(k){
@@ -1796,10 +2108,13 @@ planet_anim = genBigFrames(
 			case 3://r
 			break;
 			case 4://x
-			console.log(sichtbareBuchstaben+","+sichtbarerText.length)
+			// console.log(sichtbareBuchstaben+","+sichtbarerText.length)
 			if (sichtbareBuchstaben<sichtbarerText.length){
 				sichtbareBuchstaben=sichtbarerText.length;
+				playSound(2);
 			} else {
+
+				// playSound(1);
 				sequenzSchritt();
 			}
 			break;
@@ -1809,8 +2124,14 @@ planet_anim = genBigFrames(
 
 	function onSpielInput(k){
 
+		if (k===6){//esc
+			setGameState("TITEL");
+			return;
+		}
+
 		if (endanim<endanimdauer || wonlevel){			
-			if (k===4&&wonlevel){
+			if (k===4&&wonlevel && flyawayanim>=flyawayanimdauer){
+				playSound(7);
 				flyawayanim=0;
 			}
 			return;
@@ -1829,19 +2150,27 @@ planet_anim = genBigFrames(
 			case 1://d
 			break;
 			case 2://l
+				if (fuelreward){
+					break;
+				}
 				if (cursorPos>0 && fuelamount>0){
 					tauschanimation=tauschanimationdauer;
 					lastCursorPos=cursorPos;
 					// bewegunganimation=0;
 					cursorPos--;	
+					playSound(1);
 				}
 			break;
 			case 3://r
+				if (fuelreward){
+					break;
+				}
 				if (cursorPos<wort.length-2 && fuelamount>0){
 					tauschanimation=tauschanimationdauer;
 					lastCursorPos=cursorPos;
 					// bewegunganimation=0;
 					cursorPos++;
+					playSound(1);
 				}
 			break;
 			case 4://x
@@ -1855,14 +2184,17 @@ planet_anim = genBigFrames(
 				if (words.indexOf(wort)>=0 && fuelamount<fuelcapacity){
 					//fuelamount=fuelcapacity;
 				} else {
+					playSound(2);
 					wort = wort.substring(0,cursorPos)+wort[cursorPos+1]+wort[cursorPos]+wort.substring(cursorPos+2);
 					fuelamount--;
 					cursorPos_Base=cursorPos;
 					tauschanimation=0;
+					refuelingdauer=refuelingdauermax;
 				}
 			break;
 			case 7://h
 				if (outoffuel){
+					playSound(5);
 					recovering=true;
 					outoffuel=false;
 					recoverytimer=0;
@@ -1944,11 +2276,11 @@ planet_anim = genBigFrames(
 		let text = "";
 		let lastcol=-1;
 
-		for (let j=0;j<ch;j++){
+		for (let j=0;j<ch+1;j++){
 			for (let i=0;i<cw;i++){
 				let l = letterbuffer[i][j];
 				let col = colorbuffer[i][j];
-				if (l!==" " &&lastcol!==col){
+				if ((j===ch||l!==" ") &&lastcol!==col){
 					if (text.length>0){
 						text+="</span>"
 					}
@@ -1957,7 +2289,7 @@ planet_anim = genBigFrames(
 				}
 				text+=l;
 			}
-			if (j<ch-1){
+			if (j<ch){
 				text+="<br>";
 			}
 		}
@@ -1967,7 +2299,11 @@ planet_anim = genBigFrames(
 		textbox.innerHTML=text;
 	}
 
-	let sprache=getVal("sprache","EN");
+	let sprache = getVal("sprache","EN");
+
+
+	let startcursorIndex = getVal("level"+sprache,0)===0?0:1;
+
 	function S(de,en){
 		if (sprache==="DE"){
 			return de;
@@ -2024,8 +2360,17 @@ planet_anim = genBigFrames(
 				x=origx-(i+1);
 				continue;
 			}
-			letterbuffer[x+i][y]=char;
-			colorbuffer[x+i][y]=c;
+
+			if (y<0||y>ch){
+				continue;
+			}
+			let p = x+i;
+			if (p<0||p>=cw){
+				continue;
+			}
+
+			letterbuffer[p][y]=char;
+			colorbuffer[p][y]=c;
 		}
 	}
 
@@ -2045,9 +2390,13 @@ planet_anim = genBigFrames(
 		}
 	}
 
-	let startcursorIndex=0;
 	let savegame=123;
-	let audio=true;
+	let audio=getVal("audio","1");
+
+
+	let refuelingdauermax=1.0;
+	let refuelingdauerblinkrate=5;
+	let refuelingdauer=refuelingdauermax;
 
 	let exitanimdauer=1.0;
 	let exitanim=exitanimdauer;
@@ -2074,6 +2423,7 @@ planet_anim = genBigFrames(
 		let spracheindex = spracheIndex();
 		if (sequenzindex>=sequenzen[level][spracheindex].length){
 			sequenzEnde=0;
+			playSound(3);
 			return;
 		}
 
@@ -2082,11 +2432,13 @@ planet_anim = genBigFrames(
 		let txt = entry[1];
 		switch(action){
 			case "SAG":
+			// playSound(2);
 			sichtbareBuchstaben=1;
 			sichtbarerText = wordwrap(txt,sequenzWrapSpalten);
 			sichtbarerTextlinien =  sichtbarerText.split(/\r\n|\r|\n/).length;
 			break;
 			case "WORT":
+			// playSound(1);
 			zeigsequenzwort=true;
 			wort=getStartingWort();
 			break;
@@ -2179,9 +2531,12 @@ planet_anim = genBigFrames(
 				printText(sichtbarerText.substring(0,sichtbareBuchstaben),tbx+2,tby+2,8);
 			}
 
-			sichtbareBuchstaben++;
-			while(sichtbareBuchstaben<sichtbarerText.length && !isLetter(sichtbarerText[sichtbareBuchstaben])){
+			if (sichtbareBuchstaben<sichtbarerText.length){
 				sichtbareBuchstaben++;
+				playSound(1+(sichtbareBuchstaben%2),0.1);
+				while(sichtbareBuchstaben<sichtbarerText.length && !isLetter(sichtbarerText[sichtbareBuchstaben])){
+					sichtbareBuchstaben++;
+				}
 			}
 		}
 
@@ -2235,6 +2590,18 @@ planet_anim = genBigFrames(
 				colorbuffer[wl+i*(letterDist+1)][ty]=wortCol;		
 			}
 		}
+
+		for (var i=0;i<cw;i++){
+			colorbuffer[i][ch]=11;
+			letterbuffer[i][ch]=" ";
+		}
+		printText(
+			S(
+				`Entdeckungsreise :  Vorspiel zu Level ${level+1} (von ${leveldats[0].length}).`,
+				`Galactic Center for Etymological Research : Prelude to level ${level+1} (of ${leveldats[0].length}).`
+			),
+			1,ch,
+			11);
 	}
 
 
@@ -2249,9 +2616,13 @@ planet_anim = genBigFrames(
 		}
 		let paddingx=4;
 		let paddingy=1;
-		let titel = S("Entdeckungsreise!","Voyage of discovery!");
+		let titel = S("Galaktisches Etymologieforschungs- institut","Galactic Center for Etymological Research");
 
 		let bw = 18+2+4+2;//titel.length+2*paddingx+2;
+
+
+		titel = wordwrap(titel,bw-2);
+
 		let bh = 1+paddingy*2+2;
 
 		let zx = cw/2;
@@ -2262,18 +2633,18 @@ planet_anim = genBigFrames(
 
 		drawBox(tb_x,tb_y,bw,bh,4);
 		// printRainbowText(titel,tb_x+1+paddingx,tb_y+1+paddingy,4,20)
-		printText(titel,tb_x+Math.floor((bw-titel.length)/2),tb_y+1+paddingy,8)
+		printText(titel,tb_x+2,tb_y+1,8)
 
 		//optionen
 		//new game
 		//continue game (wo möglich)
 		//sprache
-		let optionenzahl=savegame===null?3:4;
+		let optionenzahl=getVal("level"+sprache,0)===0?3:4;
 
 		let optionen = [
 			S("Spiel starten","Start Game"),
 			S("Spiel fortsetzen	","Resume Game"),
-			audio 
+			audio==="1" 
 				? S("Audio : ein","Audio : on")
 				: S("Audio : aus","Audio : off"),
 			S("Sprache : Deutsch","Language : English")
@@ -2282,6 +2653,9 @@ planet_anim = genBigFrames(
 			optionen.splice(1,1);
 		}
 
+		if (startcursorIndex>=optionenzahl){
+			startcursorIndex--;
+		}
 		let menü_padding_y=0;
 
 		let menü_w=18+2+4;
@@ -2324,8 +2698,34 @@ planet_anim = genBigFrames(
 			}
 		}
 
+		let cbox_h=3;
+		let cbox_w=40;
+		let cbox_x=Math.floor(cw/2-cbox_w/2);
+		let cbox_y=ch-3;
 
 
+		drawBox(cbox_x,cbox_y,cbox_w,cbox_h,4);
+		printText(S("Steuerung: Pfeiltasten + X","Controls: Arrow keys + X"),
+			cbox_x+2,cbox_y+1,4	)
+					
+		for (var i=0;i<cw;i++){
+			colorbuffer[i][ch]=11;
+			letterbuffer[i][ch]=" ";
+		}
+		printText(
+			S(
+				"GEFI v1.0 von increpare (analytic@gmail.com)",
+				"CERG v1.0 by increpare (analytic@gmail.com)")
+			,1,ch,11);
+
+		// drawBox(0,0,cbox_x,cbox_y,3);
+
+	}
+
+	function centerStringOffset(s,w){
+		var l = s.length;
+		var lpadding = Math.floor((w-s.length)/2);
+		return lpadding;
 	}
 
 	function centerString(s,w){
@@ -2519,7 +2919,11 @@ planet_anim = genBigFrames(
 
 
 
-		if (words.indexOf(wort)>=0&&fuelamount<fuelcapacity && tauschanimation>=tauschanimationdauer)
+		if (words.indexOf(wort)>=0&&fuelamount<fuelcapacity && tauschanimation>=tauschanimationdauer){
+			refuelingdauer=0;
+		}
+
+		if (refuelingdauer<refuelingdauermax)
 		{
 					
 			let hbox_y=-1;
@@ -2532,16 +2936,16 @@ planet_anim = genBigFrames(
 			// 		hbox_w,hbox_h,
 			// 		0);
 
-			printText(
-					centerString(
-						S("Auftanken...","Refueling"),
-						hbox_w-2,
-
-					),
-					hbox_x+1,
-					hbox_y+1,
-					9
-				);
+			if (Math.floor(refuelingdauer*refuelingdauerblinkrate)%2===0){
+				var s = S("Auftanken...","Refueling");
+				var offset_x=centerStringOffset(s,hbox_w-2);
+				printText(
+						s,
+						hbox_x+1+offset_x,
+						hbox_y+1,
+						9
+					);
+			}
 			
 		}
 
@@ -2691,7 +3095,7 @@ planet_anim = genBigFrames(
 		// } else if (cursorPos>cursorPos_Base){
 		// 	raumschiffbild_index=2;
 		// }
-		if (fuelamount===0){
+		if (fuelamount===0 && tauschanimation>=tauschanimationdauer){
 			raumschiffbild_index=4;
 		}
 
@@ -2768,6 +3172,34 @@ planet_anim = genBigFrames(
 				);
 
 		}
+
+
+		for (var i=0;i<cw;i++){
+			colorbuffer[i][ch]=11;
+			letterbuffer[i][ch]=" ";
+		}
+
+		if (level>=leveldats[spracheIndex()].length){
+			
+			printText(
+				S(
+					`Entdeckungsreise : Nachspiel`,
+					`Voyage of Discovery : Postlude`
+				),
+				1,ch,
+				11);
+		} else {
+			printText(
+				S(
+					`Entdeckungsreise : Level ${level+1} von ${leveldats[0].length}.`,
+					`Voyage of Discovery : Level ${level+1} of ${leveldats[0].length}.`
+				),
+				1,ch,
+				11);
+		}
+
+		// drawBox(0,0,cbox_x,cbox_y,3);
+
 	}
 
 
@@ -2946,6 +3378,7 @@ planet_anim = genBigFrames(
 	let flyawayanim=flyawayanimdauer;
 
 	function startEnd(){
+		playSound(4);
 		endanim=0;
 	}
 
@@ -2964,10 +3397,16 @@ planet_anim = genBigFrames(
 
 	function spielTick(){
 		spielticker++;
+		if (refuelingdauer<refuelingdauermax){
+			refuelingdauer+=deltatime/1000;
+		}
+
 		if (flyawayanim<flyawayanimdauer){
 			flyawayanim+=deltatime/1000;
 			if (flyawayanim>=flyawayanimdauer){
+				flyawayanim-=deltatime/1000;
 				level++;
+				setVal("level"+sprache,level);
 				setGameState("SEQUENZ");
 			}
 		}
@@ -2992,10 +3431,14 @@ planet_anim = genBigFrames(
 			tauschanimation+=deltatime/1000;
 			if (tauschanimation>=tauschanimationdauer){
 				if (fuelamount===0 && words.indexOf(wort)===-1){
-					outoffuel=true;
+					if (!outoffuel){
+						playSound(11);
+						outoffuel=true;
+					}
 				}
 				if (words.indexOf(wort)>=0 && visitedlist.indexOf(wort)===-1){
 					visitedlist.push(wort);
+					playSound(6);
 					if (rewards[wort]>0){
 						doGiveReward(rewards[wort]);
 					}
@@ -3128,7 +3571,11 @@ planet_anim = genBigFrames(
 
 		
 		sequenzindex=-1;
-		sequenzSchritt();		
+		sequenzSchritt();	
+
+		if (level>=leveldats[spracheIndex()].length){
+			playSound(12);
+		}	
 	}
 
 	function setGameCamPos(reset_cam_dir){
@@ -3292,6 +3739,8 @@ planet_anim = genBigFrames(
 	}
 	
 	function startSpiel(){
+		playSound(8);
+		refuelingdauer=refuelingdauermax;
 		spielticker=0;
 
 		if (level===0){
@@ -3307,6 +3756,7 @@ planet_anim = genBigFrames(
 		recovering=false;
 		outoffuel=false;
 		endanim=endanimdauer;			
+		flyawayanim=flyawayanimdauer;
 
 		let spracheindex = spracheIndex();
 
@@ -3365,7 +3815,62 @@ planet_anim = genBigFrames(
 
 	let deltatime=100;
 
+	let music_instance=null;
+	function soundInit(){
+
+		if (!createjs.Sound.initializeDefaultPlugins()) {
+			document.getElementById("error").style.display = "block";
+			document.getElementById("content").style.display = "none";
+			return;
+		}
+
+		//examples.showDistractor("content");
+		var assetsPath = "./audio/";
+		var sounds = [
+			{src: "blip1.mp3", id: 1},
+			{src: "blip2.mp3", id: 2},
+			{src: "select.mp3", id: 3},
+			{src: "solved.mp3", id: 4},
+			{src: "ambulance.mp3", id: 5},
+			{src: "newfound.mp3", id: 6},
+			{src: "exit.mp3", id: 7},
+			{src: "rising.mp3", id: 8},//new
+			{src: "falling.mp3", id: 9},
+			{src: "risingbig.mp3", id: 10},
+			{src: "fail.mp3", id: 11},
+			{src: "gameover.mp3", id: 12},
+		];
+
+		// createjs.Sound.alternateExtensions = ["mp3"];	// add other extensions to try loading if the src file extension is not supported
+
+		// createjs.Sound.addEventListener("fileload", createjs.proxy(soundLoaded, this)); // add an event listener for when load is completed
+		createjs.Sound.registerSounds(sounds, assetsPath);
+
+
+		 let loadHandler = function(event) {
+		 	if (event.src.indexOf("bgmusic")===-1){
+		 		return;
+		 	}
+
+		     // This is fired for each sound that is registered.
+		     var instance = createjs.Sound.play("bgmusic",{loop:-1});  // play using id.  Could also use full source path or event.src.
+		     instance.on("complete", this.handleComplete, this);
+		     instance.volume = 0.5;
+		 }
+
+		// createjs.Sound.on("fileload", loadHandler, this);
+		// createjs.Sound.registerSound("./audio/bgmusic.mp3", "bgmusic");
+
+		 
+		var a = createjs.Sound.play(13);
+		a.volume=0.2;
+
+
+	}
+
 	function globalSetup(){
+		soundInit();
+
 		setDimensionen(words[0].length-1)
 
 		setInterval(tick, deltatime);

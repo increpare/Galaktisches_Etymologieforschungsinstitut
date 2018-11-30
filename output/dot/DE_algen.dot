@@ -1,16 +1,11 @@
 graph {
 	algen -- angel [ label="5" ];
-	algen -- galen [ label="2" ];
 	algen -- lagen [ label="1" ];
 	algen -- lange [ label="3" ];
 	algen -- nagel [ label="6" ];
-	angel -- galen [ label="5" ];
 	angel -- lagen [ label="6" ];
 	angel -- lange [ label="4" ];
 	angel -- nagel [ label="1" ];
-	galen -- lagen [ label="3" ];
-	galen -- lange [ label="5" ];
-	galen -- nagel [ label="6" ];
 	lagen -- lange [ label="2" ];
 	lagen -- nagel [ label="7" ];
 	lange -- nagel [ label="5" ];

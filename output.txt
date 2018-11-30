@@ -282,56 +282,56 @@ risen,resin,reins,rinse
 
 
 =========
-pares
+apres
 =======
 
 
-pares
-parse
-pears
-spare,spear
-.
-reaps
-
-
-parse
-pares
-pears
-spare,spear
-.
-reaps
-
-
-pears
-.
+apres
 pares,parse
+rapes,reaps,pears
 spare,spear
+
+
+pares
+parse,apres
+pears,rapes,reaps
+spare,spear
+
+
+parse
+pares,apres
+rapes,reaps,pears
+spare,spear
+
+
+pears
 .
-reaps
+pares,parse,apres,rapes,reaps
+spare,spear
+
+
+rapes
+.
+reaps,apres,parse,pares,pears
+spare,spear
 
 
 reaps
 .
-.
-.
-.
-pears,spear,parse,spare,pares
+rapes,apres,parse,pares,pears
+spare,spear
 
 
 spare
 .
 spear
-parse,pears,pares
-.
-reaps
+parse,pears,apres,rapes,pares,reaps
 
 
 spear
 .
 spare
-parse,pears,pares
-.
-reaps
+parse,pears,apres,rapes,pares,reaps
 
 
 
@@ -2163,7 +2163,7 @@ algen
 
 algen
 lagen
-galen,lange
+lange
 .
 angel,nagel
 
@@ -2172,26 +2172,19 @@ angel
 nagel
 .
 .
-lange,algen,galen,lagen
-
-
-galen
-.
-algen,lagen,lange
-.
-angel,nagel
+lange,algen,lagen
 
 
 lagen
 algen
-lange,galen
+lange
 .
 angel,nagel
 
 
 lange
 .
-lagen,algen,galen
+lagen,algen
 .
 angel,nagel
 
@@ -2200,7 +2193,7 @@ nagel
 angel
 .
 .
-lange,algen,galen,lagen
+lange,algen,lagen
 
 
 

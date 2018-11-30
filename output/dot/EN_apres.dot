@@ -1,0 +1,30 @@
+graph {
+	apres -- pares [ label="1" ];
+	apres -- parse [ label="2" ];
+	apres -- pears [ label="3" ];
+	apres -- rapes [ label="2" ];
+	apres -- reaps [ label="4" ];
+	apres -- spare [ label="5" ];
+	apres -- spear [ label="7" ];
+	pares -- parse [ label="1" ];
+	pares -- pears [ label="2" ];
+	pares -- rapes [ label="3" ];
+	pares -- reaps [ label="5" ];
+	pares -- spare [ label="4" ];
+	pares -- spear [ label="6" ];
+	parse -- pears [ label="3" ];
+	parse -- rapes [ label="4" ];
+	parse -- reaps [ label="6" ];
+	parse -- spare [ label="3" ];
+	parse -- spear [ label="5" ];
+	pears -- rapes [ label="5" ];
+	pears -- reaps [ label="5" ];
+	pears -- spare [ label="6" ];
+	pears -- spear [ label="4" ];
+	rapes -- reaps [ label="2" ];
+	rapes -- spare [ label="7" ];
+	rapes -- spear [ label="9" ];
+	reaps -- spare [ label="9" ];
+	reaps -- spear [ label="9" ];
+	spare -- spear [ label="2" ];
+}
