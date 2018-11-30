@@ -23,7 +23,7 @@ let wordsList = [
 	["psalter", "stapler", "platers", "plaster", "palters"],
 	["carets","caters","caster","crates","reacts","recast","traces"],
 	["nips", "pins", "spin", "snip"],
-	["trees", "terse", "steer", "ester", "reset"],
+	["trees", "terse", "steer", "reset"],//removed "ester", 
 	["now", "own", "won"],
 	["lap", "pal", "alp"],
 	["trap", "part", "tarp", "prat", "rapt"],
