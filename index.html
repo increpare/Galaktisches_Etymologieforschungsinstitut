@@ -849,7 +849,6 @@ let leveldats =  [
 			["LIEST",0],
 			["STIEL",1],
 			["SEILT",0],
-			["SIELT",0],
 			["STEIL",0],
 			["STILE",0],
 			["TEILS",0]
@@ -879,10 +878,10 @@ let leveldats =  [
 			["CHINESEN",1],
 		],
 		[//L8
-			["STREICHEN",5],
-			["SCHEITERN",3],
-			["SCHREITEN",3],
-			["SICHERTEN",0],
+			["SCHREITEN",4],
+			["SCHEITERN",1],
+			["SICHERTEN",6],
+			["STREICHEN",0],
 			["REICHSTEN",0],
 		],
 
@@ -1521,8 +1520,8 @@ planet_anim = genBigFrames(
 			sprache="DE";
 		}
 
-		let menügröße = getVal("level"+sprache,0)===0?3:4;
-		startcursorIndex=menügröße-1;
+		let menügröße = parseInt(getVal("level"+sprache,0))===0?4:5;
+		startcursorIndex=menügröße-2;
 		setVal("sprache",sprache);
 
 		
@@ -1537,7 +1536,7 @@ planet_anim = genBigFrames(
 			return;
 		}
 
-		let menügröße = getVal("level"+sprache,0)===0?4:5;
+		let menügröße = parseInt(getVal("level"+sprache,0))===0?4:5;
 		let audiooption = (menügröße===4 && startcursorIndex===1) || (menügröße===5 && startcursorIndex===2);
 		let spracheoption = (menügröße===4 && startcursorIndex===2) || (menügröße===5 && startcursorIndex===3);
 		let neuesspiel = startcursorIndex===0;
@@ -1581,7 +1580,7 @@ planet_anim = genBigFrames(
 					toggleSprache();
 				}
 				if (fortsetzen){
-					level=getVal("level"+sprache,0);
+					level=parseInt(getVal("level"+sprache,0));
 					exitanim=0;
 					playSound(3);
 				}
@@ -1614,7 +1613,7 @@ I am indebted to the following people for their most gracious testing of and fee
 `
 ];
 
-let testers = "Jonah Ostroff, Guilherme Töws, Boopy Boop, Boopy Boop, Boopy Booperson, Booperson Boop"
+let testers = "Alex Fink, Mike Lazer-Walker, Felix Niklas, Jazz Mickle, Jonah Ostroff, Guilherme Töws, Jannik Schleder."
 
 let	sequenzenDat = [
 `
@@ -1733,19 +1732,18 @@ A search for meaning beyond words, and beyond worlds.
 LEVEL1 TOR
 ----
 Herzlich willkommen im Galaktischen Etymologieforschungsinstitut, kurz GEFI genannt.
-Ihr Projket hier ist eines zu den Ursprüngen der Planetennamen.
-Das heißt, eine Datenbank davon zu Sammeln, und unser Wissen darüber zu vertiefen.
-Planetnnamen ergibt oft nicht so viel sinn. Aber dieses Mal hat es Sinn.
+Ihr Projekt handelt von den Ursprüngen der Planetennamen.
+Das heißt, eine Datenbank davon zu sammeln, und unser Wissen darüber zu vertiefen.
+Planetnnamen ergeben oft keinen Sinn. Aber dieses Mal sind sie Sinnvoll.
 ZEIG
-Sie werden von diesem Planeten, Tor, aufbrechen.
-Lassen Sie dieses Projekt als Tor Ihrer Zukunft sein.
-Ein Raumschiff ist Ihnen zugeteilt worden.
-Sie dürfen reisen, wohin Sie wollen.
-Wohin Sie wollen, und wohin Sie genug Treibstoff haben, um zu fahren.
+Sie werden von einem Planeten namens Tor aufbrechen.
+Lassen Sie dieses Projekt als Tor in Ihrer Zukunft sein.
+Ihnen wurde ein Raumschiff zugeteilt. Sie dürfen reisen, wohin Sie wollen.
+Wohin Sie wollen und solange der Treibstoff reicht.
 Das heißt, die Treibstoffskapazität Ihres Schiffs ist ziemlich niedrig.
 So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten fliegen können.
-ABER Sie sollten es vergrößern können.
-Treibstoff ist selbst kein Problem, nur die Kapazität.  Sie können immer auf Planeten auftanken. 
+ABER Sie können die Kapazität vergrößern.
+Der Treibstoff selbst ist kein Problem, nur die Kapazität.  Sie können immer auf Planeten auftanken.
 Das war's, ich glaube.
 Ich wünsche Ihnen viel Spaß dabei.
 ----
@@ -1754,49 +1752,49 @@ LEVEL2 EHRE
 Eine Person kann Ehre haben, das würde ich zugeben.
 Aber ein Planet? Ne, das würde ich nicht.
 ZEIG
-Leute sagen immer, wie wunderschön es aussieht.
-Aber, obwohl Etymologie selbst ist wunderschön,  Wunderschönheit ist keine Etymologie!
-Ich verstehe nicht, aber - aber auch ohne Verständnis sollten wir trotzdem vorankommen können.
-Wir müssen mehr Datenpunkte sammeln.
+Leute sagen immer, wie wunderschön dieser Planet aussieht.
+Aber, obwohl Etymologie selbst wunderschön ist,  Wunderschönheit ist keine Etymologie!
+Ich verstehe das nicht, aber - aber auch ohne Verständnis sollten wir trotzdem vorankommen können.
+Wir müssen mehr Datenpunkte sammeln!
 ----
 LEVEL3 SEIEN
 ----
 Sei X ein Planet.
 ZEIG
-Es könnte gesagt werden, dass dieser Planet nicht länger als sein Name bestehen wird.
-Was für Logic würde zu diesen Namen führen?  
+Man könnte sagen, dass dieser Planet nicht länger als sein Name existieren wird.
+Welche Logik würde zu diesen Namen führen?  
 Worin liegt die Wissenschaft?
 ----
 LEVEL4 LISTE
 ----
-Was erstellen Sie?  Eine Datenbank? 
+Was erstellen Sie da?  Eine Datenbank? 
 Nee, Datenbanken haben Struktur.
 ZEIG
-Sie erstellen nicht. 
+Sie erstellen nichts. 
 Sie schreiben nur eine Liste.  
-Die Struktur, die Logic, die Wissenschaft fehlen komplett.
+Die Struktur, die Logik, die Wissenschaft fehlen komplett.
 Was ist dann der Sinn Ihrer Forschung?
 ----
 LEVEL5 FEIERN
 ----
-Der Grund, warum etwas so gennant wurde, kommt uns oft schnell abhanden.
-Hier haben wir viele Planeten mit vielen Namen, und die Namen haben selbst alle Bedeutungen. 
-Aber Bedeutungen ohne Gründe sind keine Bedeutungen.
-Seien Gegenstände Gegenstände und Wörter nur Wörter.
-Wenn ich Ihnen ROBOTER nennen würde, was hat das mit Ihrem Inbegriff zu tun?
-Aber die Bedeutung dieses Namens könnte etwas Wahr an Ihnen spiegeln.
-Die große Hoffnung unserer Forschung ist die Wege zu finden, wodurch Wesen und Wörter verkoppelt werden können.
-Nur zu diesem Zeitpunkt werden wir feiern können.
+Die Bedeutung eines Namens kommt uns schnell abhanden.
+Hier haben wir viele Planeten mit vielen Namen, und die Namen haben selbst alle eine eigene Bedeutungen. 
+Aber eine Bedeutung ohne Grund ist keine Bedeutung.
+Dinge sind Dinge und Worte sind Worte.
+Wenn ich Sie ROBOTER nenne, was hat das dann mit Ihrem Wesen zu tun?
+Aber die Bedeutung dieses Namens könnte etwas Wahres an Ihnen widerspiegeln.
+Die große Hoffnung unserer Forschung ist es, Wege zu finden, wodurch Wesen und Wörter verkoppelt werden können.
+Nur wenn wir das erreichen können wir feiern
 ZEIG
 Das Wort reicht mir nicht.  
 Ich will nicht "feiern" sondern feiern!
 -----
 LEVEL6 REISEN
 ----
-Wir reisen hierher und dorthin.
+Wir reisen hin und her.
 ZEIG
 Wir suchen nach Wissen und Sinn.
-Aber Sie weichen uns aus.
+Aber sie weichen uns aus.
 Ich fürchte, wir werden die Antwort nicht finden.
 Ich fürchte, es gibt weder Antwort, noch Wissen, noch Sinn.
 ----
@@ -1805,32 +1803,32 @@ LEVEL7 SCHEINEN
 Ich habe eine Idee.
 Es scheint mir
 ZEIG
-Es scheint mir, dass die Planeten und ihre Namen..., dass die nicht geordnet sind.
-Aber warum haben wir nur Planeten beobachtet genau wo die Koordinaten bilden?
-Es könnte nicht der Fall sein, dass Planeten nach ihren Eigenschaften benannt sind.
-Könnte es der Fall sein, dass *Begriffe* nach *Planeten* benannt wurden?
+Es scheint mir, dass die Planeten und ihre Namen..., dass sie nicht geordnet sind.
+Aber warum haben wir nur dort Planeten gefunden, wo uns die Namen hingeführt haben?
+Es kann nicht sein, dass Planeten nach ihren Eigenschaften benannt wurden.
+Könnte es sein, dass *Begriffe* nach *Planeten* benannt wurden?
 Wie gesagt, nur eine Vermutung.
 ----
-LEVEL8 STREICHEN
+LEVEL8 SCHREITEN
 ----
-Die immer weiter laufende Zeit streicht beide Wort und Welt weg.
+Die immer weiter schreitende Zeit streicht Wort und Welt weg.
 ZEIG
 Wörter wachsen und werden welk, und Welten wachsen und werden welk.
 Ich habe die Vergangenheitsdaten überprüft.
-Es scheint der Fall zu sein, wenn ein Wort in Gebrauch kommt, entsteht in seinen entsprechenden Koordinaten ein neuer Planet.
-Und im Fall ein Wort ganz vergessen ist, wird der entsprechende Planet auch erlöscht.
-Es scheint der Fall zu sein, dass die Beziehung zwischen Namen und Planeten ist nicht, dass wir die Planeten genannt haben, sondern dass Namen uns Planeten gegeben haben.
+Es scheint, dass wenn ein Wort in Gebrauch kommt auch ein neuer Planet in den entsprechenden Koordinaten entsteht.
+Und wenn ein Wort vergessen wird, dann erlischt auch der Planet.
+Es scheint, dass wir die Planeten nicht benannt haben, sondern dass Namen uns Planeten gegeben haben.
 Das wirft eine Frage auf:
 Woher komm dann der erste Planet? Von der Stimme des Nichts?
 ----
 END
 ----
-Der Mund zu offnen bedeutet Welten zu schaffen.
+Den Mund zu öffnen bedeutet Welten zu schaffen.
 Wörter sind Welten und Welten sind Wörter.
-Wir dachten, wir suchten nach Sinn, aber wir suchten tatsächlich nach Wörter.
+Wir dachten, dass wir nach Sinn suchten, aber wir suchten tatsächlich nach Wörtern.
 Damit ist unsere Arbeit getan.
-Lass uns ein anderes Mal treffen, eine neue Suche durchzuführen:
-Eine Suche des Wortes und der Planeten jenseits.
+Treffen wir uns ein anderes mal um eine neue Suche durchzuführen
+Eine Suche nach Bedeutung, jenseits von Wörtern und Planeten.
 `
 	]
 	
@@ -2084,7 +2082,7 @@ let sequenzen =[];
 	let sprache = getVal("sprache","EN");
 
 
-	let startcursorIndex = getVal("level"+sprache,0)===0?0:1;
+	let startcursorIndex = parseInt(getVal("level"+sprache,0))===0?0:1;
 
 	function S(de,en){
 		if (sprache==="DE"){
@@ -2385,13 +2383,25 @@ let sequenzen =[];
 			colorbuffer[i][ch]=11;
 			letterbuffer[i][ch]=" ";
 		}
-		printText(
-			S(
-				`Entdeckungsreise :  Vorspiel zu Level ${level+1} (von ${leveldats[0].length}).`,
-				`Galactic Center for Etymological Research : Prelude to level ${level+1} (of ${leveldats[0].length}).`
-			),
-			1,ch,
-			11);
+		if (level>=leveldats[spracheIndex()].length){
+			
+			printText(
+				S(
+					`Entdeckungsreise : Nachspiel`,
+					`Voyage of Discovery : Postlude`
+				),
+				1,ch,
+				11);
+		} else {
+			printText(
+				S(
+					`GEFI v1.0 : Level ${level+1} von ${leveldats[spracheIndex()].length}.`,
+					`CERG v1.0 : Level ${level+1} of ${leveldats[spracheIndex()].length}.`
+				),
+				1,ch,
+				11);
+		}
+
 	}
 
 
@@ -2429,7 +2439,7 @@ let sequenzen =[];
 		//new game
 		//continue game (wo möglich)
 		//sprache
-		let optionenzahl=getVal("level"+sprache,0)===0?4:5;
+		let optionenzahl=parseInt(getVal("level"+sprache,0))===0?4:5;
 
 		let optionen = [
 			S("Spiel starten","Start Game"),
@@ -2440,7 +2450,7 @@ let sequenzen =[];
 			S("Sprache : Deutsch","Language : English"),
 			S("Mitwirkende","Credits")
 		]
-		if (optionenzahl===3){
+		if (optionenzahl===4){
 			optionen.splice(1,1);
 		}
 
@@ -2503,11 +2513,14 @@ let sequenzen =[];
 			colorbuffer[i][ch]=11;
 			letterbuffer[i][ch]=" ";
 		}
+		
 		printText(
 			S(
-				"GEFI v1.0 von increpare (analytic@gmail.com)",
-				"CERG v1.0 by increpare (analytic@gmail.com)")
-			,1,ch,11);
+			"GEFI v1.0 von increpare (analytic@gmail.com)",
+			"CERG v1.0 by increpare (analytic@gmail.com)"
+			),
+			1,ch,
+			11);
 
 		// drawBox(0,0,cbox_x,cbox_y,3);
 
@@ -3071,8 +3084,8 @@ let sequenzen =[];
 		} else {
 			printText(
 				S(
-					`Entdeckungsreise : Level ${level+1} von ${leveldats[0].length}.`,
-					`Voyage of Discovery : Level ${level+1} of ${leveldats[0].length}.`
+					`Entdeckungsreise : Level ${level+1} von ${leveldats[spracheIndex()].length}.`,
+					`Voyage of Discovery : Level ${level+1} of ${leveldats[spracheIndex()].length}.`
 				),
 				1,ch,
 				11);
@@ -3457,7 +3470,7 @@ let sequenzen =[];
 		sequenzSchritt();	
 
 		if (level>=leveldats[spracheIndex()].length){
-			playSound(12);
+			// playSound(12);
 		}	
 	}
 
@@ -3721,7 +3734,6 @@ let sequenzen =[];
 			{src: "falling.mp3", id: 9},
 			{src: "risingbig.mp3", id: 10},
 			{src: "fail.mp3", id: 11},
-			{src: "gameover.mp3", id: 12},
 		];
 
 		// createjs.Sound.alternateExtensions = ["mp3"];	// add other extensions to try loading if the src file extension is not supported

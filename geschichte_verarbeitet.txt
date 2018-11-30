@@ -1,0 +1,114 @@
+
+----
+LEVEL1 TOR
+----
+Herzlich willkommen im Galaktischen Etymologieforschungsinstitut, kurz GEFI genannt.
+Ihr Projekt handelt von den Ursprüngen der Planetennamen.
+Das heißt, eine Datenbank davon zu sammeln, und unser Wissen darüber zu vertiefen.
+Planetnnamen ergeben oft keinen Sinn. Aber dieses Mal sind sie Sinnvoll.
+ZEIG
+Sie werden von einem Planeten namens Tor aufbrechen.
+Lassen Sie dieses Projekt als Tor in Ihrer Zukunft sein.
+Ihnen wurde ein Raumschiff zugeteilt. Sie dürfen reisen, wohin Sie wollen.
+Wohin Sie wollen und solange der Treibstoff reicht.
+Das heißt, die Treibstoffskapazität Ihres Schiffs ist ziemlich niedrig.
+So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten fliegen können.
+ABER Sie können die Kapazität vergrößern.
+Der Treibstoff selbst ist kein Problem, nur die Kapazität.  Sie können immer auf Planeten auftanken.
+Das war's, ich glaube.
+Ich wünsche Ihnen viel Spaß dabei.
+----
+LEVEL2 EHRE
+----
+Eine Person kann Ehre haben, das würde ich zugeben.
+Aber ein Planet? Ne, das würde ich nicht.
+ZEIG
+Leute sagen immer, wie wunderschön dieser Planet aussieht.
+Aber, obwohl Etymologie selbst wunderschön ist,  Wunderschönheit ist keine Etymologie!
+Ich verstehe das nicht, aber - aber auch ohne Verständnis sollten wir trotzdem vorankommen können.
+Wir müssen mehr Datenpunkte sammeln!
+----
+LEVEL3 SEIEN
+----
+Sei X ein Planet.
+ZEIG
+Man könnte sagen, dass dieser Planet nicht länger als sein Name existieren wird.
+Welche Logik würde zu diesen Namen führen?  
+Worin liegt die Wissenschaft?
+----
+LEVEL4 LISTE
+----
+Was erstellen Sie da?  Eine Datenbank? 
+Nee, Datenbanken haben Struktur.
+ZEIG
+Sie erstellen nichts. 
+Sie schreiben nur eine Liste.  
+Die Struktur, die Logik, die Wissenschaft fehlen komplett.
+Was ist dann der Sinn Ihrer Forschung?
+----
+LEVEL5 FEIERN
+----
+Die Bedeutung eines Namens kommt uns schnell abhanden.
+Hier haben wir viele Planeten mit vielen Namen, und die Namen haben selbst alle eine eigene Bedeutungen. 
+Aber eine Bedeutung ohne Grund ist keine Bedeutung.
+Dinge sind Dinge und Worte sind Worte.
+Wenn ich Sie ROBOTER nenne, was hat das dann mit Ihrem Wesen zu tun?
+Aber die Bedeutung dieses Namens könnte etwas Wahres an Ihnen widerspiegeln.
+Die große Hoffnung unserer Forschung ist es, Wege zu finden, wodurch Wesen und Wörter verkoppelt werden können.
+Nur wenn wir das erreichen können wir feiern
+ZEIG
+Das Wort reicht mir nicht.  
+Ich will nicht "feiern" sondern feiern!
+-----
+LEVEL6 REISEN
+----
+Wir reisen hin und her.
+ZEIG
+Wir suchen nach Wissen und Sinn.
+Aber sie weichen uns aus.
+Ich fürchte, wir werden die Antwort nicht finden.
+Ich fürchte, es gibt weder Antwort, noch Wissen, noch Sinn.
+----
+LEVEL7 SCHEINEN
+----
+Ich habe eine Idee.
+Es scheint mir
+ZEIG
+Es scheint mir, dass die Planeten und ihre Namen..., dass sie nicht geordnet sind.
+Aber warum haben wir nur dort Planeten gefunden, wo uns die Namen hingeführt haben?
+Es kann nicht sein, dass Planeten nach ihren Eigenschaften benannt wurden.
+Könnte es sein, dass *Begriffe* nach *Planeten* benannt wurden?
+Wie gesagt, nur eine Vermutung.
+----
+LEVEL8 SCHREITEN
+----
+Die immer weiter schreitende Zeit streicht Wort und Welt weg.
+ZEIG
+Wörter wachsen und werden welk, und Welten wachsen und werden welk.
+Ich habe die Vergangenheitsdaten überprüft.
+Es scheint, dass wenn ein Wort in Gebrauch kommt auch ein neuer Planet in den entsprechenden Koordinaten entsteht.
+Und wenn ein Wort vergessen wird, dann erlischt auch der Planet.
+Es scheint, dass wir die Planeten nicht benannt haben, sondern dass Namen uns Planeten gegeben haben.
+Das wirft eine Frage auf:
+Woher komm dann der erste Planet? Von der Stimme des Nichts?
+----
+END
+----
+Den Mund zu öffnen bedeutet Welten zu schaffen.
+Wörter sind Welten und Welten sind Wörter.
+Wir dachten, dass wir nach Sinn suchten, aber wir suchten tatsächlich nach Wörtern.
+Damit ist unsere Arbeit getan.
+Treffen wir uns ein anderes mal um eine neue Suche durchzuführen
+Eine Suche nach Bedeutung, jenseits von Worten und Planeten.
+
+Eine Suche jenseits des Wortes und der Planeten jenseits.
+
+
+Mitwerkende Text:
+Ich nutze SoundJS für Audiowiedergabe.
+Ein großes Dankeschön gilt den folgenden Leuten für Hilfe mit dem Spiel (Korrekturlesen und allgemeines Prüfen):
+
+
+
+
+
