@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicon.ico"/>
+
 
 	<title>Galaktisches Etymologieforschungsinstitut</title>
 
@@ -1628,7 +1630,7 @@ let mitwerkende_text = [
 `
 Ich nutze SoundJS für Audiowiedergabe.
 
-Ein großes Dankeschön gilt den folgenden Leuten für ihre Mithilfe (Korrekturlesen und allgemeines Prüfen):
+Ein großes Dankeschön gilt den folgenden Leuten für ihre Mithilfe (Korrekturlesen und allgemeines Testen):
 `
 ,
 `
@@ -1755,7 +1757,7 @@ A search for meaning beyond words, and beyond worlds.
 ----
 LEVEL1 TOR
 ----
-Herzlich willkommen beim Galaktischen Institut für angewandte Etymologie, kurz GIAE.
+Herzlich willkommen beim Galaktischen Etymologieforschungsinstitut, kurz GEFI.
 Ihr Projekt am GEFI befasst sich mit den Ursprüngen der Planetennamen.
 Ihre Aufgabe ist es, eine Datenbank mit allen Planetennamen verschiedener Systeme zu füllen und dabei zu ergründen, woher diese Namen stammen.
 Planetennamen ergeben oft keinen Sinn. Nehmen sie unseren Heimatplaneten als Beispiel:
@@ -1766,8 +1768,7 @@ Wohin Sie wollen und solange der Treibstoff reicht.
 Die Treibstoffkapazität Ihres Schiffs ist jedoch ziemlich niedrig.
 So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten reisen können.
 ABER Sie können mit der Zeit die Kapazität erhöhen.
-Der Treibstoff selbst ist kein Problem, nur die Kapazität ihres Tanks. Wenn Sie auf einem Planeten landen, wird der jedes Mal automatisch aufgefüllt.
-Das war alles, glaube ich.
+Der Treibstoff selbst ist kein Problem, nur die Kapazität ihres Tanks. Wenn Sie auf einem Planeten landen, wird der Tank automatisch aufgefüllt.
 Ich wünsche Ihnen viel Spaß dabei.
 ----
 LEVEL2 EHRE
@@ -2057,13 +2058,7 @@ let sequenzen =[];
 	    	onInput(7);
 	    } else if (e.keycode=='88'){
 	    	onInput(8);
-	    } else if (e.keyCode=='89'){
-
-				flyawayanim-=deltatime/1000;
-				level++;
-				setVal("level"+sprache,level);
-				setGameState("SEQUENZ");
-	    }
+	    } 
 
 	}
 
