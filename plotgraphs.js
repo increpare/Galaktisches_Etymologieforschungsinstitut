@@ -27,8 +27,8 @@ let wordsList = [
 	["now", "own", "won"],
 	["lap", "pal", "alp"],
 	["trap", "part", "tarp", "prat", "rapt"],
-
-	["eilst","leist","liest","liste","seilt","steil","stiel","stile","teils"],
+	["mane", "amen", "mean", "name"],
+	["eilst","liest","liste","seilt","steil","stiel","stile","teils"],
 	["genre","neger","regen","gerne","enger"],
 	["balgen","belang","gabeln"],
 	["feiern", "ferien", "freien", "riefen", "reifen","eifern"],
@@ -315,7 +315,7 @@ function printPoints(_words){
 for (let i=0;i<wordsList.length;i++){
 	gdist_cache={}
 
-	sprache = i<=22 ? "EN":"DE";
+	sprache = i<=23 ? "EN":"DE";
 
 	let _words = wordsList[i];
 

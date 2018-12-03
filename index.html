@@ -10,8 +10,12 @@
 		body{
 			background-color: black;
 			width: 100%;
-			margin:0;
+			margin: 0;
 			text-align: center;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
   
 
@@ -22,7 +26,7 @@
 		    font-family: "Lucida Console", Monaco, monospace;
     		white-space: pre;
     		/*font-size: 1.6vw;*/
-    		margin: :0;
+    		margin:0;
     		font-size: 2.4vh;	
     		/*font-size: calc(min(1.6vw,2.4vh));	*/
     		/*line-height: 1;*/
@@ -172,17 +176,17 @@ function handleresize(){
 let Planet_Eingeweide = [  
 [
 "                ",
-"   /  \\        ",
-"  |  _|        ",
-"  |_/   _/\\___ ",
-"       /      \\"
+"   /  \\         ",
+"  |  _|         ",
+"  |_/   _/\\___  ",
+"       /      \\ "
 ],
 [
 "                ",
-" |     _/  \\_/ ",
-" \\   _|   _    ",
-"  |_/   _/ \\_/\\",
-"       /      |"
+" |     _/  \\_/  ",
+" \\   _|   _     ",
+"  |_/   _/ \\_/\\ ",
+"       /      | "
 ],
 [
 "                ",
@@ -207,10 +211,10 @@ let Planet_Eingeweide = [
 ],
 [
 "                ",
-"|  |   |    |  ",
-"    ---      --",
-"   --     ---- ",
-"  |  |   |    |",
+"|  |   |     |  ",
+"    ---       --",
+"   --      ---- ",
+"  |  |    |    |",
 ],
 [
 "                ",
@@ -844,11 +848,10 @@ let leveldats =  [
 		],
 		[//L4
 			["LISTE",2],
-			["EILST",1],
-			["LEIST",0],
-			["LIEST",0],
-			["STIEL",1],
+			["LIEST",1],
+			["EILST",0],
 			["SEILT",0],
+			["STIEL",1],
 			["STEIL",0],
 			["STILE",0],
 			["TEILS",0]
@@ -856,8 +859,8 @@ let leveldats =  [
 		[//L5
 			["FEIERN",2],
 			["EIFERN",0],
-			["FREIEN",1],//KÖNNTE AUCH DAS PUNKTE GEBEN (STATT FERIEN)
 			["FERIEN",0],
+			["FREIEN",1],//KÖNNTE AUCH DAS PUNKTE GEBEN (STATT FERIEN)
 			["RIEFEN",0],
 			["REIFEN",0],
 		],
@@ -916,9 +919,9 @@ let leveldats =  [
 		],
 		[//l5
 			["parse",1],
+			["pares",0],
 			["apres",1],
 			["rapes",1],
-			["pares",0],
 			["reaps",0],
 			["pears",0],
 			["spare",0],
@@ -1285,6 +1288,19 @@ planet_anim = genBigFrames(
 
 	}
 
+	function randomFramesFromLevel(){
+		let col1_i = level%5;
+		let col2_i =  (level%4)+1;
+		let c0 = level%Planet_Eingeweide.length;
+		let c1 = col1_i+5;
+		let c2 = (5)+( (col2_i)%5 );
+		let my_planet_anim = genAllFrames(
+			c0,
+			c1,
+			c2
+			);
+		return my_planet_anim;
+	}
 
 	function spawnTitelPlaneten(){
 
@@ -1307,6 +1323,10 @@ planet_anim = genBigFrames(
 				c1,
 				c2
 				);
+
+			if (i===0){
+				my_planet_anim=randomFramesFromLevel();
+			}
 
 			let planet = [normalized,my_planet_anim];
 
@@ -1413,7 +1433,12 @@ planet_anim = genBigFrames(
 			return;
 		}
 			
-
+		
+			if (gameState==="TITEL"){
+				// sx=cx+Math.floor(sx/2);
+				// sy=cy+Math.floor(sy/2);
+				sy-=2;
+			}	
 
 		// sx-=60;
 
@@ -1603,7 +1628,7 @@ let mitwerkende_text = [
 `
 Ich nutze SoundJS für Audiowiedergabe.
 
-Ein großes Dankeschön gilt den folgenden Leuten für Hilfe mit dem Spiel (Korrekturlesen und allgemeines Prüfen):
+Ein großes Dankeschön gilt den folgenden Leuten für ihre Mithilfe (Korrekturlesen und allgemeines Prüfen):
 `
 ,
 `
@@ -1613,15 +1638,14 @@ I am indebted to the following people for their most gracious testing of and fee
 `
 ];
 
-let testers = "Alex Fink, Mike Lazer-Walker, Felix Niklas, Jazz Mickle, Jonah Ostroff, Guilherme Töws, Jannik Schleder."
+let testers = "Alex Fink, Mike Lazer-Walker, Felix Niklas, Jazz Mickle, Jonah Ostroff, Guilherme Töws, Jannik Schleder, Marcos Donnantuoni, Ian Snyder, Julius Jacobsen, Bennett Foddy, Terry Cavanagh, Ruari O'Sullivan, Christian Zachau, Marcus Richter."
 
 let	sequenzenDat = [
 `
 ----
 LEVEL1 star
 ----
-Welcome to the Galactic Center for Etymological Research, or ERCG for short.
-Your project at ERCG is to map out all the planet names in various systems, and hopefully to help us understand where these names come from!
+Welcome to the Galactic Center for Etymological Research, or ERCG for short.  Your project at ERCG is to map out all the planet names in various systems, and hopefully to help us understand where these names come from!
 Planet names often don't seem to make much sense.
 Like your home planet.
 ZEIG
@@ -1630,9 +1654,9 @@ Anyway, you've been allocated a spaceship.
 You may travel with it as you please.
 The fuel is currently limited, so you can only hop between neighbouring planets.  
 BUT in principle it can be upgraded, so you should be able to go further afield if you can manage that.
-You will always be able to refuel when you land on a planet.
+You'll automatically refuel when you arrive at a planet.
 Okay, that's everything.
-Welcome, get going, and have fun :)
+So: Welcome, get going, and have fun :)
 ----
 LEVEL2 east
 ----
@@ -1640,7 +1664,7 @@ The cardinal directions of north, south, east and west have no meaning in space.
 Or they shouldn't, but, well...look at where your next assignment is sending you:
 ZEIG
 East? Really? Who named these things anyway?
-Excuse my French, I'm sure the people who named it did so for reasons important to them.
+Excuse my French; I'm sure the people who named it did so for reasons important to them.
 I just wish they'd explain it to the rest of us!
 Well, don't mind my ranting.  I'm sure you're itching to get going...
 ----
@@ -1649,17 +1673,17 @@ LEVEL3 trees
 Things exist at different scales, from atomic scale to galactic scale.
 Things at different levels don't typically interact with each other.
 But names have physical laws all of their own.
-Exemplified by our next point of departure
+Exemplified by our next point of departure:
 ZEIG
-Yip, planet "tree".
-I hope you manage to find some more appropriate-named planets on your trip today.
+Yip, planet "trees".
+I hope you manage to find some more appropriately-named planets on your trip today.
 ----
 LEVEL4 steak
 ----
 Do you want to eat a steak burger?
 Oh you do?  Steak is indeed delicious.
 How about steak fries? 
-Or steak strawberries?
+Or steak strawberries? No?
 Well you're in luck, because we're going to planet...
 ZEIG
 Yip, planet "Steak".  
@@ -1708,13 +1732,13 @@ It seems that when a new word comes into use, a planet springs into existence at
 And when a word falls out of use, the planet vanishes.
 It seems the relationship between names and planets was not that we give planets names, but that words give us planets.
 This raises the question:
-How did the first world come into existence?
+How did the first planet come into existence?
 Let's think about this more over the next assignment. We can chat more when you're back.
 Oh, right! The mission.  
 Your final mission!
 Well, this is a name that could be assigned to about any planet that there's been life on.
 ZEIG
-Let's hope this one isn't particularly egregious.
+Let's hope it isn't particularly egregious.
 ----
 END
 ----
@@ -1731,104 +1755,104 @@ A search for meaning beyond words, and beyond worlds.
 ----
 LEVEL1 TOR
 ----
-Herzlich willkommen im Galaktischen Etymologieforschungsinstitut, kurz GEFI genannt.
-Ihr Projekt handelt von den Ursprüngen der Planetennamen.
-Das heißt, eine Datenbank davon zu sammeln, und unser Wissen darüber zu vertiefen.
-Planetnnamen ergeben oft keinen Sinn. Aber dieses Mal sind sie Sinnvoll.
+Herzlich willkommen beim Galaktischen Institut für angewandte Etymologie, kurz GIAE.
+Ihr Projekt am GEFI befasst sich mit den Ursprüngen der Planetennamen.
+Ihre Aufgabe ist es, eine Datenbank mit allen Planetennamen verschiedener Systeme zu füllen und dabei zu ergründen, woher diese Namen stammen.
+Planetennamen ergeben oft keinen Sinn. Nehmen sie unseren Heimatplaneten als Beispiel:
 ZEIG
-Sie werden von einem Planeten namens Tor aufbrechen.
-Lassen Sie dieses Projekt als Tor in Ihrer Zukunft sein.
+Sehen Sie dieses Projekt als ein Tor in Ihre Zukunft an.
 Ihnen wurde ein Raumschiff zugeteilt. Sie dürfen reisen, wohin Sie wollen.
 Wohin Sie wollen und solange der Treibstoff reicht.
-Das heißt, die Treibstoffskapazität Ihres Schiffs ist ziemlich niedrig.
-So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten fliegen können.
-ABER Sie können die Kapazität vergrößern.
-Der Treibstoff selbst ist kein Problem, nur die Kapazität.  Sie können immer auf Planeten auftanken.
-Das war's, ich glaube.
+Die Treibstoffkapazität Ihres Schiffs ist jedoch ziemlich niedrig.
+So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten reisen können.
+ABER Sie können mit der Zeit die Kapazität erhöhen.
+Der Treibstoff selbst ist kein Problem, nur die Kapazität ihres Tanks. Wenn Sie auf einem Planeten landen, wird der jedes Mal automatisch aufgefüllt.
+Das war alles, glaube ich.
 Ich wünsche Ihnen viel Spaß dabei.
 ----
 LEVEL2 EHRE
 ----
-Eine Person kann Ehre haben, das würde ich zugeben.
-Aber ein Planet? Ne, das würde ich nicht.
+Der Weltraum ist kalt und leer und voller Gesteinsbrocken. Moralische Konzepte sind hier bedeutungslos.
+Könnte man zumindest denken, aber nunja, hier ist dein nächster Auftrag:
 ZEIG
-Leute sagen immer, wie wunderschön dieser Planet aussieht.
-Aber, obwohl Etymologie selbst wunderschön ist,  Wunderschönheit ist keine Etymologie!
-Ich verstehe das nicht, aber - aber auch ohne Verständnis sollten wir trotzdem vorankommen können.
-Wir müssen mehr Datenpunkte sammeln!
+Ehre? Ein Planet kann doch nicht Ehre heißen!
+Das ist doch eine zutiefst menschliche Eigenschaft! Kein Name für ein Ding!
+Oder doch? Aber warum? Wer kann das erklären?
+Vielleicht die Etymologie! Aber dazu brauchen wir mehr Datenpunkte.
+Los geht's!
 ----
 LEVEL3 SEIEN
 ----
 Sei X ein Planet.
 ZEIG
 Man könnte sagen, dass dieser Planet nicht länger als sein Name existieren wird.
-Welche Logik würde zu diesen Namen führen?  
-Worin liegt die Wissenschaft?
+Welche Logik würde zu diesem Namen führen?
+Und welche Ordnung läge dem zugrunde?
 ----
 LEVEL4 LISTE
 ----
-Was erstellen Sie da?  Eine Datenbank? 
-Nee, Datenbanken haben Struktur.
+Was erstellen Sie da? Eine Datenbank?
+Nein. Datenbanken haben Struktur.
 ZEIG
-Sie erstellen nichts. 
-Sie schreiben nur eine Liste.  
+Sie erstellen nichts.
+Sie schreiben nur eine Liste.
 Die Struktur, die Logik, die Wissenschaft fehlen komplett.
-Was ist dann der Sinn Ihrer Forschung?
+Worin liegt dann der Sinn Ihrer Forschung?
 ----
 LEVEL5 FEIERN
 ----
 Die Bedeutung eines Namens kommt uns schnell abhanden.
-Hier haben wir viele Planeten mit vielen Namen, und die Namen haben selbst alle eine eigene Bedeutungen. 
+Hier haben wir viele Planeten mit vielen Namen, und die Namen haben selbst alle eine eigene Bedeutungen.
 Aber eine Bedeutung ohne Grund ist keine Bedeutung.
 Dinge sind Dinge und Worte sind Worte.
 Wenn ich Sie ROBOTER nenne, was hat das dann mit Ihrem Wesen zu tun?
 Aber die Bedeutung dieses Namens könnte etwas Wahres an Ihnen widerspiegeln.
-Die große Hoffnung unserer Forschung ist es, Wege zu finden, wodurch Wesen und Wörter verkoppelt werden können.
-Nur wenn wir das erreichen können wir feiern
+Die große Hoffnung unserer Forschung ist es, zu ergründen, inwiefern Wesen und Worte miteinander verknüpft sind.
+Wenn uns dies gelingt, haben wir einen Grund zu feiern.
 ZEIG
-Das Wort reicht mir nicht.  
-Ich will nicht "feiern" sondern feiern!
+Das Wort reicht mir nicht.
+Ich will nicht über "feiern" theoretisieren sondern feiern!
+Doch bekanntermaßen kommt die Arbeit vor dem Vergnügen und von der sollten Sie sich von mir nicht abhalten lassen.
 -----
 LEVEL6 REISEN
 ----
 Wir reisen hin und her.
 ZEIG
 Wir suchen nach Wissen und Sinn.
-Aber sie weichen uns aus.
+Aber sie verstecken sich, weichen uns aus.
 Ich fürchte, wir werden die Antwort nicht finden.
 Ich fürchte, es gibt weder Antwort, noch Wissen, noch Sinn.
 ----
 LEVEL7 SCHEINEN
 ----
-Ich habe eine Idee.
-Es scheint mir
+Mir ging gerade ein Gedanke durch den Kopf.
+Es scheint mir...
 ZEIG
-Es scheint mir, dass die Planeten und ihre Namen..., dass sie nicht geordnet sind.
+Es scheint mir, dass die Planeten und ihre Namen... dass sie nicht geordnet sind.
 Aber warum haben wir nur dort Planeten gefunden, wo uns die Namen hingeführt haben?
 Es kann nicht sein, dass Planeten nach ihren Eigenschaften benannt wurden.
 Könnte es sein, dass *Begriffe* nach *Planeten* benannt wurden?
-Wie gesagt, nur eine Vermutung.
 ----
 LEVEL8 SCHREITEN
 ----
-Die immer weiter schreitende Zeit streicht Wort und Welt weg.
+Die immerfort weiterschreitende Zeit lässt Worte verklingen und Welten vergehen.
 ZEIG
-Wörter wachsen und werden welk, und Welten wachsen und werden welk.
+Worte wachsen und werden welk, sowie auch Welten wachsen und welk werden.
 Ich habe die Vergangenheitsdaten überprüft.
-Es scheint, dass wenn ein Wort in Gebrauch kommt auch ein neuer Planet in den entsprechenden Koordinaten entsteht.
+Es scheint, dass wenn ein Wort in Gebrauch kommt auch ein neuer Planet an den entsprechenden Koordinaten entsteht.
 Und wenn ein Wort vergessen wird, dann erlischt auch der Planet.
-Es scheint, dass wir die Planeten nicht benannt haben, sondern dass Namen uns Planeten gegeben haben.
-Das wirft eine Frage auf:
-Woher komm dann der erste Planet? Von der Stimme des Nichts?
+Es scheint, dass wir die Planeten nicht benannt haben, sondern dass die Planeten uns Worte gegeben haben.
+Das wirft folgende Frage auf:
+Woher kommt der erste Planet? Von der Stimme des Nichts?
 ----
-END
+ENDE
 ----
 Den Mund zu öffnen bedeutet Welten zu schaffen.
-Wörter sind Welten und Welten sind Wörter.
-Wir dachten, dass wir nach Sinn suchten, aber wir suchten tatsächlich nach Wörtern.
+Worte sind Welten und Welten sind Worte.
+Wir dachten, dass wir nach Sinn suchten, aber tatsächlich suchten wir nach Worten.
 Damit ist unsere Arbeit getan.
-Treffen wir uns ein anderes mal um eine neue Suche durchzuführen
-Eine Suche nach Bedeutung, jenseits von Wörtern und Planeten.
+Treffen wir uns ein anderes mal um eine neue Suche durchzuführen.
+Eine Suche nach Bedeutung, jenseits von Worten und Planeten.
 `
 	]
 	
@@ -2033,16 +2057,18 @@ let sequenzen =[];
 	    	onInput(7);
 	    } else if (e.keycode=='88'){
 	    	onInput(8);
+	    } else if (e.keyCode=='89'){
+
+				flyawayanim-=deltatime/1000;
+				level++;
+				setVal("level"+sprache,level);
+				setGameState("SEQUENZ");
 	    }
 
 	}
 
 	/**
-	 * Returns a random integer between min (inclusive) and max (inclusive).
-	 * The value is no lower than min (or the next integer greater than min
-	 * if min isn't an integer) and no greater than max (or the next integer
-	 * lower than max if max isn't an integer).
-	 * Using Math.round() will give you a non-uniform distribution!
+	 * Returns a random integer between min (inclusive) and max (exclusive).
 	 */
 	function getRandomInt(min, max) {
 	  min = Math.ceil(min);
@@ -2218,7 +2244,7 @@ let sequenzen =[];
 			sichtbarerTextlinien =  sichtbarerText.split(/\r\n|\r|\n/).length;
 			break;
 			case "WORT":
-			// playSound(1);
+			playSound(6);
 			zeigsequenzwort=true;
 			wort=getStartingWort();
 			break;
@@ -2289,7 +2315,7 @@ let sequenzen =[];
 
 			tbw = (Math.floor(tbw*(1-pc*3)));
 			tbh = (Math.floor(tbh*(1-pc*3)));
-			let tby = 4+Math.floor((oldtbh-tbh)/2);//Math.floor((ch-tbh)/2);
+			let tby = 2+Math.floor((oldtbh-tbh)/2);//Math.floor((ch-tbh)/2);
 			let tbx = Math.floor((cw-tbw)/2);
 			drawBox(tbx,tby,tbw,tbh,8);
 
@@ -2320,7 +2346,7 @@ let sequenzen =[];
 			}
 
 			if (sichtbareBuchstaben<sichtbarerText.length){
-				sichtbareBuchstaben++;
+				sichtbareBuchstaben+=2;
 				playSound(1+(sichtbareBuchstaben%2),0.1);
 				while(sichtbareBuchstaben<sichtbarerText.length && !isLetter(sichtbarerText[sichtbareBuchstaben])){
 					sichtbareBuchstaben++;
@@ -2429,7 +2455,7 @@ let sequenzen =[];
 		let zy = cw/2;
 
 		let tb_x = Math.floor(zx-bw/2);
-		let tb_y = topmargin+1;
+		let tb_y = topmargin;
 
 		drawBox(tb_x,tb_y,bw,bh,4);
 		// printRainbowText(titel,tb_x+1+paddingx,tb_y+1+paddingy,4,20)
@@ -2445,7 +2471,7 @@ let sequenzen =[];
 			S("Spiel starten","Start Game"),
 			S("Spiel fortsetzen	","Resume Game"),
 			audio==="1" 
-				? S("Audio : ein","Audio : on")
+				? S("Audio : an","Audio : on")
 				: S("Audio : aus","Audio : off"),
 			S("Sprache : Deutsch","Language : English"),
 			S("Mitwirkende","Credits")
@@ -2502,7 +2528,7 @@ let sequenzen =[];
 		let cbox_h=3;
 		let cbox_w=40;
 		let cbox_x=Math.floor(cw/2-cbox_w/2);
-		let cbox_y=ch-3;
+		let cbox_y=ch-6;
 
 
 		drawBox(cbox_x,cbox_y,cbox_w,cbox_h,4);
@@ -2709,7 +2735,7 @@ let sequenzen =[];
 			if (flyawayanim>=flyawayanimdauer){
 				printText(
 						centerString(
-							S("Drucken Sie x um weiter zu fahren","Press X to continue"),
+							S("Drücken Sie x um weiter zu fliegen","Press X to continue"),
 							hbox_w-2
 						),
 						hbox_x+1,
@@ -2746,7 +2772,7 @@ let sequenzen =[];
 			printText(
 					wordwrap(
 						S(
-							`Die Kapazität Ihres Treibstofftank wurde von ${cap_pre} auf ${cap_post} erhöhrt!`,
+							`Die Kapazität Ihres Treibstofftanks wurde von ${cap_pre} auf ${cap_post} erhöht!`,
 							`Your tank capacity has been increased from ${cap_pre} to ${cap_post}!`
 						),
 						hbox_w-2
@@ -2759,7 +2785,7 @@ let sequenzen =[];
 
 			printText(
 					centerString(
-						S("Drucken Sie x um weiter zu fahren","Press X to continue"),
+						S("Drücken Sie x um weiter zu fahren","Press X to continue"),
 						hbox_w-2
 					),
 					hbox_x+1,
@@ -2801,7 +2827,8 @@ let sequenzen =[];
 			
 			printText(
 					centerString(
-						S("Drucken Sie H, um hilfen zu bitten","Press H to call for help"),
+						S(	"Drücken Sie H, um Hilfe zu rufen",
+							"Press H to call for help" ),
 						hbox_w-2
 					),
 					hbox_x+1,
@@ -3029,7 +3056,7 @@ let sequenzen =[];
 		{
 
 
-			let hbox_y=3;
+			let hbox_y=2;
 			let hbox_w=cw-5;
 			let hbox_h=ch-5;
 			let hbox_x=3;
@@ -3441,11 +3468,13 @@ let sequenzen =[];
 
 		planeten=[];
 
-		let my_planet_anim = genAllFrames(
-				0,
-				5,//blue
-				6//green
-				);
+		let my_planet_anim = randomFramesFromLevel();
+
+		// genAllFrames(
+		// 		0,
+		// 		5,//blue
+		// 		6//green
+		// 		);
 		let planetframes = [my_planet_anim[8]];
 		planetframes[0][0]=100;
 		let planet = [ origin.slice(), planetframes];
@@ -3635,6 +3664,7 @@ let sequenzen =[];
 	}
 	
 	function startSpiel(){
+		cursorPos=1;
 		playSound(8);
 		refuelingdauer=refuelingdauermax;
 		spielticker=0;
@@ -3690,6 +3720,8 @@ let sequenzen =[];
 		
 		setDimensionen(words[0].length-1)
 		spawnTitelPlaneten();
+
+
 
 		sterne=[]
 		while(sterne.length<15){

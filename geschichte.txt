@@ -33,8 +33,8 @@ Things at different levels don't typically interact with each other.
 But names have physical laws all of their own.
 Exemplified by our next point of departure
 ZEIG
-Yip, planet "tree".
-I hope you manage to find some more appropriate-named planets on your trip today.
+Yip, planet "trees".
+I hope you manage to find some more appropriately-named planets on your trip today.
 ----
 LEVEL4 steak
 ----
@@ -109,7 +109,6 @@ A search for meaning beyond words, and beyond worlds.
 `,
 
 
-
 `
 ----
 LEVEL1 TOR
@@ -117,17 +116,17 @@ LEVEL1 TOR
 Herzlich willkommen im Galaktischen Etymologieforschungsinstitut, kurz GEFI genannt.
 Ihr Projekt handelt von den Ursprüngen der Planetennamen.
 Das heißt, eine Datenbank davon zu sammeln, und unser Wissen darüber zu vertiefen.
-Planetnnamen ergeben oft keinen Sinn. Aber dieses Mal sind sie Sinnvoll.
+Planetnnamen ergeben oft keinen Sinn. Nehmen sie unseren Heimatplaneten als Beispiel:
 ZEIG
 Sie werden von einem Planeten namens Tor aufbrechen.
 Lassen Sie dieses Projekt als Tor in Ihrer Zukunft sein.
 Ihnen wurde ein Raumschiff zugeteilt. Sie dürfen reisen, wohin Sie wollen.
 Wohin Sie wollen und solange der Treibstoff reicht.
-Das heißt, die Treibstoffskapazität Ihres Schiffs ist ziemlich niedrig.
-So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten fliegen können.
+Das heißt, die Treibstoffkapazität Ihres Schiffs ist ziemlich niedrig.
+So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten reisen können.
 ABER Sie können die Kapazität vergrößern.
-Der Treibstoff selbst ist kein Problem, nur die Kapazität.  Sie können immer auf Planeten auftanken.
-Das war's, ich glaube.
+Der Treibstoff selbst ist kein Problem, nur die Kapazität.  Wenn Sie auf einem Planeten landen, werden sie automatisch aufgetankt.
+Das war's, glaube ich.
 Ich wünsche Ihnen viel Spaß dabei.
 ----
 LEVEL2 EHRE
@@ -151,9 +150,9 @@ Worin liegt die Wissenschaft?
 LEVEL4 LISTE
 ----
 Was erstellen Sie da?  Eine Datenbank? 
-Nee, Datenbanken haben Struktur.
+Ne, Datenbanken haben Struktur.
 ZEIG
-Sie erstellen nichts. 
+Sie erstellen nichts.
 Sie schreiben nur eine Liste.  
 Die Struktur, die Logik, die Wissenschaft fehlen komplett.
 Was ist dann der Sinn Ihrer Forschung?

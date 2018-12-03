@@ -1,5 +1,4 @@
 graph {
-	eilst -- leist [ label="2" ];
 	eilst -- liest [ label="3" ];
 	eilst -- liste [ label="5" ];
 	eilst -- seilt [ label="3" ];
@@ -7,13 +6,6 @@ graph {
 	eilst -- stiel [ label="7" ];
 	eilst -- stile [ label="8" ];
 	eilst -- teils [ label="4" ];
-	leist -- liest [ label="1" ];
-	leist -- liste [ label="3" ];
-	leist -- seilt [ label="5" ];
-	leist -- steil [ label="8" ];
-	leist -- stiel [ label="9" ];
-	leist -- stile [ label="8" ];
-	leist -- teils [ label="6" ];
 	liest -- liste [ label="2" ];
 	liest -- seilt [ label="6" ];
 	liest -- steil [ label="9" ];

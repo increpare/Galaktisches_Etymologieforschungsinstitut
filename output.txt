@@ -1015,29 +1015,21 @@ snip,nips,pins
 
 
 =========
-ester
+reset
 =======
 
 
-ester
-.
-steer
-.
-terse,trees
-reset
-
-
 reset
 .
 .
 .
 .
-trees,terse,steer,ester
+trees,terse,steer
 
 
 steer
 .
-ester
+.
 .
 terse,trees
 reset
@@ -1047,7 +1039,7 @@ terse
 .
 trees
 .
-steer,ester
+steer
 reset
 
 
@@ -1055,7 +1047,7 @@ trees
 .
 terse
 .
-steer,ester
+steer
 reset
 
 
@@ -1151,63 +1143,89 @@ rapt,part,prat
 
 
 =========
+amen
+=======
+
+
+amen
+.
+mean,mane
+name
+
+
+mane
+.
+mean,amen
+name
+
+
+mean
+.
+mane,amen
+name
+
+
+name
+.
+.
+mane,mean,amen
+
+
+
+
+
+
+=========
 eilst
 =======
 
 
 eilst
 .
-leist,liest,liste
-seilt,steil,stile,stiel
-teils
-
-
-leist
-liest
-eilst,liste
-seilt,steil,stile,stiel
+.
+seilt,steil,stile,stiel,liest,liste
 teils
 
 
 liest
-leist
-liste,eilst
-seilt,steil,stile,stiel
+.
+liste
+eilst,seilt,steil,stile,stiel
 teils
 
 
 liste
 .
-liest,leist,eilst
-seilt,steil,stile,stiel
+liest
+eilst,seilt,steil,stile,stiel
 teils
 
 
 seilt
 .
 .
-steil,stile,stiel,eilst,liest,liste,leist
+steil,stile,stiel,eilst,liest,liste
 teils
 
 
 steil
 stiel,stile
 .
-seilt,eilst,liest,liste,leist
+seilt,eilst,liest,liste
 teils
 
 
 stiel
 stile,steil
 .
-seilt,eilst,liest,liste,leist
+seilt,eilst,liest,liste
 teils
 
 
 stile
 stiel,steil
 .
-seilt,eilst,liest,liste,leist
+seilt,eilst,liest,liste
 teils
 
 
@@ -1215,7 +1233,7 @@ teils
 .
 .
 .
-steil,seilt,stiel,stile,eilst,liest,liste,leist
+steil,seilt,stiel,stile,eilst,liest,liste
 
 
 

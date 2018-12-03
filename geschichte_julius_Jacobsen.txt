@@ -1,0 +1,57 @@
+
+>audio ein -> audio an
+
+
+Hi,
+Ich geb auf, ich kann weder die die deutsche (lvl 7), noch die englische Version (lvl 6) lösen.
+Generell hatte ich den Eindruck, dass der englische Text deutlich humorvoller und lockerer geschrieben ist, während der deutsche Text eher... akademisch wirkt. Ich kann auch leider oft nicht den Sinn der Textes verstehen.
+
+Menü:
+audio ein -> audio an
+
+Liste der gefundenen Planeten:
+"Entdeckung" -> "Entdeckungen" (Ich finde hier den Plural sinnvoller)
+
+Levelende:
+"Drucken Sie x um weiter zu fahren" -> "Drücken Sie x um weiter zu fliegen" (2 changes)
+
+Upgrade:
+"Die Kapazität Ihres Treibstofftank wurde von x auf y erhöhrt" -> "Die Kapazität Ihres Treibstofftanks wurde von x auf y erhöht" (2 changes)
+
+Abschleppdienst:
+"Drücken Sie x um hilfen zu bitten" -> "Drücken Sie x um Hilfe zu rufen"
+"Rückführung des Fahrzeuges im Gange" -> "Bergung des Raumschiffs im Gange"
+
+Level 1:
+"Planetnnamen ergeben oft keinen Sinn. Aber dieses Mal sind sie Sinnvoll."
+Der zweite Satz klingt komisch und "sinnvoll" muss klein geschrieben werden. Ich fand den Ansatz in Englisch besser, etwa: "Planetennamen ergeben oft keinen Sinn. Nehmen sie unseren Heimatplaneten als Beispiel." (Dann muss aber auch der Rest danach umgeschrieben werden.)
+"Lassen Sie dieses Projekt als Tor in Ihrer Zukunft sein."
+Diese Redewendung existiert nicht und klingt komisch. Doch "Tor" bedeutet nicht nur "goal", sondern auch "fool". Warum dann nicht "Nur ein Tor kann sich so einen Namen ausgedacht haben." ("Tor" ist altmodisch, aber es passt zum Stil.)
+"Das heißt, die Treibstoffskapazität Ihres Schiffs ist ziemlich niedrig."  Treibstoffskapazität -> Treibstoffkapazität
+"So niedrig, dass Sie im Moment nur zwischen benachbarten Planeten fliegen können." fliegen -> reisen
+"Sie können immer auf Planeten auftanken." ist nicht falsch, aber "Wenn Sie auf einem Planeten landen, werden sie automatisch aufgetankt." klingt besser.
+"Das war's, ich glaube." -> "Das war's, glaube ich."
+
+Level 4:
+"Nee, Datenbanken haben Struktur." Da der Rest eher wie ein Buch geschrieben ist, würde ich davon abraten umgangsförmliche Ausdrücke zu benutzen, also "Nein" statt "Nee" oder "Ne".
+
+Level 6:
+"Wir suchen nach Wissen und Sinn.
+Aber sie weichen uns aus." Das ist nicht falsch, aber es liest sich etwas komisch. Ich glaube ich würde lieber "Doch die Antworten entgehen uns" schreiben.
+
+Anagramme:
+4. "sielt" ist ein ziemlich obskures Wort. Ich habe beim Anagrammsuchen daran gedacht aber nicht als Wort erkannt und weitergesucht. Ich musste das level durch trial and error lösen. "teaks" in Englisch fand ich auch schwer. Man könnte solche schweren Wörter vielleicht als optionale Bonusplaneten behandeln? So wie unsere Zwergplaneten Eris und Haumea etc.
+5. "feiner" ist ein Wort, wird aber nicht erkannt (Komparativ von "fein").
+6. "Nieser" ist ein Wort, wird aber nicht erkannt (bedeutet "sneeze").
+7. Ich habe "Chinesen" nicht erkannt und konnte das level nicht lösen, aber "Nieschen" ist auch ein Anagramm das mit den Buchstaben gebildet werden kann (Plural von "Niesche").
+Level 2 auf Englisch:
+Ich glaube "tase" ist ein Wort ("Don't tase me, bro!")
+
+Generell war es im Deutschen etwas repetitiv, dass fast alle Anagramme nur e's und i's als Vokale hatten.
+
+Ich mochte den Grafikstil und die Idee des Spiels und der Geschichte sehr gerne.
+ Diese Nachricht, gesendet am vor 28 Sekunden von Julius Jacobsen, melden Diese Nachricht, gesendet am vor 28 Sekunden von Julius Jacobsen, löschen
+5 Min. vor 28 Sekunden
+ Julius Jacobsen
+ Ich habe über die Wiederholung der Vokale im Deutschen geschrieben, aber eine Minute nachdem ich die Nachricht losgeschickt habe, ist mir aufgefallen, dass die Vokale im Englischen sich auch wiederholen; es sind nur a's und e's. Hat das einen besonderen Grund?
+ Diese Nachricht, gesendet am vor 47 Sekunden von Julius Jacobsen, melden Diese Nachricht, gesendet am vor 47 Sekunden von Julius Jacobsen, löschen

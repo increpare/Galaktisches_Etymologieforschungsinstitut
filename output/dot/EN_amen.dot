@@ -1,0 +1,8 @@
+graph {
+	amen -- mane [ label="2" ];
+	amen -- mean [ label="2" ];
+	amen -- name [ label="3" ];
+	mane -- mean [ label="2" ];
+	mane -- name [ label="3" ];
+	mean -- name [ label="5" ];
+}

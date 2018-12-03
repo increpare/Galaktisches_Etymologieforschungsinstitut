@@ -1,0 +1,8 @@
+graph {
+	reset -- steer [ label="7" ];
+	reset -- terse [ label="7" ];
+	reset -- trees [ label="5" ];
+	steer -- terse [ label="4" ];
+	steer -- trees [ label="6" ];
+	terse -- trees [ label="2" ];
+}
